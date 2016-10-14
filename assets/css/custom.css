@@ -1,0 +1,6 @@
+/* Add here all your css styles (customizations) */
+@media (min-width: 992px) {
+    .header-v6 .navbar-nav {
+        float: none;
+    }
+}
