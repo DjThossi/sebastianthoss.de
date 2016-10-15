@@ -8,3 +8,15 @@
         box-shadow: 0 0 3px #bbb;
     }
 }
+
+/*Interactive Slider v2
+------------------------------------*/
+.interactive-slider-v2 {
+    background-image: url("../img/bg/teaser.jpg");
+}
+
+@media (max-width: 450px) {
+    .interactive-slider-v2 {
+        padding: 100px 0;
+    }
+}
