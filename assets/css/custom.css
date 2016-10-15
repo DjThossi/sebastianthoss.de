@@ -3,4 +3,8 @@
     .header-v6 .navbar-nav {
         float: none;
     }
+
+    .header-fixed .header-v6.header-sticky {
+        box-shadow: 0 0 3px #bbb;
+    }
 }
