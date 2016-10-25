@@ -21,9 +21,7 @@ cookie_consent:
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
                     <p>
-                        <a href="/de/">
-                            Sebastian Thoss
-                        </a>
+                        Sebastian Thoss
                     </p>
                 </div>
                 <!-- ENd Navbar Brand -->
@@ -33,9 +31,17 @@ cookie_consent:
             <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <div class="menu-container">
                     <ul class="nav navbar-nav">
-                        <!-- Kontakt --
-                        <li class="">
-                            <a href="#">
+                        <!-- Homepage -->
+                        <li class="{% if page.active_nav == 'home' %}active{% endif %}">
+                            <a href="{{ site.github.url }}/de/">
+                                Home
+                            </a>
+                        </li>
+                        <!-- End Homepage -->
+
+                        <!-- Kontakt -->
+                        <li class="{% if page.active_nav == 'kontakt' %}active{% endif %}">
+                            <a href="{{ site.github.url }}/de/kontakt/">
                                 Kontakt
                             </a>
                         </li>
