@@ -35,6 +35,12 @@
         <link rel="stylesheet" href="{{ site.github.url }}{{ css_entry }}">
     {% endfor %}
 
+    <!--[if lt IE 9]>
+    {% for css_entry in page.add_css_lt_ie_9 %}
+        <link rel="stylesheet" href="{{ site.github.url }}{{ css_entry }}">
+    {% endfor %}
+    <![endif]-->
+
     <!-- CSS Theme -->
     <link rel="stylesheet" href="{{ site.github.url }}/assets/css/theme-colors/blue.css" id="style_color">
     <link rel="stylesheet" href="{{ site.github.url }}/assets/css/theme-skins/dark.css">
@@ -52,23 +58,43 @@
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/jquery/jquery-migrate.min.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
 <!-- JS Implementing Plugins -->
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/back-to-top.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/smoothScroll.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/plugins/jquery.parallax.js"></script>
+
 <!-- JS Customization -->
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/custom.js"></script>
+
 <!-- JS Page Level -->
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/app.js"></script>
+{% for js_script in page.js.scripts %}
+    <script type="text/javascript" src="{{ site.github.url }}{{ js_script }}"></script>
+{% endfor %}
+
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
+        {% for codeline in page.js.run_code %}
+            {{ codeline }}
+        {% endfor %}
     });
 </script>
+
+<!--[if lt IE 10]>
+{% for js_script in page.js.scripts_lt_ie_10 %}
+    <script type="text/javascript" src="{{ site.github.url }}{{ js_script }}"></script>
+{% endfor %}
+<![endif]-->
+
 <!--[if lt IE 9]>
 <script src="{{ site.github.url }}/assets/plugins/respond.js"></script>
 <script src="{{ site.github.url }}/assets/plugins/html5shiv.js"></script>
 <script src="{{ site.github.url }}/assets/plugins/placeholder-IE-fixes.js"></script>
+{% for js_script in page.js.scripts_lt_ie_9 %}
+ <script type="text/javascript" src="{{ site.github.url }}{{ js_script }}"></script>
+{% endfor %}
 <![endif]-->
 
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
