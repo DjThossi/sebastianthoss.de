@@ -139,10 +139,28 @@ cookie_consent:
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Termine</h2></div>
                     <ul class="list-unstyled link-news">
-                        {% for meeting in site.data.de.meetings %}
+                        {% for meeting in site.data.meetings %}
                             <li>
                                 <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
-                                <small>{{ meeting.date }}</small>
+                                <small>
+                                    {% assign m = meeting.date | date: "%-m" %}
+                                    {{ meeting.date | date: "%-d" }}.
+                                    {% case m %}
+                                        {% when '1' %}Januar
+                                        {% when '2' %}Februar
+                                        {% when '3' %}M&auml;rz
+                                        {% when '4' %}April
+                                        {% when '5' %}Mai
+                                        {% when '6' %}Juni
+                                        {% when '7' %}Juli
+                                        {% when '8' %}August
+                                        {% when '9' %}September
+                                        {% when '10' %}Oktober
+                                        {% when '11' %}November
+                                        {% when '12' %}Dezember
+                                    {% endcase %}
+                                    {{ meeting.date | date: "%Y" }}
+                                </small>
                             </li>
                         {% endfor %}
                     </ul>
