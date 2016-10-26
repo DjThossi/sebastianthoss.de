@@ -70,7 +70,11 @@
 <!-- JS Page Level -->
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/app.js"></script>
 {% for js_script in page.js.scripts %}
-    <script type="text/javascript" src="{{ site.github.url }}{{ js_script }}"></script>
+    {% if js_script | slice: 0, 4 == 'http' %}
+        <script type="text/javascript" src="{{ js_script }}"></script>
+    {% else %}
+        <script type="text/javascript" src="{{ site.github.url }}{{ js_script }}"></script>
+    {% endif %}
 {% endfor %}
 
 <script type="text/javascript">
