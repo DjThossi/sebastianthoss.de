@@ -1,8 +1,8 @@
 ---
 layout: default
 cookie_consent:
-  message: Diese Webseite nutzt Cookies um das Erlebnis der Seite permanent zu verbessern.
-  dismiss: Danke
+message: Diese Webseite nutzt Cookies um das Erlebnis der Seite permanent zu verbessern.
+dismiss: Danke
 ---
 <!--=== Header v6 ===-->
 <div class="header-v6 header-classic-white header-sticky">
@@ -33,27 +33,24 @@ cookie_consent:
                     <ul class="nav navbar-nav">
                         <!-- Homepage -->
                         <li class="{% if page.active_nav == 'home' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/de/">
+                            <a href="{{ site.github.url }}/en/">
                                 Home
                             </a>
                         </li>
-                        <!-- End Homepage -->
 
-                        <!-- Kontakt -->
-                        <li class="{% if page.active_nav == 'kontakt' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/de/kontakt/">
-                                Kontakt
+                        <!-- Contact --
+                        <li class="{% if page.active_nav == 'contact' %}active{% endif %}">
+                            <a href="{{ site.github.url }}/en/contact/">
+                                Contact
                             </a>
                         </li>
-                        <!-- End Kontakt -->
 
-                        <!-- English Version -->
+                        <!-- Deutsche Version -->
                         <li>
-                            <a href="{{ site.github.url }}/en/">
-                                <i class="fa fa-globe"></i> English Version
+                            <a href="{{ site.github.url }}/de/">
+                                <i class="fa fa-globe"></i> Deutsche Version
                             </a>
                         </li>
-                        <!-- End Kontakt -->
 
                         <!-- Impressum --
                         <li class="dropdown">
@@ -63,17 +60,6 @@ cookie_consent:
                         </li>
                         <!-- End Impressum -->
 
-                        <!-- Sprachen --
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-globe"></i> Sprachen
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/de/">Deutsch</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </li>
-                        <!-- End Sprachen -->
                     </ul>
                 </div>
             </div><!--/navbar-collapse-->
@@ -100,13 +86,14 @@ cookie_consent:
                 <!-- About -->
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="latest-tweets">
-                        <div class="headline"><h2 class="heading-sm">&Uuml;ber mich</h2></div>
+                        <div class="headline"><h2 class="heading-sm">About me</h2></div>
                         <div class="latest-tweets-inner">
                             <p>
-                                Nach mehrj&auml;hrigen Aufenthalten in der irischen und australischen IT kam ich zur&uuml;ck nach Deutschland, um hier tiefer in die Softwarearchitektur einzusteigen.
+                                I'm in IT since mid of nineties and still love it. After several years of living and working in Ireland and Australia.
+                                I came back to Hamburg, Germany in order to learn even more about architecture of software.
                             </p>
                             <p>
-                                Seit April 2015 k&uuml;mmere ich mich bei der kartenmacherei in Hamburg um Backend Projekte, das Team und die Ausbildung des Nachwuchses.
+                                Since April 2015 I'm at kartenmacherei responsible for backend projects, the team and training of our young apprentice.
                             </p>
                         </div>
                     </div>
@@ -115,9 +102,9 @@ cookie_consent:
 
                 <!-- Address -->
                 <div class="col-md-3 md-margin-bottom-40">
-                    <div class="headline"><h2 class="heading-sm">Kontaktdaten</h2></div>
+                    <div class="headline"><h2 class="heading-sm">Contact details</h2></div>
                     <address class="md-margin-bottom-40">
-                        <i class="fa fa-home"></i>Ahrensburg, Schleswig-Holstein <br />
+                        <i class="fa fa-home"></i>Ahrensburg, Germany <br />
                         <i class="fa fa-skype"></i>Skype: sebastian301082 <br />
                         <i class="fa fa-globe"></i>Website: <a href="http://www.sebastianthoss.de">sebastianthoss.de</a> <br />
                         <i class="fa fa-envelope"></i>Mail: <a href="mailto:thoss_sebastian@web.de">thoss_sebastian@web.de</a>
@@ -137,7 +124,7 @@ cookie_consent:
 
                 <!-- Termine -->
                 <div class="col-md-3 md-margin-bottom-40">
-                    <div class="headline"><h2 class="heading-sm">Termine</h2></div>
+                    <div class="headline"><h2 class="heading-sm">Meet me</h2></div>
                     <ul class="list-unstyled link-news">
                         {% for meeting in site.data.de.meetings %}
                             <li>
