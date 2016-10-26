@@ -1,0 +1,45 @@
+---
+layout: german
+title: Kontakt
+active_nav: kontakt
+
+add_css:
+  - /assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css
+  - /assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css
+
+add_css_lt_ie_9:
+  - /assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css
+
+js:
+  scripts:
+    - http://maps.google.com/maps/api/js?key=AIzaSyCynS0zY2Og3GJBw7HlXlGXUacyScSQQ54
+    - /assets/plugins/gmap/gmap.js
+    - /assets/js/pages/page_contacts.js
+  run_code:
+    - ContactPage.initMap();
+---
+
+<!-- Google Map -->
+<div id="map" class="map">
+</div><!---/map-->
+<!-- End Google Map -->
+
+<!--=== Content Part ===-->
+<div class="container content">
+    <div class="row margin-bottom-30">
+        <div class="col-md-12 mb-margin-bottom-30">
+            <div class="headline">
+                <h2>Kontaktformular</h2>
+            </div>
+
+            <div id="sky-form3" class="sky-form contact-style submited">
+                <div class="message">
+                    <i class="rounded-x fa fa-check"></i>
+                    <p>Ihre Nachricht wurde erfolgreich versendet!</p>
+                </div>
+            </div>
+        </div><!--/col-md-12-->
+    </div><!--/row-->
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
