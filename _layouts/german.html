@@ -139,7 +139,7 @@ cookie_consent:
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Termine</h2></div>
                     <ul class="list-unstyled link-news">
-                        {% for meeting in site.data.meetings %}
+                        {% for meeting in site.data.meetings limit:3 %}
                             <li>
                                 <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
                                 <small>
