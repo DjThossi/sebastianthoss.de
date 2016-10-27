@@ -30,17 +30,17 @@ var ContactForm = function () {
 	            {
 	                name:
 	                {
-	                    required: 'Bitte geben Sie Ihren Namen ein.'
+	                    required: 'Bitte gib Deinen Namen an.'
 	                },
 	                email:
 	                {
-	                    required: 'Bitte geben Sie Ihre E-Mail Adresse ein.',
-	                    email: 'Bitte geben Sie eine g&uuml;ltige E-Mail Adresse ein.'
+	                    required: 'Bitte gib Deine E-Mail Adresse an.',
+	                    email: 'Bitte gib eine g&uuml;ltige E-Mail Adresse ein.'
 	                },
 	                message:
 	                {
-	                    required: 'Bitte geben sie eine Nachricht ein.',
-						minlength: 'Ihre Nachricht muss mindestens {0} Zeichen lang sein.'
+	                    required: 'Eine Nachricht muss sein.',
+						minlength: 'Deine Nachricht muss mindestens {0} Zeichen lang sein.'
 	                }
 	            },
 	                                
