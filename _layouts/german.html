@@ -144,7 +144,7 @@ cookie_consent:
                                 <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
                                 <small>
                                     {% assign m = meeting.date | date: "%-m" %}
-                                    {{ meeting.date | date: "%-d" }}.
+                                    {{ meeting.date | date: "%d" }}.
                                     {% case m %}
                                         {% when '1' %}Januar
                                         {% when '2' %}Februar
