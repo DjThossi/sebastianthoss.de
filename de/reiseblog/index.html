@@ -1,0 +1,16 @@
+---
+layout: english
+title: Technologies Blog
+active_nav: techblog
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+---
+
+<!--=== Content Part ===-->
+{% include blog_overview.html posts=site.categories.Reiseblog readMore="Weiterlesen" %}
+<!--=== End Content Part ===-->
