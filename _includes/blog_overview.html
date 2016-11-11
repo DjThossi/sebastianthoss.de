@@ -7,11 +7,11 @@
                 {% if post.overview.image.url %}
                     {% if post.overview.external_link %}
                         <a href="{{ post.overview.external_link }}" target="_blank">
-                            <img class="img-responsive" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
+                            <img class="img-responsive center-block" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
                         </a>
                     {%  else %}
                         <a href="{{ site.github.url }}{{ post.url }}">
-                            <img class="img-responsive" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
+                            <img class="img-responsive center-block" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
                         </a>
                     {%  endif %}
                 {% endif %}
