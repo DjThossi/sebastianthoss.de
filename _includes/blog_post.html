@@ -4,8 +4,10 @@
         <div class="blog-img">
             {% if page.headline.image.url %}
                 <img class="img-responsive" src="{{ site.github.url }}{{ page.headline.image.url }}" alt="{{ page.headline.image.alt }}">
-            {% else if page.categories contains 'Techblog' %}
-                <img class="img-responsive" src="{{ site.github.url }}{{ include.defaultImageSrc }}" alt="{{ include.defaultImageAlt }}">
+            {% else %}
+                {% if page.categories contains 'tech-blog' %}
+                    <img class="img-responsive" src="{{ site.github.url }}{{ include.defaultImageSrc }}" alt="{{ include.defaultImageAlt }}">
+                {% endif %}
             {% endif %}
         </div>
 
