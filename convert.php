@@ -10,7 +10,7 @@ foreach ( scandir('_posts/de/reiseblog') as $file) {
     $content = file_get_contents($fileName);
     $content = preg_replace('/tags(.*\n)*---/', '---', $content);
 
-    $content = preg_replace('/layout: post\n/', "layout: de_travelblog\n", $content);
+    $content = preg_replace('/layout: post\n/', "layout: de_travel-blog\n", $content);
     $content = preg_replace('/categories:\n/', "categories:\n  - de\n  - Reiseblog\nlocations:\n", $content);
     $content = preg_replace('/\n- /', "\n  - ", $content);
     $content = preg_replace('/{{ site.baseurl }}/', "{{ site.github.url }}", $content);
