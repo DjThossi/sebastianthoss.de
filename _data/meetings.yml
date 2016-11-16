@@ -1,9 +1,4 @@
 - link:
-    text: Serverless Meetup Hamburg
-    url: http://www.meetup.com/de-DE/Serverless-Hamburg/events/233707967/
-  date: 2016-11-14
-
-- link:
     text: Automated layout checks with galen
     url: http://www.meetup.com/de-DE/ThoughtWorks-Hamburg/events/234641565/
   date: 2016-11-15
@@ -22,3 +17,8 @@
     text: Einf&uuml;hrung GraphQL
     url: https://www.meetup.com/de-DE/sfughh/events/232230469/
   date: 2016-12-06
+
+- link:
+    text: PHP UK London
+    url: http://phpconference.co.uk/
+  date: 2017-02-16
