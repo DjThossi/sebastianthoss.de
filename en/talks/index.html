@@ -1,0 +1,37 @@
+---
+layout: english
+title: Talks Overview
+active_nav: talks_index
+
+add_css:
+  - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
+  - /assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css
+js:
+  scripts:
+  - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
+  - /assets/js/plugins/cube-portfolio/cube-portfolio-2.js
+---
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1>Talks Overview</h1>
+        <p>All sessions can be given in english or german</p>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+
+<!--=== Cube-Portfdlio ===-->
+<div class="cube-portfolio container margin-bottom-60">
+    <div class="content-xs">
+        <div id="filters-container" class="cbp-l-filters-text content-xs">
+            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> All </div> |
+            <div data-filter=".architecture" class="cbp-filter-item"> Architecture </div> |
+            <div data-filter=".testing" class="cbp-filter-item"> Testing </div> |
+        </div>
+        <!--/end Filters Container-->
+    </div>
+
+    {% include talks.html talks=site.data.en.talks %}
+
+</div>
+<!--=== End Cube-Portfdlio ===-->

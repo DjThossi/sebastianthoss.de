@@ -1,0 +1,17 @@
+- title: "Don't fear the walking dead"
+  subtitle: how to get rid of a zombie
+  link: /en/talks
+  image:
+    url: /assets/img/don_t_fear_the_walking_dead/ipc_1.png
+    alt: First slide of my presentatioon
+  tags:
+    - architecture
+
+- title: "99% is not enough"
+  link: /en/talks
+  image:
+    url: /assets/img/99_percent_is_not_enough/phpughh_1.jpg
+    alt: First slide of my presentatioon
+  tags:
+    - architecture
+    - testing
