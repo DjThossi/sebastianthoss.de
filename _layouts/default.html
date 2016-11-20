@@ -8,8 +8,14 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    {% if page.meta.description %}
+        <meta name="description" content="{{ page.meta.description }}">
+    {% else %}
+        <meta name="description" content="{{ layout.meta.description }}">
+    {% endif %}
+
+    <meta name="keywords" content="Sebastian, Thoss, {% if page.meta.keywords %}{{ page.meta.keywords | join: ', ' }}, {% endif %}{% if layout.meta.keywords %}{{ layout.meta.keywords | join: ', ' }}, {% endif %}Tho&szlig;, Workshops, PHP, Hamburg, Ahrensburg, Dublin, Sydney, Rostock, Plauen, Putbus">
+    <meta name="author" content="Sebastian Thoss">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.github.url }}/assets/img/sebastian_thoss.jpg">
