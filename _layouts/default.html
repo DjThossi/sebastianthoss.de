@@ -18,6 +18,10 @@
     <meta name="author" content="Sebastian Thoss">
     <meta name=”robots” content=”index,follow” />
 
+    {% if page.hreflang %}
+        <link rel="alternate" hreflang="{{ layout.hreflang.lang }}" href="{{ page.hreflang.href }}" />
+    {% endif %}
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.github.url }}/assets/img/sebastian_thoss.jpg">
 
