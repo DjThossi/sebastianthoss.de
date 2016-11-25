@@ -1,6 +1,13 @@
+{% if include.skipTalkId %}
+    {% capture expression %}item.id != {{ include.skipTalkId }}{% endcapture %}
+    {% assign talks = include.talks | where_exp:"item", expression %}
+{% else %}
+    {% assign talks = include.talks %}
+{% endif %}
+
 <div id="grid-container" class="cbp-l-grid-agency">
 
-    {% for talk in include.talks %}
+    {% for talk in talks limit: include.limit %}
         <div class="cbp-item  {{ talk.tags | join: ' ' }}">
             <div class="cbp-caption margin-bottom-20">
                 <div class="cbp-caption-defaultWrap">
