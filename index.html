@@ -9,13 +9,13 @@
         var language = navigator.language || navigator.browserLanguage;
 
         if (language.indexOf('en') > -1) {
-            document.location.href = '/en/';
+            document.location.href = '{{ site.github.url }}/en/';
         } else {
-            document.location.href = '/de/';
+            document.location.href = '{{ site.github.url }}/de/';
         }
     </script>
 
-    <meta http-equiv="refresh" content="0; url=/de/" />
+    <meta http-equiv="refresh" content="0; url={{ site.github.url }}/de/" />
 </head>
 <body>
 </body>
