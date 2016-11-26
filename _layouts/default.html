@@ -19,7 +19,8 @@
     <meta name=”robots” content=”index,follow” />
 
     {% if page.hreflang %}
-        <link rel="alternate" hreflang="{{ layout.hreflang.lang }}" href="{{ page.hreflang.href }}" />
+        <link rel="alternate" hreflang="de" href="{{ site.github.url }}{{ page.hreflang.de.href }}" />
+        <link rel="alternate" hreflang="en" href="{{ site.github.url }}{{ page.hreflang.en.href }}" />
     {% endif %}
 
     <!-- Favicon -->
