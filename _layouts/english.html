@@ -59,13 +59,14 @@ cookie_consent:
                         </li>
 
                         <!-- Talks -->
-                        <li class="dropdown{% if page.active_nav == 'talks_index' %} active{% endif %}">
+                        <li class="dropdown{% if page.active_nav contains 'talks-' %} active{% endif %}">
                             <a href="{{ site.github.url }}/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
                                Talks
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ site.github.url }}/en/talks/">Overview</a></li>
-                                <li><a href="{{ site.github.url }}/en/talks/don-t-fear-the-walking-dead.html">Don't fear the walking dead</a></li>
+                                <li class="{% if page.active_nav == 'talks-index' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
+                                <li class="{% if page.active_nav == 'talks-fury' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/don-t-fear-the-walking-dead.html"><i class="fa fa-angle-double-right"></i>Don't fear the walking dead</a></li>
+                                <li class="{% if page.active_nav == 'talks-99' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/99-percent-is-not-enough.html"><i class="fa fa-angle-double-right"></i>99% is not enough</a></li>
                             </ul>
                         </li>
 
