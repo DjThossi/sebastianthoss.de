@@ -19,7 +19,7 @@ add_css:
 js:
   scripts:
   - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
-  - /assets/js/plugins/cube-portfolio/cube-portfolio-2.js
+  - /assets/js/cube-portfolio-overlay-bottom.js
 ---
 <!--=== Breadcrumbs v3 ===-->
 <div class="breadcrumbs-v3 img-v3">
@@ -41,7 +41,7 @@ js:
         <!--/end Filters Container-->
     </div>
 
-    {% include talks.html talks=site.data.en.talks %}
+    {% include talks.html talks=site.data.en.talks cols="2" %}
 
 </div>
 <!--=== End Cube-Portfdlio ===-->

@@ -1,3 +1,9 @@
+{% if include.cols %}
+    {% assign cols = include.cols %}
+{% else %}
+    {% assign cols = 4 %}
+{% endif %}
+
 {% if include.skipTalkId %}
     {% capture expression %}item.id != {{ include.skipTalkId }}{% endcapture %}
     {% assign talks = include.talks | where_exp:"item", expression %}
@@ -5,34 +11,23 @@
     {% assign talks = include.talks %}
 {% endif %}
 
-<div id="grid-container" class="cbp-l-grid-agency">
+<div id="grid-container" data-cols="{{ cols }}" class="cbp-l-grid-agency">
 
     {% for talk in talks limit: include.limit %}
         <div class="cbp-item  {{ talk.tags | join: ' ' }}">
-            <div class="cbp-caption margin-bottom-20">
+            <a href="{{ site.github.url }}{{ talk.link }}" class="cbp-caption">
                 <div class="cbp-caption-defaultWrap">
                     <img src="{{ site.github.url }}{{ talk.image.url }}" alt="{{ talk.image.alt }}">
                 </div>
                 <div class="cbp-caption-activeWrap default-transparent-hover">
-                    <div class="cbp-l-caption-alignCenter">
+                    <div class="cbp-l-caption-alignLeft">
                         <div class="cbp-l-caption-body">
-                            <ul class="link-captions no-bottom-space">
-                                <li>
-                                    <a href="{{ site.github.url }}{{ talk.link }}"><i class="rounded-x fa fa-search"></i></a>
-                                </li>
-                            </ul>
+                            <div class="cbp-l-caption-title">{{ talk.title }}</div>
+                            <div class="cbp-l-caption-desc">{{ talk.subtitle }}</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cbp-title-dark">
-                <div class="cbp-l-grid-agency-title">
-                    <a href="{{ site.github.url }}{{ talk.link }}">{{ talk.title }}</a>
-                </div>
-                <div class="cbp-l-grid-agency-desc">
-                    {{ talk.subtitle }}
-                </div>
-            </div>
+            </a>
         </div>
     {% endfor %}
 
