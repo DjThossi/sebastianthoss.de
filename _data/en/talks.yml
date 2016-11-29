@@ -1,3 +1,13 @@
+- id: 3
+  title: "SmokeTests"
+  subtitle: "Let's try to burn down servers"
+  link: /en/talks/smoke-tests.html
+  image:
+    url: /assets/img/under-construction-small.jpg
+    alt: This talk is currently under construction
+  tags:
+    - testing
+
 - id: 2
   title: "99%"
   subtitle: "is not enough"

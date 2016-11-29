@@ -1,0 +1,77 @@
+---
+layout: english
+title: "99% is not enough"
+meta:
+  description: "Talk description about testing software and why it is so important to really have the 100% of code coverage and how to keep it"
+  keywords:
+    - test
+    - testing
+    - software
+    - unittest
+    - development
+    - phpunit
+    - acceptance
+    - integration
+    - smoketests
+
+active_nav: talks-99
+
+add_css:
+  - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
+  - /assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css
+js:
+  scripts:
+    - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
+    - /assets/js/cube-portfolio-overlay-bottom.js
+---
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1>SmokeTests</h1>
+        <p>Why you should try to burn down your production environment</p>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+
+<!--=== Container Part ===-->
+<div class="container">
+    <div class="content">
+        <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/under-construction.jpg" alt="This talk is currently under construction">
+
+
+        <div class="row margin-bottom-30">
+            <div class="col-sm-8">
+                <div class="headline"><h2>Talk Abstract</h2></div>
+                <p>
+                    Today it's crystal clear why we need unit tests. Even integration and acceptance tests are quite
+                    common but who is making sure that your pages are working in production environment?
+                </p>
+                <p>
+                    I'd like to show in detail how smoke tests will help achieving this goal and why you should try to
+                    burn down your production server.
+                </p>
+                <p>
+                    <strong>This is a complete new talk I'm preparing right now.</strong> I want to show that smoke
+                    tests are a good way
+                    to approve that all your critical URLs are working. I will show how the workflow of deployments to
+                    production environments could look like. How the correct Server setup will help to get SmokeTests
+                    running and how we make sure that SmokeTests are not affecting our customers.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div class="headline"><h2>Talk Details</h2></div>
+                <ul class="list-unstyled project-details">
+                    <li><strong>Length:</strong> 45 to 60 minutes</li>
+                    <li><strong>First held:</strong> 16 February 2017</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cube-portfolio">
+            <div class="headline"><h3>Other Talks</h3></div>
+            {% include talks.html talks=site.data.en.talks limit="4" skipTalkId="3" %}
+        </div>
+
+    </div>
+</div>
+<!--=== End Container Part ===-->
