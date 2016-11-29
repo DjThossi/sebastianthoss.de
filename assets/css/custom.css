@@ -56,6 +56,12 @@
     display: block;
 }
 
+/* Color of description text over talks overview CTAs */
 .cbp-l-caption-desc {
     color: #ffffff;
+}
+
+/* Error page body margin */
+body {
+    margin-bottom: auto;
 }
