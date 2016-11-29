@@ -87,16 +87,16 @@ cookie_consent:
         <div class="container">
             <div class="row">
                 <!-- Photo -->
-                <div class="col-md-3 md-margin-bottom-40">
+                <div class="col-md-3 col-sm-6">
                     <img id="logo-footer" src="{{ site.github.url }}/assets/img/sebastian_thoss.jpg" alt="Foto von mir">
 
                 </div>
                 <!-- End Photo -->
 
                 <!-- About -->
-                <div class="col-md-3 md-margin-bottom-40">
+                <div class="col-md-3 col-sm-6 md-margin-bottom-60">
                     <div class="latest-tweets">
-                        <div class="headline"><h2 class="heading-sm">&Uuml;ber mich</h2></div>
+                        <div class="headline"><h2 class="heading-sm">&Uuml;ber Sebastian Tho&szlig;</h2></div>
                         <div class="latest-tweets-inner">
                             <p>
                                 Nach mehrj&auml;hrigen Aufenthalten in der irischen und australischen IT kam ich zur&uuml;ck nach Deutschland, um hier tiefer in die Softwarearchitektur einzusteigen.
@@ -110,9 +110,10 @@ cookie_consent:
                 <!-- End About -->
 
                 <!-- Address -->
-                <div class="col-md-3 md-margin-bottom-40">
+                <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Kontaktdaten</h2></div>
                     <address class="md-margin-bottom-40">
+                        <i class="fa fa-male"></i>Sebastian Tho&szlig; <br />
                         <i class="fa fa-home"></i>Ahrensburg, Schleswig-Holstein <br />
                         <i class="fa fa-skype"></i>Skype: sebastian301082 <br />
                         <i class="fa fa-globe"></i>Website: <a href="http://www.sebastianthoss.de">sebastianthoss.de</a> <br />
@@ -121,18 +122,28 @@ cookie_consent:
 
                     <!-- Social Links -->
                     <ul class="social-icons">
-                        <li><a target="_blank" href="https://www.xing.com/profile/Sebastian_Thoss" data-original-title="XING" class="rounded-x social_xing"></a></li>
-                        <li><a target="_blank" href="https://github.com/DjThossi" data-original-title="GitHub" class="rounded-x social_github"></a></li>
-                        <li><a target="_blank" href="https://www.facebook.com/sebastian.thoss" data-original-title="Facebook" class="rounded-x social_facebook"></a></li>
-                        <li><a target="_blank" href="https://twitter.com/dj_thossi" data-original-title="Twitter" class="rounded-x social_twitter"></a></li>
-                        <li><a target="_blank" href="https://sebastian301082.wordpress.com/" data-original-title="WordPress" class="rounded-x social_wordpress"></a></li>
+                        <li>
+                            <a target="_blank" href="https://www.xing.com/profile/Sebastian_Thoss" data-original-title="XING" class="rounded-x social_xing" title="Sebastian Tho&szlig; auf Xing"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/DjThossi" data-original-title="GitHub" class="rounded-x social_github" title="Sebastian Tho&szlig; auf GitHub"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/sebastian.thoss" data-original-title="Facebook" class="rounded-x social_facebook" title="Sebastian Tho&szlig; auf Facebook"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/dj_thossi" data-original-title="Twitter" class="rounded-x social_twitter" title="Sebastian Tho&szlig; auf Twitter"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://sebastian301082.wordpress.com/" data-original-title="WordPress" class="rounded-x social_wordpress" title="Sebastian Tho&szlig; auf WordPress"></a>
+                        </li>
                     </ul>
                     <!-- End Social Links -->
                 </div>
                 <!-- End Address -->
 
                 <!-- Termine -->
-                <div class="col-md-3 md-margin-bottom-40">
+                <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Termine</h2></div>
                     <ul class="list-unstyled link-news">
                         {% for meeting in site.data.meetings limit:3 %}
