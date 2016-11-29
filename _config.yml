@@ -31,3 +31,6 @@ theme: minima
 # My Settings
 timezone: Europe/Berlin
 encoding: utf-8
+
+gems:
+  - jekyll-sitemap
