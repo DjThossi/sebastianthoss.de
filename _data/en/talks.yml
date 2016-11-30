@@ -2,6 +2,7 @@
   title: "SmokeTests"
   subtitle: "Let's try to burn down servers"
   link: /en/talks/smoke-tests.html
+  active_nav: talks-smoke-tests
   image:
     url: /assets/img/under-construction-small.jpg
     alt: This talk is currently under construction
@@ -12,6 +13,7 @@
   title: "99%"
   subtitle: "is not enough"
   link: /en/talks/99-percent-is-not-enough.html
+  active_nav: talks-99
   image:
     url: /assets/img/99-percent-is-not-enough/phpughh-slides-1-small.jpg
     alt: First slide of my presentatioon
@@ -23,6 +25,7 @@
   title: "Don't fear the walking dead"
   subtitle: how to get rid of a zombie
   link: /en/talks/don-t-fear-the-walking-dead.html
+  active_nav: talks-fury
   image:
     url: /assets/img/don-t-fear-the-walking-dead/ipc-1.png
     alt: First slide of my presentatioon

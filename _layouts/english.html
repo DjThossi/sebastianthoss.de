@@ -64,10 +64,12 @@ cookie_consent:
                                Talks
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="{% if page.active_nav == 'talks-index' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
-                                <li class="{% if page.active_nav == 'talks-smoke-tests' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/smoke-tests.html"><i class="fa fa-angle-double-right"></i>SmokeTests</a></li>
-                                <li class="{% if page.active_nav == 'talks-99' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/99-percent-is-not-enough.html"><i class="fa fa-angle-double-right"></i>99% is not enough</a></li>
-                                <li class="{% if page.active_nav == 'talks-fury' %} active{% endif %}"><a href="{{ site.github.url }}/en/talks/don-t-fear-the-walking-dead.html"><i class="fa fa-angle-double-right"></i>Don't fear the walking dead</a></li>
+                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="{{ site.github.url }}/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
+
+                                {% for talk in site.data.en.talks %}
+                                    {% assign titleLength = talk.title |size %}
+                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ site.github.url }}{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
+                                {% endfor %}
                             </ul>
                         </li>
 
