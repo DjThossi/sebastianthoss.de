@@ -1,0 +1,33 @@
+- id: 3
+  title: "SmokeTests"
+  subtitle: "Let's try to burn down servers"
+  link: /de/vortraege.html
+  active_nav: talks-smoke-tests
+  image:
+    url: /assets/img/under-construction-small.jpg
+    alt: An diesem Vortrag arbeitet Sebastian Thoss gerade
+  tags:
+    - testing
+
+- id: 2
+  title: "99%"
+  subtitle: "is not enough"
+  link: /de/vortraege.html
+  active_nav: talks-99
+  image:
+    url: /assets/img/99-percent-is-not-enough/phpughh-slides-1-small.jpg
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml;ber Testing von Software"
+  tags:
+    - architecture
+    - testing
+
+- id: 1
+  title: "Don't fear the walking dead"
+  subtitle: how to get rid of a zombie
+  link: /de/vortraege.html
+  active_nav: talks-fury
+  image:
+    url: /assets/img/don-t-fear-the-walking-dead/ipc-1.png
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag, wie man mit Zombie Software umgeht"
+  tags:
+    - architecture

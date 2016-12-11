@@ -1,0 +1,49 @@
+---
+layout: german
+title: Talks Overview
+meta:
+  description: "Hier bekommt Ihr eine Lieste von Vortr&auml;gen die Sebastian Thoss geben hat."
+  keywords:
+    - "&uuml;bersicht"
+    - Vortrag
+    - Architekture
+    - Testen
+    - Entwicklung
+    - Deutsch
+    - Englisch
+
+active_nav: talks-index
+
+add_css:
+  - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
+  - /assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css
+
+js:
+  scripts:
+  - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
+  - /assets/js/cube-portfolio-overlay-bottom.js
+---
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1>&Uuml;bersicht der Vortr&auml;ge</h1>
+        <p>Alle Vortr&auml;ge k&ouml;nnen in Deutsch oder Englisch gehalten werden</p>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+
+<!--=== Cube-Portfdlio ===-->
+<div class="cube-portfolio container margin-bottom-60">
+    <div class="content-xs">
+        <div id="filters-container" class="cbp-l-filters-text content-xs">
+            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Alle </div> |
+            <div data-filter=".architecture" class="cbp-filter-item"> Architektur </div> |
+            <div data-filter=".testing" class="cbp-filter-item"> Testen </div> |
+        </div>
+        <!--/end Filters Container-->
+    </div>
+
+    {% include talks.html talks=site.data.en.talks cols="3" %}
+
+</div>
+<!--=== End Cube-Portfdlio ===-->

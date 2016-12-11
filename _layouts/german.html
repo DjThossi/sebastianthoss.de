@@ -50,6 +50,21 @@ cookie_consent:
                         </li>
                         <!-- End Homepage -->
 
+                        <!-- Talks -->
+                        <li class="dropdown{% if page.active_nav contains 'talks-' %} active{% endif %}">
+                            <a href="{{ site.github.url }}/de/vortraege/" class="dropdown-toggle" data-toggle="dropdown">
+                                Vortr&auml;ge
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="{{ site.github.url }}/de/vortraege/"><i class="fa fa-angle-double-right"></i>&Uuml;bersicht</a></li>
+
+                                {% for talk in site.data.de.talks %}
+                                    {% assign titleLength = talk.title |size %}
+                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ site.github.url }}{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
                         <!-- Reiseblog -->
                         <li class="{% if page.active_nav == 'travel-blog' %}active{% endif %}">
                             <a href="{{ site.github.url }}/de/reiseblog/">
