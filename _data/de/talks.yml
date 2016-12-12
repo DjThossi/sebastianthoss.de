@@ -24,7 +24,7 @@
 - id: 1
   title: "Don't fear the walking dead"
   subtitle: how to get rid of a zombie
-  link: /de/vortraege/
+  link: /de/vortraege/don-t-fear-the-walking-dead.html
   active_nav: talks-fury
   image:
     url: /assets/img/don-t-fear-the-walking-dead/ipc-1.png
