@@ -1,0 +1,131 @@
+---
+layout: german
+title: "99% is not enough"
+meta:
+  description: "Wir m&ouml;chten euch zeigen, wie wir Tests erstellen, was wir tun m&uuml;ssen um unseren Sourcecode testbar zu machen und warum das erreichen der 100 prozentigen Abdeckung unseres Codes so wichtig f&uuml;r uns ist."
+  keywords:
+    - Test
+    - testen
+    - Software
+    - Unit
+    - UnitTests
+    - Enwicklung
+    - phpunit
+    - robust
+    - wartbar
+    - SmokeTests
+    - Integration
+
+active_nav: talks-99
+
+hreflang:
+  en:
+    href: /en/talks/99-percent-is-not-enough.html
+  de:
+    href: /de/vortraege/99-percent-is-not-enough.html
+
+add_css:
+  - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
+  - /assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css
+js:
+  scripts:
+    - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
+    - /assets/js/cube-portfolio-overlay-bottom.js
+---
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1>99%</h1>
+        <p>is not enough</p>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+
+<!--=== Container Part ===-->
+<div class="container">
+    <div class="content">
+        <!-- Magazine Slider -->
+        <div class="carousel slide carousel-v2 margin-bottom-40" id="portfolio-carousel">
+            <ol class="carousel-indicators">
+                <li class="active rounded-x" data-target="#portfolio-carousel" data-slide-to="0"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="1"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="2"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="3"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="4"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="5"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="6"></li>
+                <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="7"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-1.jpg" alt="Erste Folie des Vortrags &uuml;ber richtiges testen von Software">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-11.jpg" alt="Die Folie zeigt, dass 100% nicht wirklich 100% sicher meint">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-12.jpg" alt="Die erste Folie des Beispiels zeigt, Programmcode der mit Tests abgedesckt werden soll">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-13.jpg" alt="Die zweite Folie des Beispiels zeigt, ten test wie man zu 100% Abdeckung kommt">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-14.jpg" alt="Die dritte Folie des Beispiels zeigt, das es wirklich 100% sind">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-15.jpg" alt="Die vierte Folie des Beispiels zeigt, wie &auml;nderungen den Code zerst&ouml;ren k&ouml;nnen">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-16.jpg" alt="Die f&uuml;nfte Folie des Beispiels zeigt, dass es weiterhin 100% Code Coverage sind">
+                </div>
+                <div class="item">
+                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/99-percent-is-not-enough/phpughh-slides-27.jpg" alt="Diese Folie zeigt die Testpyramide und welche Arten von Tests es gibt">
+                </div>
+            </div>
+
+            <a class="left carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="prev">
+                <i class="fa fa-angle-left arrow-prev"></i>
+            </a>
+            <a class="right carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="next">
+                <i class="fa fa-angle-right arrow-next"></i>
+            </a>
+        </div>
+        <!-- End Magazine Slider -->
+
+        <div class="row margin-bottom-30">
+            <div class="col-sm-8">
+                <div class="headline"><h2>Kurzbeschreibung</h2></div>
+                <p>
+                    Jeder stimmt zu, dass Unit Tests essentiell wichtig sind um robuste und wartbare Software zu erstellen. Aber wie viel Code Coverage sollte ein Projekt haben? Wir behaupten, dass selbst 99% Abdeckung nicht genug sind.
+                </p>
+                <p>
+                    Wir m&ouml;chten euch zeigen, wie wir Tests erstellen, was wir tun m&uuml;ssen um unseren Sourcecode testbar zu machen und warum das erreichen der 100 prozentigen Abdeckung unseres Codes so wichtig f&uuml;r uns ist.
+                </p>
+                <div class="headline margin-top-20"><h3>Zielgruppe</h3></div>
+                <p>
+                    Dieser Vortrag richtet sich an PHP Entwickler und Software Architekten denen es wichtig ist, wartbaren und refakturierbaren Programmcode zu erstellen. Grundkentnisse &uuml;ber die erstellung von Tests und was Code Coverage bedeutet, sind von Vorteil.
+                </p>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="headline"><h2>Daten & Links</h2></div>
+                <ul class="list-unstyled project-details">
+                    <li><strong>Vortragender:</strong> Sebastian Tho&szlig;</li>
+                    <li><strong>Vortragender:</strong> Kruno Knego</li>
+                    <li><strong>Vortragender:</strong> Sebastian Heuer</li>
+                    <li><strong>L&auml;nge:</strong> 45 - 60 Minuten</li>
+                    <li><strong>Erstelldatum:</strong> 11. Oktober 2016</li>
+                    <li><strong>Folien:</strong> <a target="_blank" href="http://de.slideshare.net/kartenmacherei/99-is-not-enough">on SlideShare<i class="fa fa-external-link margin-left-5"></i></a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cube-portfolio">
+            <div class="headline"><h3>Weitere Vortr&auml;ge</h3></div>
+            {% include talks.html talks=site.data.de.talks limit="2" cols="2" skipTalkId="2" %}
+        </div>
+
+    </div>
+</div>
+<!--=== End Container Part ===-->

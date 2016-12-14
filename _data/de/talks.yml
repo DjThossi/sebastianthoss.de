@@ -12,7 +12,7 @@
 - id: 2
   title: "99%"
   subtitle: "is not enough"
-  link: /de/vortraege/
+  link: /de/vortraege/99-percent-is-not-enough.html
   active_nav: talks-99
   image:
     url: /assets/img/99-percent-is-not-enough/phpughh-slides-1-small.jpg
