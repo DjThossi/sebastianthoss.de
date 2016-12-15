@@ -1,0 +1,83 @@
+---
+layout: german
+title: "SmokeTests"
+meta:
+  description: "Details &uuml;ber Sebastian Tho&szlig;'s Vortrag zum Thema Smoke Tests und warum du versuchen solltest deinen Live Server niederzubrennen"
+  keywords:
+    - test
+    - testen
+    - Software
+    - SmokeTests
+    - Entwicklung
+    - phpunit
+
+active_nav: talks-smoke-tests
+
+hreflang:
+  en:
+    href: /en/talks/smoke-tests.html
+  de:
+    href: /de/vortraege/smoke-tests.html
+
+add_css:
+  - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
+  - /assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css
+js:
+  scripts:
+    - /assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js
+    - /assets/js/cube-portfolio-overlay-bottom.js
+---
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1>SmokeTests</h1>
+        <p>Why you should try to burn down your production environment</p>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+
+<!--=== Container Part ===-->
+<div class="container">
+    <div class="content">
+        <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/under-construction.jpg" alt="Dieser Vortrag wird gerade von Sebastian Tho&szlig; erstellt">
+
+
+        <div class="row margin-bottom-30">
+            <div class="col-sm-8">
+                <div class="headline"><h2>Kurzbeschreibung</h2></div>
+                <p>
+                    Heute ist es Kristallklar wozu man Unittests ben&ouml;tigt. Sogar Integrations- und Akzeptanztests
+                    sind heutzutage h&auml;ufig zu finden. Wer stellt aber sicher, dass alle deine Seiten auch auf der
+                    Produktionsumgebung funktionieren?
+                </p>
+                <p>
+                    Ich m&ouml;chte gerne in Detail zeigen, wie SmokeTests helfen dies zu erreichen und warum du
+                    versuchen solltest euren Live Server zum rauchen zu bekommen. Wenn er kein Feuer f&auml;ngt oder
+                    anf&auml;ngt zu rauchen, ist alles gut.
+                </p>
+                <p>
+                    <strong>Diesen Vortrag bereite ich aktuell vor</strong>
+                    Ich m&ouml;chte zeigen, dass SmokeTests ein guter Weg sind um die Gesch&auml;ftskritischen URLs auf
+                    Verf&uuml;gbarkeit und Geschwindigkeit zu pr&uuml;fen. Ich m&ouml;chte zeigen wie ein Deployment
+                    aussehen k&ouml;nnte und an welcher Stelle es Sinn macht, SmokeTests einzubinden. Dazu geh&ouml;rt
+                    auch das richtige Server Setup, damit die Kunden nicht beeintr&auml;chtigt werden.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div class="headline"><h2>Daten & Links</h2></div>
+                <ul class="list-unstyled project-details">
+                    <li><strong>Vortragender:</strong> Sebastian Tho&szlig;</li>
+                    <li><strong>L&auml;nge:</strong> 45 - 60 Minuten</li>
+                    <li><strong>Erstelldatum:</strong> 16. Februar 2017</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cube-portfolio">
+            <div class="headline"><h3>Weitere Vortr&auml;ge</h3></div>
+            {% include talks.html talks=site.data.en.talks limit="2" cols="2" skipTalkId="3" %}
+        </div>
+
+    </div>
+</div>
+<!--=== End Container Part ===-->
