@@ -121,10 +121,7 @@ js:
             </div>
         </div>
 
-        <div class="cube-portfolio">
-            <div class="headline"><h3>Weitere Vortr&auml;ge</h3></div>
-            {% include talks.html talks=site.data.de.talks limit="2" cols="2" skipTalkId="2" %}
-        </div>
+        {% include de/other-talks.html skipTalkId="2" %}
 
     </div>
 </div>
