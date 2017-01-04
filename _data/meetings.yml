@@ -1,12 +1,12 @@
 - link:
-    text: "Merry Christmas 2016"
-    url: https://www.youtube.com/watch?v=nDWu5-f8pYU
-  date: 2016-12-25
-
-- link:
     text: "Docker's not just for production"
     url: https://www.meetup.com/ThoughtWorks-Hamburg/events/235900641
   date: 2017-01-17
+
+- link:
+    text: "Succeeding with Microservices"
+    url: https://www.meetup.com/ThoughtWorks-Hamburg/events/236253977
+  date: 2017-02-07
 
 - link:
     text: "PHP UK London"
