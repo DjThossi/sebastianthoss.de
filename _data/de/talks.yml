@@ -1,3 +1,14 @@
+- id: 4
+  title: "Git"
+  subtitle: "basics"
+  link: /de/vortraege/git-basics.html
+  active_nav: git-basics
+  image:
+    url: /assets/img/git-basics/bs-14-slides-001.jpg
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml;ber Git basics"
+  tags:
+    - git
+
 - id: 3
   title: "SmokeTests"
   subtitle: "Let's try to burn down servers"
