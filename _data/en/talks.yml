@@ -5,7 +5,7 @@
   active_nav: git-basics
   image:
     url: /assets/img/git-basics/bs-14-slides-001.jpg
-    alt: First slide of my presentation git basics
+    alt: First slide of Sebastian Thoss presentation git basics
   tags:
     - git
 
@@ -27,7 +27,7 @@
   active_nav: talks-99
   image:
     url: /assets/img/99-percent-is-not-enough/phpughh-slides-1-small.jpg
-    alt: First slide of my presentation 99 percent is not enough
+    alt: First slide of Sebastian Thoss presentation 99 percent is not enough
   tags:
     - architecture
     - testing
@@ -39,6 +39,6 @@
   active_nav: talks-fury
   image:
     url: /assets/img/don-t-fear-the-walking-dead/ipc-1.png
-    alt: First slide of my presentation do not fear the walking dead
+    alt: First slide of Sebastian Thoss presentation do not fear the walking dead
   tags:
     - architecture
