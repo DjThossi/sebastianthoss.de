@@ -26,8 +26,8 @@
   link: /de/vortraege/smoke-tests.html
   active_nav: talks-smoke-tests
   image:
-    url: /assets/img/under-construction-small.jpg
-    alt: An diesem Vortrag arbeitet Sebastian Thoss gerade
+    url: /assets/img/smoke-tests/kam-slides-001.jpg
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml; SmokeTests- Why you should try to burn down your production environment"
   tags:
     - testing
 
