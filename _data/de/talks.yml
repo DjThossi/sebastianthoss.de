@@ -1,11 +1,22 @@
-- id: 4
+- id: 6
   title: "Git"
   subtitle: "basics"
   link: /de/vortraege/git-basics.html
   active_nav: git-basics
   image:
     url: /assets/img/git-basics/bs-14-slides-001.jpg
-    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml;ber Git basics"
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml;ber Git - basics"
+  tags:
+    - git
+
+- id: 5
+  title: "Git"
+  subtitle: "Workflows and best practices"
+  link: /de/vortraege/git-workflows-and-best-practices.html
+  active_nav: git-workflows
+  image:
+    url: /assets/img/git-workflows-and-best-practices/bs-14-slides-001.jpg
+    alt: "Erste Folie aus Sebastian Thoss's Vortrag &uuml;ber Git - Workflows and best practices"
   tags:
     - git
 
