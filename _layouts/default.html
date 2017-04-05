@@ -16,7 +16,12 @@
 
     <meta name="keywords" content="Sebastian, Thoss, {% if page.meta.keywords %}{{ page.meta.keywords | join: ', ' }}, {% endif %}{% if layout.meta.keywords %}{{ layout.meta.keywords | join: ', ' }}, {% endif %}Tho&szlig;, Workshops, PHP, Hamburg, Ahrensburg, Dublin, Sydney, Rostock, Plauen, Putbus">
     <meta name="author" content="Sebastian Thoss">
-    <meta name=”robots” content=”index,follow” />
+
+    {% if page.sitemap == false %}
+        <meta name=”robots” content=”noindex,nofollow” />
+    {% else %}
+        <meta name=”robots” content=”index,follow” />
+    {% endif %}
 
     {% if page.hreflang %}
         <link rel="alternate" hreflang="de" href="{{ site.github.url }}{{ page.hreflang.de.href }}" />
