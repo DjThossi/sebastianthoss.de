@@ -11,6 +11,11 @@ permalink: sitemap.xml
         <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>{{ site.url }}/de/kontakt/</loc>
+        <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
     {% for post in data.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
