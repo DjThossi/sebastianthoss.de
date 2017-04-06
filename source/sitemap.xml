@@ -1,0 +1,21 @@
+---
+use: ["posts"]
+permalink: sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ site.url }}</loc>
+        <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    {% for post in data.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.date|date('c') }}</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    {% endfor %}
+</urlset>
