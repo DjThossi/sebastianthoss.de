@@ -1,22 +1,11 @@
----
-layout: default
+{% extends "default.html.twig" %}
 
-meta:
-  description: "My private website to show family and friends what I'm up to right now"
-  keywords:
-    - Developer
-    - Team
-    - Lead
-    - Trainer
-    - Scuba
-    - Diver
-    - Talks
-    - Sessions
+{% set metaDescription = "My private website to show family and friends what I'm up to right now" %}
+{% set metaKeywords = ['Developer', 'Team', 'Lead', 'Trainer', 'Scuba', 'Diver', 'Talks', 'Sessions'] %}
+{% set cookieConsentMessage = "This website uses Cookies in order to optimize on-page experience." %}
+{% set cookieConsentDismiss = "Thank you" %}
 
-cookie_consent:
-  message: This website uses Cookies in order to optimize on-page experience.
-  dismiss: Thank you
----
+{% block layout %}
 <!--=== Header v6 ===-->
 <div class="header-v6 header-classic-white header-sticky">
     <!-- Navbar -->
@@ -46,43 +35,43 @@ cookie_consent:
                     <ul class="nav navbar-nav">
                         <!-- Homepage -->
                         <li class="{% if page.active_nav == 'home' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/en/">
+                            <a href="/en/">
                                 Home
                             </a>
                         </li>
 
                         <!-- Tech blog -->
                         <li class="{% if page.active_nav == 'tech-blog' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/en/tech-blog/">
+                            <a href="/en/tech-blog/">
                                 Tech Blog
                             </a>
                         </li>
 
                         <!-- Talks -->
-                        <li class="dropdown{% if page.active_nav contains 'talks-' %} active{% endif %}">
-                            <a href="{{ site.github.url }}/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
+                            <a href="/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
                                Talks
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="{{ site.github.url }}/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
+                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
 
                                 {% for talk in site.data.en.talks %}
-                                    {% assign titleLength = talk.title |size %}
-                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ site.github.url }}{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
+                                    {% set titleLength = talk.title |length %}
+                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
 
                         <!-- Contact -->
                         <li class="{% if page.active_nav == 'contact' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/en/contact/">
+                            <a href="/en/contact/">
                                 Contact me
                             </a>
                         </li>
 
                         <!-- Deutsche Version -->
                         <li>
-                            <a href="{{ site.github.url }}/de/">
+                            <a href="/de/">
                                 <i class="fa fa-globe"></i> Deutsche Version
                             </a>
                         </li>
@@ -95,7 +84,7 @@ cookie_consent:
 </div>
 <!--=== End Header v6 ===-->
 
-{{ content }}
+{{ page.blocks.content|raw }}
 
 <!--=== Footer v2 ===-->
 <div id="footer-v2" class="footer-v2">
@@ -104,7 +93,7 @@ cookie_consent:
             <div class="row">
                 <!-- Photo -->
                 <div class="col-md-3 col-sm-6">
-                    <img id="logo-footer" src="{{ site.github.url }}/assets/img/sebastian_thoss.jpg" alt="picture of myself">
+                    <img id="logo-footer" src="/assets/img/sebastian_thoss.jpg" alt="picture of myself">
                 </div>
                 <!-- End Photo -->
 
@@ -162,10 +151,10 @@ cookie_consent:
                 <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Meet me</h2></div>
                     <ul class="list-unstyled link-news">
-                        {% for meeting in site.data.meetings limit:3 %}
+                        {% for meeting in site.meetings|slice(0, 3) %}
                             <li>
                                 <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
-                                <small>{{ meeting.date | date_to_long_string }}</small>
+                                <small>{{ meeting.date|date('d F Y') }}</small>
                             </li>
                         {% endfor %}
                     </ul>
@@ -177,3 +166,5 @@ cookie_consent:
 
 </div>
 <!--=== End Footer v2 ===-->
+
+{% endblock %}

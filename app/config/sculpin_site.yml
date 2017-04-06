@@ -9,3 +9,9 @@
 #    shortname:
 
 url: http://www.sebastianthoss.de
+
+meetings:
+  - link:
+      text: "Code Talks - Hamburg"
+      url: https://www.codetalks.de
+    date: 2017-09-28
