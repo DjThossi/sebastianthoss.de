@@ -1,20 +1,11 @@
----
-layout: default
+{% extends "default.html.twig" %}
 
-meta:
-  description: "Meine private Webseite mit der ich meiner Familie und meinen Freunden zeigen m&ouml;chte was ich gerade mache"
-  keywords:
-    - Entwickler
-    - Teamleiter
-    - Ausbilder
-    - Taucher
-    - Dozent
-    - Schulungen
+{% set metaDescription = "Meine private Webseite mit der ich meiner Familie und meinen Freunden zeigen m&ouml;chte was ich gerade mache" %}
+{% set metaKeywords = ['Entwickler', 'Teamleiter', 'Ausbilder', 'Taucher', 'Dozent', 'Schulungen'] %}
+{% set cookieConsentMessage = "Diese Webseite nutzt Cookies um das Erlebnis der Seite permanent zu verbessern." %}
+{% set cookieConsentDismiss = "Danke" %}
 
-cookie_consent:
-  message: Diese Webseite nutzt Cookies um das Erlebnis der Seite permanent zu verbessern.
-  dismiss: Danke
----
+{% block layout %}
 <!--=== Header v6 ===-->
 <div class="header-v6 header-classic-white header-sticky">
     <!-- Navbar -->
@@ -44,44 +35,44 @@ cookie_consent:
                     <ul class="nav navbar-nav">
                         <!-- Homepage -->
                         <li class="{% if page.active_nav == 'home' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/de/">
+                            <a href="/de/">
                                 Home
                             </a>
                         </li>
                         <!-- End Homepage -->
 
                         <!-- Talks -->
-                        <li class="dropdown{% if page.active_nav contains 'talks-' %} active{% endif %}">
-                            <a href="{{ site.github.url }}/de/vortraege/" class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
+                            <a href="/de/vortraege/" class="dropdown-toggle" data-toggle="dropdown">
                                 Vortr&auml;ge
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="{{ site.github.url }}/de/vortraege/"><i class="fa fa-angle-double-right"></i>&Uuml;bersicht</a></li>
+                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="/de/vortraege/"><i class="fa fa-angle-double-right"></i>&Uuml;bersicht</a></li>
 
                                 {% for talk in site.data.de.talks %}
-                                    {% assign titleLength = talk.title |size %}
-                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ site.github.url }}{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
+                                    {% set titleLength = talk.title|length %}
+                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
 
                         <!-- Reiseblog -->
                         <li class="{% if page.active_nav == 'travel-blog' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/de/reiseblog/">
+                            <a href="/de/reiseblog/">
                                 Reiseblog
                             </a>
                         </li>
 
                         <!-- Kontakt -->
                         <li class="{% if page.active_nav == 'kontakt' %}active{% endif %}">
-                            <a href="{{ site.github.url }}/de/kontakt/">
+                            <a href="/de/kontakt/">
                                 Kontakt
                             </a>
                         </li>
 
                         <!-- English Version -->
                         <li>
-                            <a href="{{ site.github.url }}/en/">
+                            <a href="/en/">
                                 <i class="fa fa-globe"></i> English Version
                             </a>
                         </li>
@@ -94,7 +85,7 @@ cookie_consent:
 </div>
 <!--=== End Header v6 ===-->
 
-{{ content }}
+{{ page.blocks.content|raw }}
 
 <!--=== Footer v2 ===-->
 <div id="footer-v2" class="footer-v2">
@@ -103,8 +94,7 @@ cookie_consent:
             <div class="row">
                 <!-- Photo -->
                 <div class="col-md-3 col-sm-6">
-                    <img id="logo-footer" src="{{ site.github.url }}/assets/img/sebastian_thoss.jpg" alt="Foto von mir">
-
+                    <img id="logo-footer" src="/assets/img/sebastian_thoss.jpg" alt="Foto von mir">
                 </div>
                 <!-- End Photo -->
 
@@ -161,27 +151,25 @@ cookie_consent:
                 <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">Termine</h2></div>
                     <ul class="list-unstyled link-news">
-                        {% for meeting in site.data.meetings limit:3 %}
+                        {% for meeting in site.meetings|slice(0, 3) %}
                             <li>
                                 <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
                                 <small>
-                                    {% assign m = meeting.date | date: "%-m" %}
-                                    {{ meeting.date | date: "%d" }}.
-                                    {% case m %}
-                                        {% when '1' %}Januar
-                                        {% when '2' %}Februar
-                                        {% when '3' %}M&auml;rz
-                                        {% when '4' %}April
-                                        {% when '5' %}Mai
-                                        {% when '6' %}Juni
-                                        {% when '7' %}Juli
-                                        {% when '8' %}August
-                                        {% when '9' %}September
-                                        {% when '10' %}Oktober
-                                        {% when '11' %}November
-                                        {% when '12' %}Dezember
-                                    {% endcase %}
-                                    {{ meeting.date | date: "%Y" }}
+                                    {{ meeting.date|date('d') }}.
+                                    {% set m = meeting.date|date('n') %}
+                                    {% if m == '1' %}Januar{% endif %}
+                                    {% if m == '2' %}Februar{% endif %}
+                                    {% if m == '3' %}M&auml;rz{% endif %}
+                                    {% if m == '4' %}April{% endif %}
+                                    {% if m == '5' %}Mai{% endif %}
+                                    {% if m == '6' %}Juni{% endif %}
+                                    {% if m == '7' %}Juli{% endif %}
+                                    {% if m == '8' %}August{% endif %}
+                                    {% if m == '9' %}September{% endif %}
+                                    {% if m == '10' %}Oktober{% endif %}
+                                    {% if m == '11' %}November{% endif %}
+                                    {% if m == '12' %}Dezember{% endif %}
+                                    {{ meeting.date|date('Y') }}
                                 </small>
                             </li>
                         {% endfor %}
@@ -194,11 +182,13 @@ cookie_consent:
     <div class="copyright">
         <div class="container">
             <p class="text-center">
-                Rechtliches: <a href="{{ site.github.url }}/de/impressum/">Impressum</a> |
-                <a href="{{ site.github.url }}/de/datenschutzerklaerung/">Datenschutzerkl&auml;rung</a>
+                Rechtliches: <a href="/de/impressum/">Impressum</a> |
+                <a href="/de/datenschutzerklaerung/">Datenschutzerkl&auml;rung</a>
             </p>
         </div>
     </div>
 
 </div>
 <!--=== End Footer v2 ===-->
+
+{% endblock %}
