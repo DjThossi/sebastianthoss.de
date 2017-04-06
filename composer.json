@@ -1,0 +1,17 @@
+{
+    "name": "DjThossi/djthossi.github.io",
+    "description": "My Private Website",
+    "type": "sculpin-project",
+    "license": "Private Project. No copies allowed",
+    "authors": [
+        {
+            "name": "Sebastian Thoss",
+            "email": "dj_thossi@web.de",
+            "homepage": "http://www.sebastianthoss.de"
+        }
+    ],
+    "require": {
+        "sculpin/sculpin": "^2.1@stable",
+        "dflydev/embedded-composer": "^1.0@dev"
+    }
+}
