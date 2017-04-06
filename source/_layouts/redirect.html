@@ -10,13 +10,13 @@
         var language = navigator.language || navigator.browserLanguage;
 
         if (language.indexOf('de') > -1) {
-            document.location.href = '{{ site.github.url }}/de/';
+            document.location.href = '/de/';
         } else {
-            document.location.href = '{{ site.github.url }}/en/';
+            document.location.href = '/en/';
         }
     </script>
 
-    <meta http-equiv="refresh" content="0; url={{ site.github.url }}/de/" />
+    <meta http-equiv="refresh" content="0; url=/de/" />
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -32,28 +32,28 @@
     {% endif %}
 
     {% if page.show_alternate == true %}
-        <link rel="alternate" href="{{ site.github.url }}/" hreflang="x-default" />
+        <link rel="alternate" href="/" hreflang="x-default" />
     {% endif %}
 
     {% if page.show_canonical == true %}
-        <link rel="canonical" href="{{ site.github.url }}/">
+        <link rel="canonical" href="/">
     {% endif %}
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ site.github.url }}/assets/img/sebastian_thoss.jpg">
+    <link rel="shortcut icon" href="/assets/img/sebastian_thoss.jpg">
 
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="{{ site.github.url }}/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ site.github.url }}/assets/css/one.style.css">
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/one.style.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ site.github.url }}/assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ site.github.url }}/assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen">
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="{{ site.github.url }}/assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen">
     <![endif]-->
 </head>
 
@@ -70,7 +70,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <!-- SLIDE 1 -->
             <li data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
                 <!-- MAIN IMAGE -->
-                <img src="{{ site.github.url }}/assets/img/redirect/sebastian-thoss.jpg"
+                <img src="/assets/img/redirect/sebastian-thoss.jpg"
                      alt="That's me (Sebstian Thoss) sitting in front of a brown wooden wall"
                      data-bgfit="cover"
                      data-bgposition="center center"
@@ -116,15 +116,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                      data-endeasing="Power1.easeIn"
                      data-captionhidden="off"
                      style="z-index: 6">
-                    <a href="{{ site.github.url }}/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
-                    <a href="{{ site.github.url }}/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
+                    <a href="/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
+                    <a href="/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
                 </div>
             </li>
 
             <!-- SLIDE 2 -->
             <li data-transition="slideup" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
                 <!-- MAIN IMAGE -->
-                <img src="{{ site.github.url }}/assets/img/redirect/norway-polar-lights.jpg"
+                <img src="/assets/img/redirect/norway-polar-lights.jpg"
                      alt="Green Aurora Borealis or Polar lights above a red colored bush"
                      data-bgfit="cover"
                      data-bgposition="center center"
@@ -170,15 +170,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                      data-endeasing="Power1.easeIn"
                      data-captionhidden="off"
                      style="z-index: 6">
-                    <a href="{{ site.github.url }}/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
-                    <a href="{{ site.github.url }}/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
+                    <a href="/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
+                    <a href="/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
                 </div>
             </li>
 
             <!-- SLIDE 3 -->
             <li data-transition="slideup" data-slotamount="5" data-masterspeed="700"  data-title="Slide 3">
                 <!-- MAIN IMAGE -->
-                <img src="{{ site.github.url }}/assets/img/redirect/sydney-harbour-bridge-and-opera-sunset.jpg"
+                <img src="/assets/img/redirect/sydney-harbour-bridge-and-opera-sunset.jpg"
                      alt="Sydney Harbour Bridge and Opera at sunset"
                      data-bgfit="cover"
                      data-bgposition="center center"
@@ -224,8 +224,8 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                      data-endeasing="Power1.easeIn"
                      data-captionhidden="off"
                      style="z-index: 6">
-                    <a href="{{ site.github.url }}/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
-                    <a href="{{ site.github.url }}/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
+                    <a href="/en/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> English Version</a>
+                    <a href="/de/" class="btn-u btn-brd btn-brd-hover btn-u-light"><i class="fa fa-angle-double-right"></i> Deutsche Version</a>
                 </div>
             </li>
         </ul>
@@ -236,14 +236,14 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 <!-- End Intro Section -->
 
 <!-- JS Global Compulsory -->
-<script src="{{ site.github.url }}/assets/plugins/jquery/jquery.min.js"></script>
-<script src="{{ site.github.url }}/assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script src="{{ site.github.url }}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/plugins/jquery/jquery.min.js"></script>
+<script src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script src="{{ site.github.url }}/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="{{ site.github.url }}/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <!-- JS Page Level-->
-<script src="{{ site.github.url }}/assets/js/plugins/revolution-slider.js"></script>
+<script src="/assets/js/plugins/revolution-slider.js"></script>
 <script>
     jQuery(document).ready(function() {
         RevolutionSlider.initRSfullScreen();
