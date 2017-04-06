@@ -7,7 +7,7 @@ permalink: sitemap.xml
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>{{ site.url }}</loc>
+        <loc>{{ site.url }}/</loc>
         <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
     </url>
