@@ -1,0 +1,11 @@
+<div class="cube-portfolio">
+    <div class="headline"><h3>{{ headline }}</h3></div>
+    {% include 'talks.html.twig'
+        with{
+            'talks': talks,
+            'limit': limit,
+            'cols': cols,
+            'skipId': skipId
+        }
+    %}
+</div>
