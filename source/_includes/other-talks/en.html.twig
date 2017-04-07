@@ -1,0 +1,9 @@
+{% include 'other-talks/base.html.twig'
+    with{
+        'talks': site.talks.en,
+        'limit': '4',
+        'cols': '4',
+        'skipId': skipId,
+        'headline': 'Other Talks'
+    }
+%}
