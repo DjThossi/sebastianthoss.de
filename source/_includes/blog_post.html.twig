@@ -3,9 +3,9 @@
     <div class="blog margin-bottom-40">
         <div class="blog-img">
             {% if page.headline.image.url %}
-                <img class="img-responsive" src="{{ site.github.url }}{{ page.headline.image.url }}" alt="{{ page.headline.image.alt }}">
+                <img class="img-responsive" src="{{ page.headline.image.url }}" alt="{{ page.headline.image.alt }}">
             {% else %}
-                <img class="img-responsive" src="{{ site.github.url }}{{ include.defaultImageSrc }}" alt="{{ include.defaultImageAlt }}">
+                <img class="img-responsive" src="{{ defaultImageSrc }}" alt="{{ defaultImageAlt }}">
             {% endif %}
         </div>
 
@@ -15,24 +15,20 @@
 
         <div class="blog-post-tags">
             <ul class="list-unstyled list-inline blog-info">
-                <li><i class="fa fa-calendar"></i> {{ page.date | date_to_long_string }}</li>
+                <li><i class="fa fa-calendar"></i> {{ page.date|date('d F Y') }}</li>
                 <li><i class="fa fa-globe"></i>
                     {% for location in page.locations %}
-                        {% if forloop.last == false %}
+                        {% if loop.last == false %}
                             {{ location }},
                         {% else %}
                             {{ location }}
                         {% endif %}
                     {% endfor %}
                 </li>
-                <li>
-                    <i class="fa fa-align-left"></i>
-                    {{ page.content | number_of_words }} {{ include.words }}
-                </li>
             </ul>
         </div>
 
-        {{ page.content }}
+        {{ page.blocks.content|raw }}
     </div>
     <!--End Blog Post-->
 

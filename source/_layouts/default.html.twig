@@ -48,6 +48,9 @@
     <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
 
     <!-- CSS Page Style -->
+    {% for css_entry in layoutAddCss %}
+        <link rel="stylesheet" href="{{ css_entry }}">
+    {% endfor %}
     {% for css_entry in page.add_css %}
         <link rel="stylesheet" href="{{ css_entry }}">
     {% endfor %}
