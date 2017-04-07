@@ -18,8 +18,11 @@ js:
   scripts:
     - /assets/plugins/masonry/jquery.masonry.min.js
     - /assets/js/pages/blog-masonry.js
----
 
+generator: pagination
+use:
+  - posts
+---
 <!--=== Content Part ===-->
-{% include blog_overview.html posts=site.categories.tech-blog readMore="Read more" %}
+{% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
 <!--=== End Content Part ===-->

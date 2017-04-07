@@ -2,7 +2,7 @@
 <div class="blog_masonry_3col">
     <div class="container content grid-boxes">
 
-        {% for post in include.posts %}
+        {% for post in posts %}
             <div class="grid-boxes-in">
                 {% if post.overview.image.url %}
                     {% if post.overview.external_link %}
@@ -44,9 +44,9 @@
 
                     <p>
                         {% if post.overview.external_link %}
-                            <a class="btn-u btn-u-sm" href="{{ post.overview.external_link }}" target="_blank">{{ include.readMore }} <i class="fa fa-external-link margin-left-5"></i></a>
+                            <a class="btn-u btn-u-sm" href="{{ post.overview.external_link }}" target="_blank">{{ readMore }} <i class="fa fa-external-link margin-left-5"></i></a>
                         {%  else %}
-                            <a class="btn-u btn-u-sm" href="{{ site.github.url }}{{ post.url }}">{{ include.readMore }} <i class="fa fa-angle-double-right margin-left-5"></i></a>
+                            <a class="btn-u btn-u-sm" href="{{ site.url }}{{ post.url }}">{{ readMore }} <i class="fa fa-angle-double-right margin-left-5"></i></a>
                         {%  endif %}
                     </p>
 
