@@ -2,7 +2,7 @@
 <div class="blog_masonry_3col">
     <div class="container content grid-boxes">
 
-        {% for post in posts %}
+        {% for post in posts if category in post.categories %}
             <div class="grid-boxes-in">
                 {% if post.overview.image.url %}
                     {% if post.overview.external_link %}

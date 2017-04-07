@@ -24,5 +24,5 @@ use:
   - posts
 ---
 <!--=== Content Part ===-->
-{% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
+{% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'category': 'tech-blog', 'readMore': 'Read more'} %}
 <!--=== End Content Part ===-->
