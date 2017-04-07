@@ -8,8 +8,6 @@
 #disqus:
 #    shortname:
 
-url: http://www.sebastianthoss.de
-
 meetings:
   - link:
       text: "Code Talks - Hamburg"
