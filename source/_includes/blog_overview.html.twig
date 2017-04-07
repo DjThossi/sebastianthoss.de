@@ -7,11 +7,11 @@
                 {% if post.overview.image.url %}
                     {% if post.overview.external_link %}
                         <a href="{{ post.overview.external_link }}" target="_blank">
-                            <img class="img-responsive center-block" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
+                            <img class="img-responsive center-block" src="{{ site.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
                         </a>
                     {%  else %}
-                        <a href="{{ site.github.url }}{{ post.url }}">
-                            <img class="img-responsive center-block" src="{{ site.github.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
+                        <a href="{{ site.url }}{{ post.url }}">
+                            <img class="img-responsive center-block" src="{{ site.url }}{{ post.overview.image.url }}" alt="{{ post.overview.image.alt }}">
                         </a>
                     {%  endif %}
                 {% endif %}
@@ -20,16 +20,16 @@
                         {% if post.overview.external_link %}
                             <a href="{{ post.overview.external_link }}" target="_blank">{{ post.title }}</a>
                         {%  else %}
-                            <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                         {%  endif %}
                     </h3>
                     <ul class="list-inline grid-boxes-news">
                         <li><i class="fa fa-calendar"></i>
-                            {{ post.date | date_to_long_string }}
+                            {{ post.date|date('d F Y') }}
                         </li>
                         <li>
                             <i class="fa fa-globe"></i>
-                            {% for location in post.locations limit:3 %}
+                            {% for location in post.locations|slice(0, 3) %}
                                 {% if forloop.last == false %}
                                     {{ location }},
                                 {% else %}
