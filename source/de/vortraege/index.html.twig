@@ -50,7 +50,7 @@ js:
         <!--/end Filters Container-->
     </div>
 
-    {% include talks.html talks=site.data.de.talks cols="3" %}
+    {% include 'talks.html.twig' with {'talks': site.talks.de, 'cols': '3'} %}
 
 </div>
 <!--=== End Cube-Portfdlio ===-->

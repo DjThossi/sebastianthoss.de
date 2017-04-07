@@ -1,23 +1,19 @@
-{% if include.cols %}
-    {% assign cols = include.cols %}
-{% else %}
-    {% assign cols = 4 %}
+{% if cols is not defined %}
+    {% set cols = 4 %}
 {% endif %}
 
-{% if include.skipTalkId %}
-    {% capture expression %}item.id != {{ include.skipTalkId }}{% endcapture %}
-    {% assign talks = include.talks | where_exp:"item", expression %}
-{% else %}
-    {% assign talks = include.talks %}
-{% endif %}
+{% set filteredTalks = [] %}
+{% for talk in talks if talk.id != skipId %}
+    {% set filteredTalks = filteredTalks|merge([talk]) %}
+{% endfor %}
 
 <div id="grid-container" data-cols="{{ cols }}" class="cbp-l-grid-agency">
 
-    {% for talk in talks limit: include.limit %}
-        <div class="cbp-item  {{ talk.tags | join: ' ' }}">
-            <a href="{{ site.github.url }}{{ talk.link }}" class="cbp-caption">
+    {% for talk in filteredTalks|slice(0, limit) %}
+        <div class="cbp-item  {{ talk.tags|join(' ') }}">
+            <a href="{{ talk.link }}" class="cbp-caption">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="{{ site.github.url }}{{ talk.image.url }}" alt="{{ talk.image.alt }}">
+                    <img src="{{ talk.image.url }}" alt="{{ talk.image.alt }}">
                 </div>
                 <div class="cbp-caption-activeWrap default-transparent-hover">
                     <div class="cbp-l-caption-alignLeft">
