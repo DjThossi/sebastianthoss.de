@@ -1,0 +1,14 @@
+{% extends "german.html.twig" %}
+
+{% set layoutAddCss = ['/assets/css/pages/blog.css'] %}
+
+{% block contentWrapper %}
+    <!--=== Content Part ===-->
+    {% include 'blog_post.html.twig'
+        with {
+            'defaultImageSrc': '/assets/img/blog/travel-blog-headline.jpg',
+            'defaultImageAlt': 'Standardbanner f&uuml;r die Headline des Reiseblogs.'
+        }
+    %}
+    <!--=== End Content Part ===-->
+{% endblock %}
