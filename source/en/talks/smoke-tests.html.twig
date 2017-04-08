@@ -1,5 +1,7 @@
 ---
 layout: english
+permalink: en/talks/smoke-tests.html
+
 title: "SmokeTests"
 meta:
   description: "Talk description about smoke testing software and why it is important to test that your live environment still works"
@@ -55,28 +57,28 @@ js:
 
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-001.jpg" alt="First slide of Sebastian Thoss talk SmokeTests - Why you should try to burn down your production environment">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-001.jpg" alt="First slide of Sebastian Thoss talk SmokeTests - Why you should try to burn down your production environment">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-017.jpg" alt="With this slide Sebastian Thoss explains what SmokeTests doing">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-017.jpg" alt="With this slide Sebastian Thoss explains what SmokeTests doing">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-019.jpg" alt="With this slide Sebastian Thoss explains how SmokeTests can be visualised">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-019.jpg" alt="With this slide Sebastian Thoss explains how SmokeTests can be visualised">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-020.jpg" alt="With this slide Sebastian Thoss explains what SmokeTests should validate">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-020.jpg" alt="With this slide Sebastian Thoss explains what SmokeTests should validate">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-025.jpg" alt="With this slide Sebastian Thoss shows that it would be better to run SmokeTests in parallel">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-025.jpg" alt="With this slide Sebastian Thoss shows that it would be better to run SmokeTests in parallel">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-030.jpg" alt="With this slide Sebastian Thoss show that that he created already a Lib for it">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-030.jpg" alt="With this slide Sebastian Thoss show that that he created already a Lib for it">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-032.jpg" alt="With this slide Sebastian Thoss shows sample code to run SmokeTests with his library">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-032.jpg" alt="With this slide Sebastian Thoss shows sample code to run SmokeTests with his library">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/smoke-tests/kam-slides-050.jpg" alt="With this slide Sebastian Thoss explains that in case of failing tests deployment should be stopped">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/smoke-tests/kam-slides-050.jpg" alt="With this slide Sebastian Thoss explains that in case of failing tests deployment should be stopped">
                 </div>
             </div>
 
@@ -116,7 +118,7 @@ js:
             </div>
         </div>
 
-        {% include other-talks/en.html skipTalkId="3" %}
+        {% include 'other-talks/en.html.twig' with {skipId: '3'} %}
 
     </div>
 </div>
