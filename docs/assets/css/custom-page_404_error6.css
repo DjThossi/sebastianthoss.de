@@ -1,0 +1,16 @@
+/* Error page body margin */
+body {
+    margin-bottom: auto;
+}
+
+.error-v7 {
+    background: rgba(234,238,240,0.65);
+}
+
+.error-bg {
+    padding: 150px 0;
+}
+
+.error-v7 .h1 {
+    color: #666;
+}

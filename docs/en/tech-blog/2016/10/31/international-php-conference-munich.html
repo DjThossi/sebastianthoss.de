@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>International PHP conference Munich - Sebastian Thoss</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Here you can read about my week in munich at the international PHP conference (IPC) 2016">
+    
+    <meta name="keywords" content="Sebastian, Thoss, blog, ipc, 2016, munich, talks, sessions, ansible, Developer, Team, Lead, Trainer, Scuba, Diver, Talks, Sessions, Tho&szlig;, Workshops, PHP, Hamburg, Ahrensburg, Dublin, Sydney, Rostock, Plauen, Putbus">
+    <meta name="author" content="Sebastian Thoss">
+
+            <meta name=”robots” content=”index,follow” />
+    
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/sebastian_thoss.jpg">
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="/assets/css/headers/header-v6.css">
+    <link rel="stylesheet" href="/assets/css/footers/footer-v2.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/animate.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->
+            <link rel="stylesheet" href="/assets/css/pages/blog.css">
+        
+    <!--[if lt IE 9]>
+        <![endif]-->
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/assets/css/theme-colors/blue.css" id="style_color">
+    <link rel="stylesheet" href="/assets/css/theme-skins/dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+<body class="header-fixed header-fixed-space">
+<div class="wrapper">
+<!--=== Header v6 ===-->
+<div class="header-v6 header-classic-white header-sticky">
+    <!-- Navbar -->
+    <div class="navbar mega-menu" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="menu-container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <div class="navbar-brand">
+                    <p>
+                        Sebastian Thoss
+                    </p>
+                </div>
+                <!-- ENd Navbar Brand -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <div class="menu-container">
+                    <ul class="nav navbar-nav">
+                        <!-- Homepage -->
+                        <li class="">
+                            <a href="/en/">
+                                Home
+                            </a>
+                        </li>
+
+                        <!-- Tech blog -->
+                        <li class="active">
+                            <a href="/en/tech-blog/">
+                                Tech Blog
+                            </a>
+                        </li>
+
+                        <!-- Talks -->
+                        <li class="dropdown">
+                            <a href="/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
+                               Talks
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
+
+                                                                                                        <li class=""><a href="/en/talks/git-basics.html"><i class="fa fa-angle-double-right"></i>Git - basics</a></li>
+                                                                                                        <li class=""><a href="/en/talks/git-workflows-and-best-practices.html"><i class="fa fa-angle-double-right"></i>Git - Workflows and best practices</a></li>
+                                                                                                        <li class=""><a href="/en/talks/smoke-tests.html"><i class="fa fa-angle-double-right"></i>SmokeTests</a></li>
+                                                                                                        <li class=""><a href="/en/talks/99-percent-is-not-enough.html"><i class="fa fa-angle-double-right"></i>99% - is not enough</a></li>
+                                                                                                        <li class=""><a href="/en/talks/don-t-fear-the-walking-dead.html"><i class="fa fa-angle-double-right"></i>Don&#039;t fear the walking dead</a></li>
+                                                            </ul>
+                        </li>
+
+                        <!-- Contact -->
+                        <li class="">
+                            <a href="/en/contact/">
+                                Contact me
+                            </a>
+                        </li>
+
+                        <!-- Deutsche Version -->
+                        <li>
+                            <a href="/de/">
+                                <i class="fa fa-globe"></i> Deutsche Version
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/navbar-collapse-->
+        </div>
+    </div>
+    <!-- End Navbar -->
+</div>
+<!--=== End Header v6 ===-->
+
+    <!--=== Content Part ===-->
+    <div class="container content blog-page blog-item">
+    <!--Blog Post-->
+    <div class="blog margin-bottom-40">
+        <div class="blog-img">
+                            <img class="img-responsive" src="/assets/img/blog/ipc16-banner.png" alt="Banner of 2016&#039;s international PHP conference in Munich">
+                    </div>
+
+        <div class="headline">
+            <h2>International PHP conference Munich</h2>
+        </div>
+
+        <div class="blog-post-tags">
+            <ul class="list-unstyled list-inline blog-info">
+                <li><i class="fa fa-calendar"></i> 31 October 2016</li>
+                <li><i class="fa fa-globe"></i>
+                                                                        Munich,
+                                                                                                Germany
+                                                            </li>
+            </ul>
+        </div>
+
+        <div class="row">
+    <div class="col-md-12">
+        <p>
+            <span class="dropcap">T</span>his spring we got the opportunity to give a talk about architecture of our new component at the PHP Usergroup Hamburg.
+            We named it "Don't feat the walking dead."
+            It went really well so that we got the opportunity to give this talk again at the international PHP conference (IPC) in munich.
+            Every speaker got a ticket for all 3 conference days plus both workshop days.
+            I had a look into schedule and found an amazing long list of really interesting topics.
+            For the first workshop day I saw a PHP7 full day workshop.
+            Day 2 to 4 I even found for every single slot at least one session I'd love to see.
+            On second workshop day there was only a symfony full day workshop which caught my interest.
+            I decided to skip this because I had a similar workshop before and I work with symfony for years already.
+            The IPC started on a sunday so I only would need only 3 days of work approved.
+            I discussed the topic with my boss and asked if it would be ok to go for all 4 days (Sun - Wed) to the conference in munich and work the other 2 days in Gilching office.
+            It wasn't an issue at all.
+            <br>&nbsp;
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="hidden-md hidden-lg">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-arne.jpg"
+             alt="Arne Blankerts at IPC 2016 in Munich"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+    <div class="col-md-7 col-lg-8">
+        <p>
+            <span class="dropcap">I</span>
+            went on Sunday morning quite early by airplane to munich and joined the workshop about PHP7.
+            It was held by Sebastian Bergmann, Arne Blankerts and Stefan Priebsch from <a href="https://thephp.cc/" target="_blank">thePHP.cc <i class="fa fa-external-link"></i></a>
+            They've split the workshop in 4 parts.
+        </p>
+        <ol>
+            <li>What's new in PHP7?</li>
+            <li>How a PHP7 setup should look like?</li>
+            <li>How to migrate to PHP7?</li>
+            <li>Questions and Answers?</li>
+        </ol>
+        <p>
+            Each of the guys presented one part and talked in detail about it.
+            Especially they gave a lot of examples on what you never should have done and never should start doing.
+            They told us about php7cc too and I immediately tried our code with it.
+            The command showed that our own newly developed component is PHP7 compatible.
+            Only some of our vendors show errors we should look at.
+            <br />
+            I actually learned a lot during this workshop and enjoyed getting an update first hand on new features in PHP7.1
+            <br>&nbsp;
+        </p>
+    </div>
+    <div class="col-md-5 col-lg-4 hidden-sm hidden-xs">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-arne.jpg"
+             alt="Arne Blankerts at IPC 2016 in Munich"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5 col-lg-4 ">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/don-t-fear-the-walking-dead.png"
+             alt="First slide of our talks Don't fear the walking dead">
+        <br>&nbsp;
+    </div>
+    <div class="col-md-7 col-lg-8">
+        <p>
+            <span class="dropcap">1</span>st conference day started for me by listening to a talk about web security.
+            My favourite point was about read-only fields.
+            If it is read-only in your form, it still might be writable during form-data processing.
+            Around lunchtime there was a nice discussion on stage about all the things happened since PHP7 got released.
+            PHP7 ias nearly one year old. Time is flying by.
+            On top they gave us some hints which new features will be in PHP7.1 like void return type.
+            In the afternoon I listened to Michael Haeuslmann.
+            He was showing us a great new tool which will help to find hidden dependencies inside php projects.
+        </p>
+        <p>
+            Last Session of the day was our own.
+            I gave the talk about Fury and "Don't fear teh walking dead" together with Sebastian Heuer.
+            Fury our new fast, reliable and beautiful component.
+            It's sitting in front of our monolithic zombie and takes over parts of it.
+            The room was full.
+            Some people had to stand in the back.
+            We must have done a good job because not a single person left during the presentation.
+            This time we got a couple of good and interesting questions to fill up the 60 minutes we've got for our talk.
+            Even during next days quite a lot of people approached me and asked more questions about Fury structures behind it.
+            It was great.
+            After our session was finished all speakers were invited for dinner.
+            We went to a French restaurant with very good quality food and the meat was just amazing.
+            <br>&nbsp;
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="hidden-md hidden-lg">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-poker.jpg"
+             alt="A group of PHP Developers playing Poker"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+    <div class="col-md-7 col-lg-8">
+        <p>
+            <span class="dropcap">T</span>uesday was less about frontend topics and more about APIs and Software environments.
+            I started my day with listening to a talk about API-Security.
+            Christoph Wiechmann was explaining very well how OAuth and other Social Auth technologies are working.
+            Afterwards I went to a really interesting talk about how to automate CI Pipelines by using Docker.
+            Paul Dragoonis explained really fast and in such a detail how he's setting up branching environments.
+            He showed examples and solutions for exact same problems we're currently facing.
+            I immediately wanted ta take him to work and start solving our problems together.
+        </p>
+        <p>
+            The afternoon was again all about automation and web security.
+            The automation talk was showing how to properly use jenkins together with ant and ansible.
+            In security talk we got shown how easy it is to guess hashed passwords by building a crossword out of password leaks.
+            After last session around 19:30 there was beer and free gambling for everyone.
+            I went for poker and after two good hands I lost fast.
+            I used the opportunity to join some nice discussions about software architecture.
+            <br>&nbsp;
+        </p>
+    </div>
+    <div class="col-md-5 col-lg-4 hidden-sm hidden-xs">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-poker.jpg"
+             alt="A group of PHP Developers playing Poker"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5 col-lg-4">
+        <img class="img-responsive img-bordered hidden-md"
+             src="/assets/img/blog/ipc16-any-talk-small.jpg"
+             alt="Someone standing in front of a group and is looking something up on a laptop"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <img class="img-responsive img-bordered hidden-lg hidden-sm hidden-xs"
+             src="/assets/img/blog/ipc16-any-talk.jpg"
+             alt="Someone standing in front of a group and is looking something up on a laptop"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+    <div class="col-md-7 col-lg-8">
+        <p>
+            <span class="dropcap">M</span>y last day at IPC Munich started strange.
+            The first talk I went to was about technical debts.
+            Given by my former CTO.
+            I just wasn't sure if I'm still angry or if I should thank him for firing me.
+            The talk was OK.
+            On one hand he showed that it is very important to not wait to work on technical debts.
+            But on the other hand he showed how they managed to grow fast by ignoring them.
+            Later I listened to Daniel Lienert talking about Elasticsearch and Kibana.
+            Daniel showed us how to analyse data and how to put them into nice graphs with the help of Kibana.
+        </p>
+        <p>
+            Last session of this conference day was about automating anything with ansible.
+            This talk was really good.
+            Toby from Qafoo was amazing in explaining how ansible scripts look like, how they work and what you can do with them.
+            He showed a lot of simple code every developer could easily understand and follow.
+            The presentation was a very well prepared introduction of ansible.
+            Something you can make immediately use off in your own projects.
+            There should be more talks like this one.
+            <br>&nbsp;
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="hidden-md hidden-lg">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-food.jpg"
+             alt="Amazing food provided at IPC Munich 2016"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+    <div class="col-md-7 col-lg-8">
+        <p>
+            <span class="dropcap">A</span>s mentioned above I decided not to stay for second workshop day.
+            For me the conference ended on Wednesday afternoon.
+            Thanks to the organizers for this great event.
+            I learned a lot about architecture and new technologies.
+            The talks, presentations and keynotes were well selected.
+            Thank you for that. The food was amazing.
+            Drinks and gambling too.
+            I had to think for quite some time in order to come up with things which maybe could be optimized.
+        </p>
+        <ul>
+            <li>
+                Maybe consider to move Keynote after lunch.
+                This could reduce amount of people arriving for lunch at exact same moment.</li>
+            <li>
+                Probably it would be easier for participants to have every day same times when a session starts and same length of short breaks between.
+                It was a bit confusing.
+                I sometimes lost track when next session started.
+            </li>
+            <li>
+                In the Forum we held our talk in, was the setup where to put the laptop and where to look during talk for speaker notes a bit confusing.
+                We had to turn around a lot. It would be good to have another screen in front of audience showing the next slide and speaker notes.
+                Probably difficult to organize but how boring would the world be without another challenge?
+            </li>
+        </ul>
+        <p>
+            Beside these minor optimization proposals everything was great and I had a great time. Thank you!
+            Oh and after leaving the conference on Tuesday I finally got the opportunity to have a short moment in Munich's city center before I had to go on.
+            <br>&nbsp;
+        </p>
+    </div>
+    <div class="col-md-5 col-lg-4 hidden-sm hidden-xs">
+        <img class="img-responsive img-bordered"
+             src="/assets/img/blog/ipc16-food.jpg"
+             alt="Amazing food provided at IPC Munich 2016"
+             title="Copyright of this picture is with Software &amp; Support Media GmbH">
+        <br>&nbsp;
+    </div>
+</div>
+
+    </div>
+    <!--End Blog Post-->
+
+</div><!--/container-->    <!--=== End Content Part ===-->
+
+<!--=== Footer v2 ===-->
+<div id="footer-v2" class="footer-v2">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Photo -->
+                <div class="col-md-3 col-sm-6">
+                    <img id="logo-footer" src="/assets/img/sebastian_thoss.jpg" alt="picture of myself">
+                </div>
+                <!-- End Photo -->
+
+                <!-- About -->
+                <div class="col-md-3 col-sm-6 md-margin-bottom-60">
+                    <div class="latest-tweets">
+                        <div class="headline"><h2 class="heading-sm">About Sebastian Thoss</h2></div>
+                        <div class="latest-tweets-inner">
+                            <p>
+                                I'm in IT since mid of nineties and still love it. After several years of living and working in Ireland and Australia.
+                                I came back to Hamburg, Germany in order to learn even more about architecture of software.
+                            </p>
+                            <p>
+                                Since April 2015 I'm at kartenmacherei responsible for backend projects, the team and training of our young apprentice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End About -->
+
+                <!-- Address -->
+                <div class="col-md-3 col-sm-6 md-margin-bottom-40">
+                    <div class="headline"><h2 class="heading-sm">Contact details</h2></div>
+                    <address class="md-margin-bottom-40">
+                        <i class="fa fa-male"></i>Sebastian Thoss <br />
+                        <i class="fa fa-home"></i>Ahrensburg, Germany <br />
+                        <i class="fa fa-skype"></i>Skype: sebastian301082 <br />
+                        <i class="fa fa-globe"></i>Website: <a href="http://www.sebastianthoss.de/en/">sebastianthoss.de</a> <br />
+                        <i class="fa fa-envelope"></i>Mail: <a href="mailto:thoss_sebastian@web.de">thoss_sebastian@web.de</a>
+                    </address>
+
+                    <!-- Social Links -->
+                    <ul class="social-icons">
+                        <li>
+                            <a target="_blank" href="https://www.xing.com/profile/Sebastian_Thoss" data-original-title="XING" class="rounded-x social_xing" title="Sebastian Thoss auf Xing"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/DjThossi" data-original-title="GitHub" class="rounded-x social_github" title="Sebastian Thoss auf GitHub"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/sebastian.thoss" data-original-title="Facebook" class="rounded-x social_facebook" title="Sebastian Thoss auf Facebook"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/dj_thossi" data-original-title="Twitter" class="rounded-x social_twitter" title="Sebastian Thoss auf Twitter"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://sebastian301082.wordpress.com/" data-original-title="WordPress" class="rounded-x social_wordpress" title="Sebastian Thoss auf WordPress"></a>
+                        </li>
+                    </ul>
+                    <!-- End Social Links -->
+                </div>
+                <!-- End Address -->
+
+                <!-- Termine -->
+                <div class="col-md-3 col-sm-6 md-margin-bottom-40">
+                    <div class="headline"><h2 class="heading-sm">Meet me</h2></div>
+                    <ul class="list-unstyled link-news">
+                                                    <li>
+                                <a target="_blank" href="https://www.codetalks.de">Code Talks - Hamburg</a>
+                                <small>28 September 2017</small>
+                            </li>
+                                            </ul>
+                </div>
+                <!-- End Termine -->
+            </div>
+        </div>
+    </div><!--/footer-->
+
+</div>
+<!--=== End Footer v2 ===-->
+
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery.parallax.js"></script>
+
+<!-- JS Customization -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+
+<!-- JS Page Level -->
+<script type="text/javascript" src="/assets/js/app.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+            });
+</script>
+
+<!--[if lt IE 10]>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="/assets/plugins/respond.js"></script>
+<script src="/assets/plugins/html5shiv.js"></script>
+<script src="/assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {
+        "message":"This website uses Cookies in order to optimize on-page experience.",
+        "dismiss":"Thank you",
+        "learnMore":"",
+        "link":"",
+        "theme":"light-bottom"
+    };
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-3423622-11', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<!-- Google Analytics -->
+</body>
+</html>
