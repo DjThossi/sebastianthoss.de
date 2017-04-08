@@ -3,14 +3,14 @@
     <div class="blog margin-bottom-40">
         <div class="blog-img">
             {% if page.headline.image.url %}
-                <img class="img-responsive" src="{{ page.headline.image.url }}" alt="{{ page.headline.image.alt }}">
+                <img class="img-responsive" src="{{ site.url }}{{ page.headline.image.url }}" alt="{{ page.headline.image.alt }}">
             {% else %}
-                <img class="img-responsive" src="{{ defaultImageSrc }}" alt="{{ defaultImageAlt }}">
+                <img class="img-responsive" src="{{ site.url }}{{ defaultImageSrc }}" alt="{{ defaultImageAlt }}">
             {% endif %}
         </div>
 
         <div class="headline">
-            <h2>{{ page.title }}</h2>
+            <h2>{{ page.title|raw }}</h2>
         </div>
 
         <div class="blog-post-tags">
