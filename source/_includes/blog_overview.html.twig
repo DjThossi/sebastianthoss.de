@@ -18,9 +18,9 @@
                 <div class="grid-boxes-caption">
                     <h3>
                         {% if post.overview.external_link %}
-                            <a href="{{ post.overview.external_link }}" target="_blank">{{ post.title }}</a>
+                            <a href="{{ post.overview.external_link }}" target="_blank">{{ post.title|raw }}</a>
                         {%  else %}
-                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                            <a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a>
                         {%  endif %}
                     </h3>
                     <ul class="list-inline grid-boxes-news">
@@ -30,16 +30,16 @@
                         <li>
                             <i class="fa fa-globe"></i>
                             {% for location in post.locations|slice(0, 3) %}
-                                {% if forloop.last == false %}
-                                    {{ location }},
+                                {% if loop.last == false %}
+                                    {{ location|raw }},
                                 {% else %}
-                                    {{ location }}
+                                    {{ location|raw }}
                                 {% endif %}
                             {% endfor %}
                         </li>
                     </ul>
                     <p>
-                        {{ post.overview.intro }}
+                        {{ post.overview.intro|raw }}
                     </p>
 
                     <p>

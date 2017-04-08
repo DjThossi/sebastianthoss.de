@@ -3,3 +3,5 @@ sculpin_content_types:
         permalink: en/tech-blog/:year/:month/:day/:filename.html
     familie:
         permalink: familie/:year/:month/:day/:filename.html
+    reiseblog:
+        permalink: de/reiseblog/:year/:month/:day/:filename.html
