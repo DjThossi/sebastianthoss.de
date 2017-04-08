@@ -20,13 +20,17 @@ js:
   scripts:
     - /assets/plugins/masonry/jquery.masonry.min.js
     - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  provider: data.familie
 ---
 
 <div class="heading heading-v1 margin-bottom-40">
   <h1>Reiseblog f&uuml;r die Familie und Freunde</h1>
-  <p>Hier findet Ihr alle Infos und <a href="fotos.html">Bilder</a> unserer aktuellen Reise</p>
+  <p>Hier findet Ihr alle Infos und <a href="{{ site.url }}/familie/fotos.html">Bilder</a> unserer aktuellen Reise</p>
 </div>
 
 <!--=== Content Part ===-->
-{% include blog_overview.html posts=site.categories.Familie readMore="Weiterlesen" %}
+{% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
