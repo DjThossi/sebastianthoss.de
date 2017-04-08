@@ -11,7 +11,7 @@
 
     {% for talk in filteredTalks|slice(0, limit) %}
         <div class="cbp-item  {{ talk.tags|join(' ') }}">
-            <a href="{{ talk.link }}" class="cbp-caption">
+            <a href="{{ site.url }}{{ talk.link }}" class="cbp-caption">
                 <div class="cbp-caption-defaultWrap">
                     <img src="{{ talk.image.url }}" alt="{{ talk.image.alt }}">
                 </div>

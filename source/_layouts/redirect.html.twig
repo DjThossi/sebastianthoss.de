@@ -32,11 +32,11 @@
     {% endif %}
 
     {% if page.show_alternate == true %}
-        <link rel="alternate" href="/" hreflang="x-default" />
+        <link rel="alternate" href="{{ site.url }}/" hreflang="x-default" />
     {% endif %}
 
     {% if page.show_canonical == true %}
-        <link rel="canonical" href="/">
+        <link rel="canonical" href="{{ site.url }}/">
     {% endif %}
 
     <!-- Favicon -->

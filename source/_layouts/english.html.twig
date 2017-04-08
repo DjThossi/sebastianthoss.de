@@ -57,7 +57,7 @@
 
                                 {% for talk in site.talks.en %}
                                     {% set titleLength = talk.title |length %}
-                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
+                                    <li class="{% if page.active_nav == talk.active_nav %}active{% endif %}"><a href="{{ site.url }}{{ talk.link }}"><i class="fa fa-angle-double-right"></i>{{ talk.title }}{% if titleLength < 4 %} - {{ talk.subtitle }}{% endif %}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
