@@ -90,7 +90,11 @@
 <!-- JS Page Level -->
 <script type="text/javascript" src="{{ site.url }}/assets/js/app.js"></script>
 {% for js_script in page.js.scripts %}
-    <script type="text/javascript" src="{{ js_script }}"></script>
+    {% if js_script starts with 'http' or js_script starts with '//' %}
+        <script type="text/javascript" src="{{ js_script }}"></script>
+    {% else %}
+        <script type="text/javascript" src="{{ site.url }}{{ js_script }}"></script>
+    {% endif %}
 {% endfor %}
 
 <script type="text/javascript">
