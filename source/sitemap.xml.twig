@@ -1,26 +1,78 @@
 ---
-use: ["posts"]
+use: ["posts", "reiseblog"]
 permalink: sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in data.posts %}
+        <url>
+            <loc>{{ site.url }}{{ post.url }}</loc>
+            <lastmod>{{ post.date|date('c') }}</lastmod>
+        </url>
+    {% endfor %}
+    {% for post in data.reiseblog if post.sitemap is not defined or post.sitemap ==  true %}
+        <url>
+            <loc>{{ site.url }}{{ post.url }}</loc>
+            <lastmod>{{ post.date|date('c') }}</lastmod>
+        </url>
+    {% endfor %}
     <url>
         <loc>{{ site.url }}/</loc>
-        <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
-        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>{{ site.url }}/de/kontakt/</loc>
-        <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
-        <changefreq>weekly</changefreq>
     </url>
-    {% for post in data.posts %}
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
-        <lastmod>{{ post.date|date('c') }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>{{ site.url }}/de/vortraege/don-t-fear-the-walking-dead.html</loc>
     </url>
-    {% endfor %}
+    <url>
+        <loc>{{ site.url }}/en/talks/don-t-fear-the-walking-dead.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/vortraege/git-basics.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/talks/git-basics.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/vortraege/git-workflows-and-best-practices.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/talks/git-workflows-and-best-practices.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/vortraege/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/impressum/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/datenschutzerklaerung/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/contact/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/tech-blog/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/talks/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/vortraege/smoke-tests.html</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/talks/smoke-tests.html</loc>
+    </url>
 </urlset>

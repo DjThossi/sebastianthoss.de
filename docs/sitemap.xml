@@ -2,29 +2,73 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/11/16/how-to-deploy-a-black-horse.html</loc>
+            <lastmod>2016-11-16T00:00:00+00:00</lastmod>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/31/international-php-conference-munich.html</loc>
+            <lastmod>2016-10-31T00:00:00+00:00</lastmod>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
+            <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+        </url>
+            <url>
         <loc>http://www.sebastianthoss.de/</loc>
-        <lastmod>2017-04-08</lastmod>
-        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/de/kontakt/</loc>
-        <lastmod>2017-04-08</lastmod>
-        <changefreq>weekly</changefreq>
     </url>
-        <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/11/16/how-to-deploy-a-black-horse.html</loc>
-        <lastmod>2016-11-16T00:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/vortraege/don-t-fear-the-walking-dead.html</loc>
     </url>
-        <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/31/international-php-conference-munich.html</loc>
-        <lastmod>2016-10-31T00:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/talks/don-t-fear-the-walking-dead.html</loc>
     </url>
-        <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
-        <lastmod>2016-10-24T00:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/vortraege/git-basics.html</loc>
     </url>
-    </urlset>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/talks/git-basics.html</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/vortraege/git-workflows-and-best-practices.html</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/talks/git-workflows-and-best-practices.html</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/vortraege/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/impressum/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/datenschutzerklaerung/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/reiseblog/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/contact/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/tech-blog/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/talks/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/vortraege/smoke-tests.html</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/talks/smoke-tests.html</loc>
+    </url>
+</urlset>
