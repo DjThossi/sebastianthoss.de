@@ -1,5 +1,5 @@
 <div class="cube-portfolio">
-    <div class="headline"><h3>{{ headline }}</h3></div>
+    <div class="headline"><h3>{{ headline|raw }}</h3></div>
     {% include 'talks.html.twig'
         with{
             'talks': talks,
