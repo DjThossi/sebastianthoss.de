@@ -1,5 +1,7 @@
 ---
 layout: english
+permalink: en/talks/don-t-fear-the-walking-dead.html
+
 title: "Don't fear the walking dead - How we get rid of our monolith"
 meta:
   description: "Talk description about how we are replacing our monolithic legacy system and how we have managed not to touch old system too much"
@@ -54,28 +56,28 @@ js:
 
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-1.jpg" alt="First slide with title of talk">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-1.jpg" alt="First slide with title of talk">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-12.jpg" alt="Slide showing the idea of putting new component beween old and new system">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-12.jpg" alt="Slide showing the idea of putting new component beween old and new system">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-15.jpg" alt="Slide showing how we retrieve whole html from key-value storage">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-15.jpg" alt="Slide showing how we retrieve whole html from key-value storage">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-20.jpg" alt="Slide showing what happens if Fury is handling a request">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-20.jpg" alt="Slide showing what happens if Fury is handling a request">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-22.jpg" alt="Slide showing what happens if legacy system is handling a request">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-22.jpg" alt="Slide showing what happens if legacy system is handling a request">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-27.jpg" alt="Slide shows set up of server architecture">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-27.jpg" alt="Slide shows set up of server architecture">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-32.jpg" alt="Slide shows final step of our deployment">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-32.jpg" alt="Slide shows final step of our deployment">
                 </div>
                 <div class="item">
-                    <img class="full-width img-responsive" src="{{ site.github.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-37.jpg" alt="Slide shows next step of how to replace basket">
+                    <img class="full-width img-responsive" src="{{ site.url }}/assets/img/don-t-fear-the-walking-dead/phpughh-slides-37.jpg" alt="Slide shows next step of how to replace basket">
                 </div>
             </div>
 
@@ -112,7 +114,7 @@ js:
             </div>
         </div>
 
-        {% include other-talks/en.html skipTalkId="1" %}
+        {% include 'other-talks/en.html.twig' with {skipId: '1'} %}
 
     </div>
 </div>
