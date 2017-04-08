@@ -36,7 +36,7 @@ js:
 </div>
 <!--=== End Breadcrumbs v3 ===-->
 
-<!--=== Cube-Portfdlio ===-->
+<!--=== Cube-Portfolio ===-->
 <div class="cube-portfolio container margin-bottom-60">
     <div class="content-xs">
         <div id="filters-container" class="cbp-l-filters-text content-xs">
@@ -48,7 +48,7 @@ js:
         <!--/end Filters Container-->
     </div>
 
-    {% include talks.html talks=site.data.en.talks cols="3" %}
+    {% include 'talks.html.twig' with {'talks': site.talks.en, 'cols': '3'} %}
 
 </div>
-<!--=== End Cube-Portfdlio ===-->
+<!--=== End Cube-Portfolio ===-->
