@@ -35,25 +35,25 @@
                     <ul class="nav navbar-nav">
                         <!-- Homepage -->
                         <li class="{% if page.active_nav == 'home' %}active{% endif %}">
-                            <a href="/en/">
+                            <a href="{{ site.url }}/en/">
                                 Home
                             </a>
                         </li>
 
                         <!-- Tech blog -->
                         <li class="{% if page.active_nav == 'tech-blog' %}active{% endif %}">
-                            <a href="/en/tech-blog/">
+                            <a href="{{ site.url }}/en/tech-blog/">
                                 Tech Blog
                             </a>
                         </li>
 
                         <!-- Talks -->
                         <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
-                            <a href="/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="{{ site.url }}/en/talks/" class="dropdown-toggle" data-toggle="dropdown">
                                Talks
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
+                                <li class="{% if page.active_nav == 'talks-index' %}active{% endif %}"><a href="{{ site.url }}/en/talks/"><i class="fa fa-angle-double-right"></i>Overview</a></li>
 
                                 {% for talk in site.talks.en %}
                                     {% set titleLength = talk.title |length %}
@@ -64,14 +64,14 @@
 
                         <!-- Contact -->
                         <li class="{% if page.active_nav == 'contact' %}active{% endif %}">
-                            <a href="/en/contact/">
+                            <a href="{{ site.url }}/en/contact/">
                                 Contact me
                             </a>
                         </li>
 
                         <!-- Deutsche Version -->
                         <li>
-                            <a href="/de/">
+                            <a href="{{ site.url }}/de/">
                                 <i class="fa fa-globe"></i> Deutsche Version
                             </a>
                         </li>
@@ -95,7 +95,7 @@
             <div class="row">
                 <!-- Photo -->
                 <div class="col-md-3 col-sm-6">
-                    <img id="logo-footer" src="/assets/img/sebastian_thoss.jpg" alt="picture of myself">
+                    <img id="logo-footer" src="{{ site.url }}/assets/img/sebastian_thoss.jpg" alt="picture of myself">
                 </div>
                 <!-- End Photo -->
 
