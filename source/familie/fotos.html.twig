@@ -29,71 +29,16 @@ js:
 <!-- Six Columns -->
 <div class="container content">
 
-
   <div class="row margin-bottom-30">
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/20120912-085024.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 1">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/20120912-085024.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/20121028-004423.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 2">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/20121028-004423.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 3">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 4">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 5">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 6">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-  </div>
+    {% set images =  source('image_data.csv')|split(", ") %}
 
-  <div class="row margin-bottom-30">
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 7">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 8">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 9">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 10">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 11">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-2 sm-margin-bottom-30">
-      <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" rel="gallery3" class="fancybox img-hover-v1" title="Image 12">
-        <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/stepmap-karte-world-trip-1703410.jpg" alt=""></span>
-      </a>
-    </div>
+    {% for image in images %}
+      <div class="col-sm-2 sm-margin-bottom-30">
+        <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+          <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/small/{{ image }}" alt="{{ image }}"></span>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 
 </div>

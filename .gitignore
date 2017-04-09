@@ -2,3 +2,11 @@
 _unify-layout
 /vendor/
 /output_dev/
+
+/_scripts/ImageGenerator/input/*
+!/_scripts/ImageGenerator/input/.gitkeep
+
+/_scripts/ImageGenerator/output/*
+!/_scripts/ImageGenerator/output/.gitkeep
+
+/_scripts/ImageGenerator/converter/node_modules/
