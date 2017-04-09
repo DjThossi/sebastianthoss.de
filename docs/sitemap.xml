@@ -1,23 +1,24 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
-        <lastmod>2016-10-24T00:00:00+02:00</lastmod>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/11/16/how-to-deploy-a-black-horse.html</loc>
+            <lastmod>2016-11-16T00:00:00+00:00</lastmod>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/31/international-php-conference-munich.html</loc>
+            <lastmod>2016-10-31T00:00:00+00:00</lastmod>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
+            <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+        </url>
+            <url>
+        <loc>http://www.sebastianthoss.de/</loc>
     </url>
     <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/31/international-php-conference-munich.html</loc>
-        <lastmod>2016-10-31T00:00:00+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/en/tech-blog/2016/11/16/how-to-deploy-a-black-horse.html</loc>
-        <lastmod>2016-11-16T00:00:00+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/vortraege/99-percent-is-not-enough.html</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/en/talks/99-percent-is-not-enough.html</loc>
+        <loc>http://www.sebastianthoss.de/de/kontakt/</loc>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/de/vortraege/don-t-fear-the-walking-dead.html</loc>
@@ -50,9 +51,6 @@
         <loc>http://www.sebastianthoss.de/de/reiseblog/</loc>
     </url>
     <url>
-        <loc>http://www.sebastianthoss.de/de/kontakt/</loc>
-    </url>
-    <url>
         <loc>http://www.sebastianthoss.de/de/</loc>
     </url>
     <url>
@@ -66,9 +64,6 @@
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/en/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/</loc>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/de/vortraege/smoke-tests.html</loc>
