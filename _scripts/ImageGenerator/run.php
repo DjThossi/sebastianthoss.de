@@ -101,3 +101,23 @@ echo "WRITE EXISTING IMAGES DATA\n";
 
 $content = '<?php $existingImages = ' . var_export($existingImages, true) . ';';
 file_put_contents($existingImagesFile, $content);
+
+
+
+//GENERATE PROD
+echo "GENERATE PROD\n";
+
+$basePath = __DIR__ . '/../../';
+
+$output = null;
+$returnValue = null;
+exec("cd $basePath && vendor/bin/sculpin generate --env=prod && git add .", $output, $returnValue);
+
+foreach($output as $line) {
+    echo $line . "\n";
+}
+
+if ($returnValue !== 0) {
+    echo "SOMETIHNG WENT WRONG!\n";
+    die ($returnValue);
+}
