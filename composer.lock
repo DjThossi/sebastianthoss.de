@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe997940370472af6bdc342d1007df93",
+    "content-hash": "562109449624779966dcee42e0452b3f",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -998,6 +998,57 @@
                 "textile"
             ],
             "time": "2014-01-02T09:39:06+00:00"
+        },
+        {
+            "name": "orbitale/imagemagick-php",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Orbitale/ImageMagickPHP.git",
+                "reference": "46a02e3dcfbc824c40e032fd6fb84f8ac97323ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Orbitale/ImageMagickPHP/zipball/46a02e3dcfbc824c40e032fd6fb84f8ac97323ff",
+                "reference": "46a02e3dcfbc824c40e032fd6fb84f8ac97323ff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/filesystem": "~2.3|~3.0",
+                "symfony/process": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orbitale\\Component\\ImageMagick\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Rock Ancelet",
+                    "email": "alex@orbitale.io",
+                    "homepage": "http://www.orbitale.io/"
+                }
+            ],
+            "description": "A system that allows creating commands to send to the exec() function to use ImageMagick's powerful features.",
+            "homepage": "https://github.com/Orbitale/ImageMagickPHP",
+            "keywords": [
+                "ImageMagick",
+                "converter",
+                "gd",
+                "image",
+                "imagick"
+            ],
+            "time": "2017-02-10T13:33:40+00:00"
         },
         {
             "name": "psr/http-message",
