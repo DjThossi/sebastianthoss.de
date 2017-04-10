@@ -22,10 +22,14 @@ js:
 
 generator: pagination
 pagination:
-  max_per_page: 3000
+  max_per_page: 9
   provider: data.reiseblog
 ---
 
 <!--=== Content Part ===-->
 {% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->
