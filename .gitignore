@@ -10,3 +10,4 @@ _unify-layout
 !/_scripts/ImageGenerator/output/.gitkeep
 
 /_scripts/ImageGenerator/converter/node_modules/
+/.vagrant/
