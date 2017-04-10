@@ -1,21 +1,8 @@
 <?php
-// CONVERT ALL IMAGES
-echo "CONVERT ALL IMAGES\n";
+require_once __DIR__ . '/../../vendor/autoload.php';
 
-$converterPath = __DIR__ . '/converter';
-
-$output = null;
-$returnValue = null;
-exec("cd $converterPath && npm install && node convert", $output, $returnValue);
-
-foreach($output as $line) {
-    echo $line . "\n";
-}
-
-if ($returnValue !== 0) {
-    echo "SOMETIHNG WENT WRONG!\n";
-    die ($returnValue);
-}
+use Orbitale\Component\ImageMagick\Command;
+use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 
 
@@ -41,6 +28,34 @@ $inputPath = __DIR__ . '/input/';
 $inputImages = readFiles($inputPath);
 
 $outputPath = __DIR__ . '/output/';
+
+
+
+
+// CONVERT ALL IMAGES
+echo "CONVERT ALL IMAGES\n";
+
+foreach ($inputImages as $image) {
+    $command = new Command();
+    $response = $command
+        ->convert($inputPath . $image)
+        ->resize(new Geometry(132))
+        ->file($outputPath . $image, false)
+        ->run();
+
+    if ($response->hasFailed()) {
+        echo "SOMETIHNG WENT WRONG!\n";
+        die($response->getError());
+    }
+}
+
+
+
+
+
+//LOAD LIST OF OUTPUT IMAGES
+echo "LOAD LIST OF OUTPUT IMAGES\n";
+
 $outputImages = readFiles($outputPath);
 
 $images = array_intersect($inputImages, $outputImages);
