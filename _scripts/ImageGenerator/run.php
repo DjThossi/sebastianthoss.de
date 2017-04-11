@@ -39,7 +39,7 @@ foreach ($inputImages as $image) {
     $command = new Command();
     $response = $command
         ->convert($inputPath . $image)
-        ->resize(new Geometry(132))
+        ->resize(new Geometry(455))
         ->file($outputPath . $image, false)
         ->run();
 
