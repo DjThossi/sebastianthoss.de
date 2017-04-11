@@ -1,0 +1,18 @@
+<div class="headline">
+    <h2>{{ page.title|raw }}</h2>
+</div>
+
+<div class="blog-post-tags">
+    <ul class="list-unstyled list-inline blog-info">
+        <li><i class="fa fa-calendar"></i> {{ page.date|date('d F Y') }}</li>
+        <li><i class="fa fa-globe"></i>
+            {% for location in page.locations %}
+                {% if loop.last == false %}
+                    {{ location }},
+                {% else %}
+                    {{ location }}
+                {% endif %}
+            {% endfor %}
+        </li>
+    </ul>
+</div>
