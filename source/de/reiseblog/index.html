@@ -27,7 +27,7 @@ pagination:
 ---
 
 <!--=== Content Part ===-->
-{% include 'blog_overview.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
