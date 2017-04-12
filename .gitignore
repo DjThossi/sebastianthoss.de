@@ -11,3 +11,5 @@ _unify-layout
 
 /_scripts/ImageGenerator/converter/node_modules/
 /.vagrant/
+
+.DS_Store
