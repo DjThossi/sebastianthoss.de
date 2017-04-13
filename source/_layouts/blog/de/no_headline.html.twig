@@ -3,6 +3,8 @@
 {% set layoutAddCss = ['/assets/css/pages/blog.css'] %}
 
 {% block contentWrapper %}
+<div class="container content blog-page blog-item">
+
     <!--=== Content Part ===-->
     {% include 'blog/post/no_headline.html.twig'
         with {
@@ -11,4 +13,13 @@
         }
     %}
     <!--=== End Content Part ===-->
+
+    {% include 'blog/snippet/post_pagination.html.twig'
+        with {
+            'nextPostLinkText': 'N&auml;chster<span class="hidden-xs"> Beitrag</span>',
+            'previousPostLinkText': 'Vorheriger <span class="hidden-xs"> Beitrag</span>'
+        }
+    %}
+
+</div><!--/container-->
 {% endblock %}

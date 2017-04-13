@@ -3,7 +3,6 @@
         <ul class="pager pager-v3 pager-md no-margin">
             {% if pagination.previous_page %}
                 <li class="previous"><a href="{{ site.url }}{{ pagination.previous_page.url }}/">« Neuer<span class="hidden-xs"> Beitr&auml;ge</span></a></li>
-            {% else %}
             {% endif %}
 
             <li class="page-amount">{{ pagination.page }} von {{ pagination.total_pages }}</li>

@@ -1,17 +1,13 @@
-<div class="container content blog-page blog-item">
-
-    <!--Blog Post-->
-    <div class="blog margin-bottom-20">
-        <div class="blog-img">
-            {% if page.headline.image.url %}
-                <img class="img-responsive" src="{{ site.url }}{{ page.headline.image.url }}" alt="{{ page.headline.image.alt|raw }}">
-            {% else %}
-                <img class="img-responsive" src="{{ site.url }}{{ defaultImageSrc }}" alt="{{ defaultImageAlt|raw }}">
-            {% endif %}
-        </div>
-
-        {{ page.blocks.content|raw }}
+<!--Blog Post-->
+<div class="blog margin-bottom-20">
+    <div class="blog-img">
+        {% if page.headline.image.url %}
+            <img class="img-responsive" src="{{ site.url }}{{ page.headline.image.url }}" alt="{{ page.headline.image.alt|raw }}">
+        {% else %}
+            <img class="img-responsive" src="{{ site.url }}{{ defaultImageSrc }}" alt="{{ defaultImageAlt|raw }}">
+        {% endif %}
     </div>
-    <!--End Blog Post-->
 
-</div><!--/container-->
+    {{ page.blocks.content|raw }}
+</div>
+<!--End Blog Post-->
