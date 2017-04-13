@@ -1,0 +1,36 @@
+---
+layout: blog/de/no_headline
+sitemap: false
+active_nav: travel-blog
+title: Template
+categories:
+  - de
+  - Familie
+locations:
+  - Hong Kong
+  - Australien
+  - Singapur
+overview:
+  intro: "Noch 18 Tage bis zum Abflug in unseren lang ersehnten Urlaub"
+  image:
+    url: /assets/img/blog/2017-asia-oz/small/tropical-cyclone-catarina-1167137.jpg
+    alt: Aufnahme eines Zyklons aus dem Weltall
+---
+<!--=== Post ===-->
+<div class="container content-xs">
+    <div class="row">
+        <div class="col-md-6">
+            {% include 'blog/snippet/headline.html.twig' %}
+
+            <p>
+                {{ page.overview.intro|raw }}	
+            </p>
+        </div>
+        <div class="col-md-6 overflow-h">
+            <div class="box-shadow shadow-effect-3">
+                <img class="img-responsive img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
+            </div>
+        </div>
+    </div>
+</div>
+<!--=== End Post ===-->

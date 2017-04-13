@@ -1,0 +1,49 @@
+---
+layout: blog/de/no_headline
+sitemap: false
+active_nav: travel-blog
+title: Zyklon Debbie
+categories:
+  - de
+  - Familie
+locations:
+  - Australien
+  - Queensland
+  - Great Barriere Reef
+overview:
+  intro: "Leider wurde unser Urlaubsgebiet ende M&auml;rz von einem Zyklon getroffen."
+  image:
+    url: /assets/img/blog/2017-asia-oz/small/tropical-cyclone-catarina-1167137.jpg
+    alt: Aufnahme eines Zyklons aus dem Weltall
+---
+<!--=== Post ===-->
+<div class="container content-xs">
+    <div class="row">
+        <div class="col-md-6">
+            {% include 'blog/snippet/headline.html.twig' %}
+
+            <p>
+                {{ page.overview.intro|raw }}	
+            </p>
+			<p>
+				Zyklon Debbie traf mit bis zu 280 km/h auf die K&uuml;ste Queenslands.
+				Dabei zerst&ouml;rte Debbie viel Land, Natur und auch gro&szlig;e Teile des Great Barriere Reef.
+				Noch immer sind einige Ortschaften &uuml;berflutet.
+				Ein gutes hat Debbie aber doch. 
+				Der Zyklon hat die, f&uuml;r das Riff gef&auml;hrlich hohe Wassertemperatur auf ein ges&uuml;nderes Ma&szlig; reduziert.
+			</p>
+			<p>
+				Wir hoffen jetzt einfach nur, dass Debbie unseren Urlaub nicht zu sehr beeinflussen wird.
+			</p>
+			<p>
+				<a target="_blank" href="https://goo.gl/GlqBuw">Hier</a> noch ein Bericht &uuml;ber das Riff.
+			</p>
+        </div>
+        <div class="col-md-6 overflow-h">
+            <div class="box-shadow shadow-effect-3">
+                <img class="img-responsive img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
+            </div>
+        </div>
+    </div>
+</div>
+<!--=== End Post ===-->
