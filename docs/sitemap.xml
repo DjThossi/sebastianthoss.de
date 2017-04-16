@@ -3,16 +3,16 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2017/02/17/php-uk-conference-london.html</loc>
+        </url>
+            <url>
             <loc>http://www.sebastianthoss.de/en/tech-blog/2016/11/16/how-to-deploy-a-black-horse.html</loc>
-            <lastmod>2016-11-16T00:00:00+01:00</lastmod>
         </url>
             <url>
             <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/31/international-php-conference-munich.html</loc>
-            <lastmod>2016-10-31T00:00:00+01:00</lastmod>
         </url>
             <url>
             <loc>http://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
-            <lastmod>2016-10-24T00:00:00+02:00</lastmod>
         </url>
             <url>
         <loc>http://www.sebastianthoss.de/de/vortraege/99-percent-is-not-enough.html</loc>
