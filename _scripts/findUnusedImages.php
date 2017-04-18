@@ -30,4 +30,15 @@ foreach(readFiles($blogPath) as $entry) {
 	}
 }
 
+$postsPath = __DIR__ . "/../source/_posts/";
+
+foreach(readFiles($postsPath) as $entry) {
+	$content = file_get_contents($postsPath . $entry);
+	foreach($images as $key => $image) {
+		if (strpos($content, $image) !== false) {
+			unset($images[$key]);
+		}
+	}
+}
+
 var_dump($images);
