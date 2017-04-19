@@ -11,7 +11,7 @@ permalink: sitemap.xml
             <loc>{{ site.url }}{{ post.url }}</loc>
         </url>
     {% endfor %}
-    {% for post in data.reiseblog if post.sitemap is not defined or post.sitemap ==  true %}
+    {% for post in data.reiseblog if post.sitemap == true %}
         <url>
             <loc>{{ site.url }}{{ post.url }}</loc>
         </url>
