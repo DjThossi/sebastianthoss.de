@@ -1,8 +1,8 @@
 ---
 layout: blog/de/no_headline
-sitemap: false
-active_nav: travel-blog
 title: Zyklon Debbie
+active_nav: travel-blog
+sitemap: false
 
 categories:
   - de
@@ -20,32 +20,30 @@ overview:
     alt: Aufnahme eines Zyklons aus dem Weltall
 ---
 <!--=== Post ===-->
-<div class="container margin-top-20">
-    <div class="row">
-        <div class="col-md-6">
-            {% include 'blog/snippet/headline.html.twig' %}
+<div class="row">
+    <div class="col-md-6">
+        {% include 'blog/snippet/headline.html.twig' %}
 
-            <p>
-                {{ page.overview.intro|raw }}	
-            </p>
-			<p>
-				Zyklon Debbie traf mit bis zu 270 km/h auf die K&uuml;ste Queenslands.
-				Dabei zerst&ouml;rte Debbie viel Land, Natur und auch gro&szlig;e Teile des Great Barriere Reef.
-				Noch immer sind einige Ortschaften &uuml;berflutet.
-				Ein gutes hat Debbie aber doch. 
-				Der Zyklon hat die, f&uuml;r das Riff gef&auml;hrlich hohe Wassertemperatur auf ein ges&uuml;nderes Ma&szlig; reduziert.
-			</p>
-			<p>
-				Wir hoffen jetzt einfach nur, dass Debbie unseren Urlaub nicht zu sehr beeinflussen wird.
-			</p>
-			<p>
-				<a target="_blank" href="https://goo.gl/GlqBuw">Hier</a> noch ein Bericht &uuml;ber das Riff.
-			</p>
-        </div>
-        <div class="col-md-6 overflow-h">
-            <div class="box-shadow shadow-effect-3">
-                <img class="img-responsive img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
-            </div>
+        <p>
+            {{ page.overview.intro|raw }}
+        </p>
+        <p>
+            Zyklon Debbie traf mit bis zu 270 km/h auf die K&uuml;ste Queenslands.
+            Dabei zerst&ouml;rte Debbie viel Land, Natur und auch gro&szlig;e Teile des Great Barriere Reef.
+            Noch immer sind einige Ortschaften &uuml;berflutet.
+            Ein gutes hat Debbie aber doch.
+            Der Zyklon hat die, f&uuml;r das Riff gef&auml;hrlich hohe Wassertemperatur auf ein ges&uuml;nderes Ma&szlig; reduziert.
+        </p>
+        <p>
+            Wir hoffen jetzt einfach nur, dass Debbie unseren Urlaub nicht zu sehr beeinflussen wird.
+        </p>
+        <p>
+            <a target="_blank" href="https://goo.gl/GlqBuw">Hier</a> noch ein Bericht &uuml;ber das Riff.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
         </div>
     </div>
 </div>
