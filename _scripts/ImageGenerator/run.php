@@ -26,6 +26,8 @@ function readFiles($directory) {
 
 $inputPath = __DIR__ . '/input/';
 $inputImages = readFiles($inputPath);
+sort($inputImages);
+//var_dump($inputImages);die;
 
 $outputPath = __DIR__ . '/output/';
 
@@ -126,7 +128,7 @@ $basePath = __DIR__ . '/../../';
 
 $output = null;
 $returnValue = null;
-exec("cd $basePath && vendor/bin/sculpin generate --env=prod && git add .", $output, $returnValue);
+exec("cd $basePath && vendor/bin/sculpin generate --clean --env=prod && git add .", $output, $returnValue);
 
 foreach($output as $line) {
     echo $line . "\n";
