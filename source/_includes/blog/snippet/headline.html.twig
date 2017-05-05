@@ -5,6 +5,13 @@
 <div class="blog-post-tags">
     <ul class="list-unstyled list-inline blog-info">
         <li><i class="fa fa-calendar"></i> {{ page.date|date('d F Y') }}</li>
+		<li><i class="fa fa-user" title="Author"></i>
+			{% if page.author != false %}
+				{{ page.author }}
+			{% else %}
+				Sebastian Tho&szlig;
+			{% endif %}
+		</li>
         <li><i class="fa fa-globe"></i>
             {% for location in page.locations %}
                 {% if loop.last == false %}
