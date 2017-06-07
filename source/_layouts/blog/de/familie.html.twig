@@ -16,8 +16,12 @@
 
     {% include 'blog/snippet/post_pagination.html.twig'
         with {
+            'next': page.next_familie,
+            'previous': page.previous_familie,
+            'showNext': page.pagination.next,
+            'showPrevious': page.pagination.previous,
             'nextPostLinkText': 'N&auml;chster<span class="hidden-xs"> Beitrag</span>',
-            'previousPostLinkText': 'Vorheriger <span class="hidden-xs"> Beitrag</span>'
+            'previousPostLinkText': 'Vorheriger <span class="hidden-xs"> Beitrag</span>',
         }
     %}
 
