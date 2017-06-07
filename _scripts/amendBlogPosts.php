@@ -27,11 +27,22 @@ function insertContent ($content, $searchString, $addContent) {
     return substr($content, 0, $position) . $addContent . substr($content, $position);
 }
 
-$blogPath = __DIR__ . "/../source/_familie/";
+function replaceContent ($content, $searchString, $replaceString) {
+    $position = strpos($content, $searchString);
+
+    if ($position === false) {
+        return $content;
+    }
+
+    return str_replace($searchString, $replaceString, $content);
+}
+
+$blogPath = __DIR__ . "/../source/_reiseblog/";
 
 $searchString = 'sitemap: false';
 
 $addContent = '
+headline_type: top
 pagination:
   previous: true
   next: true';
