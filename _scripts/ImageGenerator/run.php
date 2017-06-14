@@ -10,7 +10,7 @@ use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 echo "LOAD LIST OF NEW IMAGES\n";
 
 function readFiles($directory) {
-    $excludedFiles = ['.', '..', '.gitkeep'];
+    $excludedFiles = ['.', '..', '.gitkeep', '.DS_Store'];
 
     $files = [];
     foreach ( scandir($directory) as $file) {
