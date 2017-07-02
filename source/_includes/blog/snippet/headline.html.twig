@@ -7,7 +7,7 @@
         <li><i class="fa fa-calendar"></i> {{ page.date|date('d F Y') }}</li>
 		<li><i class="fa fa-user" title="Author"></i>
 			{% if page.author != false %}
-				{{ page.author }}
+				{{ page.author|raw }}
 			{% else %}
 				Sebastian Tho&szlig;
 			{% endif %}
