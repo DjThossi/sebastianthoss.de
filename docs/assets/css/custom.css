@@ -1,0 +1,62 @@
+/* Add here all your css styles (customizations) */
+@media (min-width: 992px) {
+    .header-v6 .navbar-nav {
+        float: none;
+    }
+
+    .header-fixed .header-v6.header-sticky {
+        box-shadow: 0 0 3px #bbb;
+    }
+}
+
+/*Interactive Slider v2
+------------------------------------*/
+.interactive-slider-v2 {
+    background-image: url("../img/bg/teaser.jpg");
+}
+
+@media (max-width: 450px) {
+    .interactive-slider-v2 {
+        padding: 100px 0;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+    img#logo-footer {
+        max-width: 212px;
+    }
+}
+
+/*Link News*/
+.footer-v2 .footer .link-news {
+    margin-bottom: 0;
+}
+
+.footer-v2 .footer .link-news li {
+    padding: 12px 0;
+    border-top: solid 1px #555;
+}
+
+.footer-v2 .footer .link-news li:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.footer-v2 .footer .link-news li a {
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+.footer-v2 .footer .link-news a:hover {
+    color: #bbb;
+}
+
+.footer-v2 .footer .link-news li small {
+    display: block;
+}
+
+/* Color of description text over talks overview CTAs */
+.cbp-l-caption-desc {
+    color: #ffffff;
+}
