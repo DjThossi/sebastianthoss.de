@@ -21,21 +21,22 @@ js:
     - /assets/plugins/masonry/jquery.masonry.min.js
     - /assets/js/pages/blog-masonry.js
 
-generator: pagination
-pagination:
-  max_per_page: 9
-  provider: data.familie
+#generator: pagination
+#pagination:
+#  max_per_page: 9
+#  provider: data.familie
 ---
 
-<div class="heading heading-v1 margin-bottom-20 margin-top-20">
+<div class="heading margin-bottom-20 margin-top-20">
   <h1>Reiseblog f&uuml;r Familie und Freunde</h1>
-  <p>Hier findet Ihr alle <a href="{{ site.url }}/familie/">Infos</a> und <a href="{{ site.url }}/familie/fotos/">Bilder</a> unserer aktuellen Reise</p>
+  <h2>Aktuell sind wir arbeiten und verdienen das Geld f&uuml;r unsere n&auml;chste Reise</h2>
+  <p>Normalerweise findet Ihr hier alle <a href="{{ site.url }}/familie/">Infos</a> und <a href="{{ site.url }}/familie/fotos/">Bilder</a> unserer aktuellen Reise.</p>
 </div>
 
 <!--=== Content Part ===-->
-{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+{# include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} #}
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
-{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+{# include 'pagination.html.twig' with {'pagination': page.pagination} #}
 <!--End Pagination-->
