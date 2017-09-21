@@ -342,6 +342,12 @@ Als n&auml;chstes ging es dann zur Touriinfo, um den einen oder anderen Prospekt
     gtag('js', new Date());
 
     gtag('config', 'UA-3423622-11');
+
+    function gaHeartbeat(){
+        gtag('event', 'heartbeat');
+        setTimeout(gaHeartbeat, 10*1000);
+    }
+    gaHeartbeat();
 </script>
 <!-- Google Analytics -->
 </body>

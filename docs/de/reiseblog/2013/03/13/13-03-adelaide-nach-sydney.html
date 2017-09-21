@@ -351,6 +351,12 @@ Bevor ich heute wieder in Sydney ankam bin ich noch zum Illawarra fly Treetop ge
     gtag('js', new Date());
 
     gtag('config', 'UA-3423622-11');
+
+    function gaHeartbeat(){
+        gtag('event', 'heartbeat');
+        setTimeout(gaHeartbeat, 10*1000);
+    }
+    gaHeartbeat();
 </script>
 <!-- Google Analytics -->
 </body>

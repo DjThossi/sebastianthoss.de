@@ -411,6 +411,12 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-3423622-11');
+
+    function gaHeartbeat(){
+        gtag('event', 'heartbeat');
+        setTimeout(gaHeartbeat, 10*1000);
+    }
+    gaHeartbeat();
 </script>
 <!-- Google Analytics -->
 </body>
