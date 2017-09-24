@@ -60,3 +60,11 @@
 .cbp-l-caption-desc {
     color: #ffffff;
 }
+
+@media (min-width: 991px) {
+    #pfe img {
+        float: right;
+        margin-top: 35px;
+        margin-right: 30px;
+    }
+}
