@@ -65,6 +65,11 @@
     #pfe img {
         float: right;
         margin-top: 35px;
-        margin-right: 30px;
+        margin-right: 50px;
     }
+}
+
+.heading h2:before,
+.heading h2:after {
+    border-color: #337ab7;
 }
