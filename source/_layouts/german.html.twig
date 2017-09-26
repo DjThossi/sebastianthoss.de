@@ -41,6 +41,14 @@
                             </li>
                             <!-- End Homepage -->
 
+                            <!-- Homepage -->
+                            <li class="{% if page.active_nav == 'big-5' %}active{% endif %}">
+                                <a href="{{ site.url }}/de/big-five-for-life/">
+                                    Big 5 For life
+                                </a>
+                            </li>
+                            <!-- End Homepage -->
+
                             <!-- Talks -->
                             <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
                                 <a href="{{ site.url }}/de/vortraege/" class="dropdown-toggle" data-toggle="dropdown">
