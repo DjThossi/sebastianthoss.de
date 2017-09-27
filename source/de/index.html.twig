@@ -11,7 +11,7 @@ meta:
 
 hreflang:
   en:
-    href: /en/
+    href: /de/
   de:
     href: /de/
 
@@ -33,13 +33,26 @@ active_nav: home
 <div class="container content">
     <ul class="timeline-v1">
 
-        {% include 'timeline/de/2017-02-16-smoke-tests-at-php-uk-conference.html.twig' %}
-        {% include 'timeline/de/2017-01-23-git-basics-at-bs-14.html.twig' with {'css_class': 'timeline-inverted'} %}
-        {% include 'timeline/de/2016-11-26-first-node-js-application.html.twig' %}
-        {% include 'timeline/de/2016-10-24-don-t-fear-the-walking-dead-at-ipc-munich.html.twig' with {'css_class': 'timeline-inverted'} %}
-        {% include 'timeline/de/2016-10-11-99-percent-is-not-enough-at-phpughh.html.twig' %}
-        {% include 'timeline/de/2016-09-30-don-t-fear-the-walking-dead-at-code-talks.html.twig' with {'css_class': 'timeline-inverted'} %}
-        {% include 'timeline/de/2016-05-10-don-t-fear-the-walking-dead-at-phpughh.html.twig' %}
+        {% set timelineEntries = [
+                'timeline/de/2017-09-29-smoke-tests-at-code-talks.html.twig',
+                'timeline/de/2017-08-29-tech-recruiting-at-true-tech-talks.html.twig',
+                'timeline/de/2017-02-16-smoke-tests-at-php-uk-conference.html.twig',
+                'timeline/de/2017-01-23-git-basics-at-bs-14.html.twig',
+                'timeline/de/2016-11-26-first-node-js-application.html.twig',
+                'timeline/de/2016-10-24-don-t-fear-the-walking-dead-at-ipc-munich.html.twig',
+                'timeline/de/2016-10-11-99-percent-is-not-enough-at-phpughh.html.twig',
+                'timeline/de/2016-09-30-don-t-fear-the-walking-dead-at-code-talks.html.twig',
+                'timeline/de/2016-05-10-don-t-fear-the-walking-dead-at-phpughh.html.twig',
+            ]
+        %}
+
+        {% for entry in timelineEntries %}
+            {% if (loop.index % 2) == 0 %}
+                {% include entry with {'css_class': 'timeline-inverted'} %}
+            {% else %}
+                {% include entry %}
+            {% endif %}
+        {% endfor %}
 
         <li class="clearfix" style="float: none;"></li>
     </ul>
