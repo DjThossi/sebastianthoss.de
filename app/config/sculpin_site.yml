@@ -10,9 +10,9 @@
 
 meetings:
   - link:
-      text: "Code Talks - Hamburg"
-      url: https://www.codetalks.com/de/2017/speaker/sebastian-thoss-4323
-    date: 2017-09-29
+      text: "Barcamp - Hamburg"
+      url: http://www.barcamphamburg.com/
+    date: 2017-11-17
 
 talks:
   de:
