@@ -167,7 +167,51 @@
             <url>
             <loc>http://www.sebastianthoss.de/de/reiseblog/2012/07/04/mein-erster-beitrag-im-neuen-blog.html</loc>
         </url>
-        <url>
+    
+    <url>
+        <loc>http://www.sebastianthoss.de/de/reiseblog/</loc>
+    </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/2/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/3/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/4/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/5/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/6/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/7/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/8/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/9/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/10/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/11/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/12/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/13/</loc>
+        </url>
+            <url>
+            <loc>http://www.sebastianthoss.de/de/reiseblog/page/14/</loc>
+        </url>
+    
+    <url>
         <loc>http://www.sebastianthoss.de/de/vortraege/99-percent-is-not-enough.html</loc>
     </url>
     <url>
@@ -201,36 +245,6 @@
         <loc>http://www.sebastianthoss.de/de/datenschutzerklaerung/</loc>
     </url>
     <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/2/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/3/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/4/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/5/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/6/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/7/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/8/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/9/</loc>
-    </url>
-    <url>
-        <loc>http://www.sebastianthoss.de/de/reiseblog/page/10/</loc>
-    </url>
-    <url>
         <loc>http://www.sebastianthoss.de/de/kontakt/</loc>
     </url>
     <url>
@@ -250,6 +264,9 @@
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/en/big-five-for-life/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/de/big-five-for-life/</loc>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/</loc>
