@@ -16,6 +16,16 @@ permalink: sitemap.xml
             <loc>{{ site.url }}{{ post.url }}</loc>
         </url>
     {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/</loc>
+    </url>
+    {% for page in 2..(data.reiseblog|length / 9)|round(0, 'ceil') %}
+        <url>
+            <loc>{{ site.url }}/de/reiseblog/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
     <url>
         <loc>{{ site.url }}/de/vortraege/99-percent-is-not-enough.html</loc>
     </url>
@@ -50,36 +60,6 @@ permalink: sitemap.xml
         <loc>{{ site.url }}/de/datenschutzerklaerung/</loc>
     </url>
     <url>
-        <loc>{{ site.url }}/de/reiseblog/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/2/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/3/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/4/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/5/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/6/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/7/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/8/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/9/</loc>
-    </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/page/10/</loc>
-    </url>
-    <url>
         <loc>{{ site.url }}/de/kontakt/</loc>
     </url>
     <url>
@@ -99,6 +79,9 @@ permalink: sitemap.xml
     </url>
     <url>
         <loc>{{ site.url }}/en/big-five-for-life/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/big-five-for-life/</loc>
     </url>
     <url>
         <loc>{{ site.url }}/</loc>
