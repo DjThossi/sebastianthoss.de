@@ -73,3 +73,18 @@
 .heading h2:after {
     border-color: #337ab7;
 }
+
+
+
+
+@media (max-width: 992px) {
+    .text-center-md-max {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-center-sm-only {
+        text-align: center;
+    }
+}
