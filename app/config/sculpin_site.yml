@@ -10,12 +10,23 @@
 
 meetings:
   - link:
-      text: "Barcamp - Hamburg"
-      url: http://www.barcamphamburg.com/
-    date: 2017-11-17
+      text: "Merry Christmas"
+      url: https://www.smest.it/
+    date: 2017-12-24
 
 talks:
   de:
+    - id: 7
+      title: "Fun about recruiting"
+      subtitle: "Let's turn the tables"
+      link: /de/vortraege/fun-about-recruiting.html
+      active_nav: fun-about-recruiting
+      image:
+        url: /assets/img/fun-about-recruiting/true-tech-talks-001.jpg
+        alt: "Erste Folie aus Sebastian Thoss'p Presentation zu fun about recruiting"
+      tags:
+        - soft-skills
+
     - id: 6
       title: "Git"
       subtitle: "basics"
@@ -73,6 +84,17 @@ talks:
         - architecture
 
   en:
+    - id: 7
+      title: "Fun about recruiting"
+      subtitle: "Let's turn the tables"
+      link: /en/talks/fun-about-recruiting.html
+      active_nav: fun-about-recruiting
+      image:
+        url: /assets/img/fun-about-recruiting/true-tech-talks-001.jpg
+        alt: First slide of Sebastian Thoss presentation fun about recruiting
+      tags:
+        - soft-skills
+
     - id: 6
       title: "Git"
       subtitle: "basics"
