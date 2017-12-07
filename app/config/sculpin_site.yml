@@ -84,6 +84,18 @@ talks:
         - architecture
 
   en:
+    - id: 8
+      title: "How to build a startup"
+      subtitle: "digital and alone"
+      link: /en/talks/how-to-build-a-startup-digital-and-alone.html
+      active_nav: startup
+      image:
+        url: /assets/img/how-to-build-a-startup-digtal-and-alone/itech-bs-14-business-school-001.jpg
+        alt: First slide of Sebastian Thoss talk How to build a startup - digital and alone
+      tags:
+        - architecture
+        - soft-skills
+
     - id: 7
       title: "Fun about recruiting"
       subtitle: "Let's turn the tables"
