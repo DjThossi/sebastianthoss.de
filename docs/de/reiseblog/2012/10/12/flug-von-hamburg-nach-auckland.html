@@ -338,17 +338,34 @@ Heute m&ouml;chte ich nur kurz &uuml;ber meinen 36 Std Flug nach Neuseeland beri
 <!-- End Cookie Consent plugin -->
 
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script>
+    var gaProperty = 'UA-3423622-11';
+    var disableStr = 'ga-disable-' + gaProperty;
+
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+        window[disableStr] = true;
+    }
+
+    function gaOptout() {
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = true;
+    }
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3423622-11"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)};
+    function gtag(){
+        dataLayer.push(arguments)
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'UA-3423622-11', {'anonymize_ip': true});
 
     function gaHeartbeat(){
         gtag('event', 'heartbeat');
-        setTimeout(gaHeartbeat, 10*1000);
+        setTimeout(gaHeartbeat, 15*1000);
     }
     gaHeartbeat();
 </script>
