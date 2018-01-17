@@ -90,7 +90,7 @@ js:
                     <p>
                         <input type="hidden" name="_next" value="{{ site.url }}/de/kontakt/danke.html" />
                         <input type="hidden" name="_subject" value="Neue Kontaktanfrage" />
-                        <button type="submit" class="btn-u">Nachricht absenden</button>
+                        <button type="submit" onclick="return confirm('Sind Sie damit einverstanden, dass Ihre Daten durch den Dienst formspree.io mit Sitz in den USA verarbeitet werden? Alternativ, k&ouml;nnen Sie Ihre Anfrage auch per Mail an thoss_sebastian@web.de senden.');" class="btn-u">Anfrage absenden</button>
                     </p>
                 </fieldset>
             </form>
