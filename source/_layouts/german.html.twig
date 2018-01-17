@@ -104,7 +104,7 @@
                 <div class="row">
                     <!-- Photo -->
                     <div class="col-md-3 col-sm-6 text-center-sm-only">
-                        <img id="logo-footer" src="{{ site.url }}/assets/img/sebastian_thoss.jpg" alt="Foto von mir">
+                        <img id="logo-footer" class="img-responsive center-block" src="{{ site.url }}/assets/img/sebastian_thoss.jpg" alt="Foto von mir">
                     </div>
                     <!-- End Photo -->
 
@@ -159,31 +159,16 @@
 
                     <!-- Termine -->
                     <div class="col-md-3 col-sm-6 md-margin-bottom-40 text-center-sm-only">
-                        <div class="headline"><h2 class="heading-sm">Termine</h2></div>
-                        <ul class="list-unstyled link-news">
-                            {% for meeting in site.meetings|slice(0, 3) %}
-                                <li>
-                                    <a target="_blank" href="{{ meeting.link.url }}">{{ meeting.link.text }}</a>
-                                    <small>
-                                        {{ meeting.date|date('d') }}.
-                                        {% set m = meeting.date|date('n') %}
-                                        {% if m == '1' %}Januar{% endif %}
-                                        {% if m == '2' %}Februar{% endif %}
-                                        {% if m == '3' %}M&auml;rz{% endif %}
-                                        {% if m == '4' %}April{% endif %}
-                                        {% if m == '5' %}Mai{% endif %}
-                                        {% if m == '6' %}Juni{% endif %}
-                                        {% if m == '7' %}Juli{% endif %}
-                                        {% if m == '8' %}August{% endif %}
-                                        {% if m == '9' %}September{% endif %}
-                                        {% if m == '10' %}Oktober{% endif %}
-                                        {% if m == '11' %}November{% endif %}
-                                        {% if m == '12' %}Dezember{% endif %}
-                                        {{ meeting.date|date('Y') }}
-                                    </small>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                        <div class="headline" style="margin-bottom: 10px"><h2 class="heading-sm">Mein Unternehmen</h2></div>
+
+                        <a href="https://www.smest.it" target="_blank">
+                            <img id="smestItLogo" class="img-responsive center-block" src="{{ site.url }}/assets/img/smest.it.png" alt="Logo der Smest.it UG (haftungsbeschr&auml;nkt)" />
+                        </a>
+
+                        <p>
+                            Mit <a href="https://www.smest.it" target="_blank">Smest.it</a> möchte ich ein für alle mal Fehlerseiten aus dem Internet verbannen.
+                        </p>
+
                     </div>
                     <!-- End Termine -->
                 </div>
