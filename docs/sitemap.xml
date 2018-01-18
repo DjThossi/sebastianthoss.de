@@ -251,10 +251,16 @@
         <loc>http://www.sebastianthoss.de/de/kontakt/</loc>
     </url>
     <url>
+        <loc>http://www.sebastianthoss.de/de/news/</loc>
+    </url>
+    <url>
         <loc>http://www.sebastianthoss.de/de/</loc>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/en/contact/</loc>
+    </url>
+    <url>
+        <loc>http://www.sebastianthoss.de/en/news/</loc>
     </url>
     <url>
         <loc>http://www.sebastianthoss.de/en/tech-blog/</loc>
