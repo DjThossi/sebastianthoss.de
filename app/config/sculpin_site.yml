@@ -8,12 +8,6 @@
 #disqus:
 #    shortname:
 
-meetings:
-  - link:
-      text: "Merry Christmas"
-      url: https://www.smest.it/
-    date: 2017-12-24
-
 talks:
   de:
     - id: 7
