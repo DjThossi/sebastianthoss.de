@@ -11,8 +11,16 @@
 
 /*Interactive Slider v2
 ------------------------------------*/
-.interactive-slider-v2 {
-    background-image: url("../img/bg/teaser.jpg");
+.interactive-slider-v2.home-image {
+    background: url("../img/bg/home.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.breadcrumbs-v3.news-image {
+    background: url("../img/bg/news.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 @media (max-width: 450px) {

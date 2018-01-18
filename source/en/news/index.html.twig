@@ -1,0 +1,60 @@
+---
+layout: english
+title: News archive
+
+meta:
+  description: Here, my english speaking friends can see all timeline entries.
+  keywords:
+    - News
+    - Timeline
+    - Archive
+
+hreflang:
+  en:
+    href: /en/news/
+  de:
+    href: /de/news/
+
+add_css:
+  - /assets/css/pages/shortcode_timeline1.css
+
+active_nav: more-news
+---
+<!-- Breadcrumb v3 -->
+<div class="breadcrumbs-v3 news-image">
+    <div class="container text-center">
+        <h1>Sebastian Thoss</h1>
+        <p>All news for family and friends</p>
+    </div>
+</div>
+<!-- End Breadcrumb v3 -->
+
+<!--=== Content Part ===-->
+<div class="container content">
+    <ul class="timeline-v1">
+
+        {% set timelineEntries = [
+                'timeline/en/2017-09-29-smoke-tests-at-code-talks.html.twig',
+                'timeline/en/2017-08-29-tech-recruiting-at-true-tech-talks.html.twig',
+                'timeline/en/2017-02-16-smoke-tests-at-php-uk-conference.html.twig',
+                'timeline/en/2017-01-23-git-basics-at-bs-14.html.twig',
+                'timeline/en/2016-11-26-first-node-js-application.html.twig',
+                'timeline/en/2016-10-24-don-t-fear-the-walking-dead-at-ipc-munich.html.twig',
+                'timeline/en/2016-10-11-99-percent-is-not-enough-at-phpughh.html.twig',
+                'timeline/en/2016-09-30-don-t-fear-the-walking-dead-at-code-talks.html.twig',
+                'timeline/en/2016-05-10-don-t-fear-the-walking-dead-at-phpughh.html.twig',
+            ]
+        %}
+
+        {% for entry in timelineEntries %}
+            {% if (loop.index % 2) == 0 %}
+                {% include entry with {'css_class': 'timeline-inverted'} %}
+            {% else %}
+                {% include entry %}
+            {% endif %}
+        {% endfor %}
+
+        <li class="clearfix" style="float: none;"></li>
+    </ul>
+</div><!--/container-->
+<!-- End Content Part -->
