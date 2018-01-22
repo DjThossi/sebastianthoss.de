@@ -17,7 +17,7 @@ var GruenderPage = function () {
                 var marker = map.addMarker({
                     lat: 53.544578,
                     lng: 9.978211,
-                    title: 'kartenmacherei am Neustädter Neuer Weg 22'
+                    title: 'kartenmacherei am Neust&auml;dter Neuer Weg 22'
                 });
             });
         }
