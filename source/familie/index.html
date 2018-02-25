@@ -21,10 +21,10 @@ js:
     - /assets/plugins/masonry/jquery.masonry.min.js
     - /assets/js/pages/blog-masonry.js
 
-#generator: pagination
-#pagination:
-#  max_per_page: 9
-#  provider: data.familie
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: data.familie
 ---
 
 <div class="heading margin-bottom-20 margin-top-20">
@@ -34,9 +34,9 @@ js:
 </div>
 
 <!--=== Content Part ===-->
-{# include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} #}
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
-{# include 'pagination.html.twig' with {'pagination': page.pagination} #}
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
 <!--End Pagination-->
