@@ -8,6 +8,8 @@ _unify-layout
 
 /_scripts/ImageGenerator/output/*
 !/_scripts/ImageGenerator/output/.gitkeep
+!/_scripts/ImageGenerator/output/small
+!/_scripts/ImageGenerator/output/small/.gitkeep
 
 /_scripts/ImageGenerator/converter/node_modules/
 /.vagrant/
