@@ -33,6 +33,7 @@ if (count($inputImages) == 0) {
 }
 
 $outputPath = __DIR__ . '/output/';
+$outputSmallPath = __DIR__ . '/output/small/';
 
 
 
@@ -41,11 +42,25 @@ $outputPath = __DIR__ . '/output/';
 echo "CONVERT ALL IMAGES\n";
 
 foreach ($inputImages as $image) {
+    //Large output image
+    $command = new Command();
+    $response = $command
+        ->convert($inputPath . $image)
+        ->resize(new Geometry(1024))
+        ->file($outputPath . $image, false)
+        ->run();
+
+    if ($response->hasFailed()) {
+        echo "SOMETIHNG WENT WRONG!\n";
+        die($response->getError());
+    }
+
+    //Small output image
     $command = new Command();
     $response = $command
         ->convert($inputPath . $image)
         ->resize(new Geometry(455))
-        ->file($outputPath . $image, false)
+        ->file($outputSmallPath . $image, false)
         ->run();
 
     if ($response->hasFailed()) {
@@ -79,8 +94,9 @@ $largePath = __DIR__ . '/../../source/assets/img/blog/2018-philippines/';
 $smallPath = __DIR__ . '/../../source/assets/img/blog/2018-philippines/small/';
 
 foreach ($images as $image) {
-    rename($inputPath . $image, $largePath . $image);
-    rename($outputPath . $image, $smallPath . $image);
+    unlink($inputPath . $image);
+    rename($outputPath . $image, $largePath . $image);
+    rename($outputSmallPath . $image, $smallPath . $image);
 }
 
 
