@@ -1,13 +1,16 @@
 ---
 layout: german
-title: Reisefotos
+title: Reisefotos 2017 Asia Oz
 sitemap: false
 meta:
-  description: "Fotos f&uuml;r die Familie"
+  description: "Fotos von unserer Reise nach Hong Kong, Australien und Singapur"
   keywords:
     - Fotos
-    - Reisen
+    - Australien
     - Urlaub
+    - Hong Kong
+    - Singapur
+
 active_nav: travel-blog
 
 add_css:
@@ -22,19 +25,19 @@ js:
 ---
 <div class="heading heading-v1 margin-top-20">
   <h1>Aktuellste Reisebilder</h1>
-  <p>Hier findet Ihr alle <a href="{{ site.url }}/familie/">Infos</a> und <a href="{{ site.url }}/familie/fotos/">Bilder</a> unserer aktuellen Reise</p>
+  <p>Hier findet Ihr alle Bilder unserer Reise nach Hong Kong, Australien und Singapur 2017</p>
 </div>
 
 <!-- Six Columns -->
 <div class="container content">
 
     <div class="row margin-bottom-30">
-        {% set images =  source('imageData/2018-philippines.csv')|split(", ") %}
+        {% set images = source('imageData/2017-asia-oz.csv')|split(", ")|reverse %}
 
         {% for image in images %}
             <div class="col-sm-2 sm-margin-bottom-30">
-                <a href="{{ site.url }}/assets/img/blog/2018-philippines/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
-                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2018-philippines/small/{{ image }}" alt="{{ image }}"></span>
+                <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/small/{{ image }}" alt="{{ image }}"></span>
                 </a>
             </div>
             {% if loop.index % 6 == 0 %}

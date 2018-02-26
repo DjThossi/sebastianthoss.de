@@ -75,8 +75,8 @@ if (count($images) === 0 ) {
 //MOVE IMAGES
 echo "MOVE IMAGES\n";
 
-$largePath = __DIR__ . '/../../source/assets/img/blog/2017-asia-oz/';
-$smallPath = __DIR__ . '/../../source/assets/img/blog/2017-asia-oz/small/';
+$largePath = __DIR__ . '/../../source/assets/img/blog/2018-philippines/';
+$smallPath = __DIR__ . '/../../source/assets/img/blog/2018-philippines/small/';
 
 foreach ($images as $image) {
     rename($inputPath . $image, $largePath . $image);
@@ -111,7 +111,7 @@ foreach (array_reverse($existingImages) as $image) {
     }
     $content .= $image;
 }
-file_put_contents(__DIR__ . '/../../source/_includes/image_data.csv', $content);
+file_put_contents(__DIR__ . '/../../source/_includes/imageData/2018-philippines.csv', $content);
 
 
 
