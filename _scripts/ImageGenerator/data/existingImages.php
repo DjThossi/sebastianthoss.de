@@ -8,7 +8,7 @@
   'IMG_4217.jpg' => 'IMG_4217.jpg',
   'IMG_4222.jpg' => 'IMG_4222.jpg',
   'IMG_4226.jpg' => 'IMG_4226.jpg',
-  'IMG_4241.jpg' => 'IMG_4241.jpg',
+  'IMG_4227.jpg' => 'IMG_4227.jpg',
   'IMG_4274.jpg' => 'IMG_4274.jpg',
   'IMG_4277.jpg' => 'IMG_4277.jpg',
   'IMG_4280.jpg' => 'IMG_4280.jpg',
