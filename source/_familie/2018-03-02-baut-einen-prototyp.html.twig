@@ -1,0 +1,53 @@
+---
+layout: blog/de/familie
+title: "01. &amp; 02.03.2018 Baut einen Prototyp"
+active_nav: travel-blog
+sitemap: false
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - de
+  - Reiseblog
+
+locations:
+  - Philipinen
+  - Cebu
+  - Dumaguete
+
+headline:
+  image:
+    url: "/assets/img/blog/2018-philippines/headline-jeepney.jpg"
+    alt: "ein Jeepney in Manila. Hier sind das die lokalen Busse"
+
+overview:
+  intro: "Für die letzten beiden Tage gibt es wieder nicht so viel zu erzählen, da es Arbeitstage waren. Da die Geschwindigkeit des"
+  image:
+    url: "/assets/img/blog/2018-philippines/small/IMG_4338.jpg"
+    alt: "Sebastian Thoss am arbeiten auf dem Balkon in Cebu bei Sonnenuntergang."
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }}
+            Internet in A Space Cebu doch nicht so gut war wie gehofft, beschloss ich die zwei Tage direkt von der Unterkunft aus zu arbeiten.
+        </p>
+        <p>
+            Der Plan für die Zwei Tage war, im Team  einen Prototypen für eine neue Software zu bauen um besser zu verstehen, wo welche Informationen her kommen und wie wir sie im richtigen Format abspeichern können. Wir teilten uns die Aufgaben ein und beschlossen, dass ich die gesamte Arbeitszeit eine Videoschaltung offen halte und wir uns alle paar Stunden oder wenn Fragen sind, dort treffen und uns abstimmen.
+        </p>
+        <p>
+            In meiner Freizeit kämpfte ich weiter gegen die Reste des Schnupfens und des daraus entstandenen Hustens an. Freitag morgen, vor der Arbeit beschloss ich dann endgültig am Samstag mit dem Bus nach Dumaguete zu fahren. Nicht, weil es wesentlich günstiger ist sondern, weil man dabei hoffentlich mehr von den Philippinen zu sehen bekommt. Ein Einzelzimmer in einer Jugendherberge in  Dumaguete hab ich mir auch schon bis Montag gebucht. Erst einmal schauen wie schnell das Internet dort ist und ob ich irgendwie von dort aus arbeiten kann. Wenn nicht nehme ich einfach den Flieger zurück nach Cebu und arbeite weiter von hier aus.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
+        </div>
+    </div>
+</div>
+<!--=== End Post ===-->
