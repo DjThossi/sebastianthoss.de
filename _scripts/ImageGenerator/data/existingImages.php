@@ -45,6 +45,7 @@
   'IMG_4495.jpg' => 'IMG_4495.jpg',
   'IMG_4497.jpg' => 'IMG_4497.jpg',
   'IMG_4501.jpg' => 'IMG_4501.jpg',
+  'IMG_4502.jpg' => 'IMG_4502.jpg',
   'IMG_4512.jpg' => 'IMG_4512.jpg',
   'IMG_4513.jpg' => 'IMG_4513.jpg',
   'IMG_4515.jpg' => 'IMG_4515.jpg',
