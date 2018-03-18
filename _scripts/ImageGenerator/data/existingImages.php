@@ -77,4 +77,8 @@
   'IMG_4580_12.jpg' => 'IMG_4580_12.jpg',
   'IMG_4580_13.jpg' => 'IMG_4580_13.jpg',
   'IMG_4580_14.jpg' => 'IMG_4580_14.jpg',
+  'IMG_4643.jpg' => 'IMG_4643.jpg',
+  'IMG_4646.jpg' => 'IMG_4646.jpg',
+  'IMG_4648.jpg' => 'IMG_4648.jpg',
+  'IMG_4650.jpg' => 'IMG_4650.jpg',
 );
