@@ -1,0 +1,51 @@
+---
+layout: blog/de/familie
+title: "28.03. Arbeiten am Strand"
+active_nav: travel-blog
+sitemap: false
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - de
+  - Reiseblog
+
+locations:
+  - Philipinen
+  - Mactan
+  - Cebu
+
+headline:
+  image:
+    url: "/assets/img/blog/2018-philippines/headline-jeepney.jpg"
+    alt: "ein Jeepney in Manila. Hier sind das die lokalen Busse"
+
+author: "Steffi"
+
+overview:
+  intro: "Nach dem ausschlafen, einem gemütlichen Frühstück sowie entspannen auf den Sonnenliegen und Planschen /Schnorcheln im Meer, kam Basti dazu"
+  image:
+    url: "/assets/img/blog/2018-philippines/small/IMG_4875.jpg"
+    alt: "Die Hotelanlage von der Pier aus gesehen"
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} und wir gingen, diesmal mit Kamera bewaffnet, Schnorcheln. Nach anfänglichem „hm leer hier auf einmal“ ging es Schlag auf Schlag und wir fanden tatsächlich Seepferdchen und Nemos. Nach knapp einer Stunde musste Basti aus der Sonne und ich strampelte alleine vor mich hin und heftete  mich an einen Fisch, den ich unbedingt vor die Kamera kriegen wollte. Leider spielte die Kamera so gar nicht mit und stellte nicht scharf bzw. am Ende war der Akku leer.
+        </p>
+        <p>
+            Um das Salz loszuwerden, sprang ich anschließend samt Kamera in den Pool. Damit das  Urlaubsfeeling komplett wird, gab es auch noch einen Ananas-Smoothie unter Palmen der Mega lecker war. Den restlichen Tag verbrachten wir wieder entspannt in der Sonne, im Meer oder auch beim Arbeiten. Zum Abschluss gab es im Asia-Restaurant der Hotelanlage eine Kanne Tee für mich sowie Hähnchen-Erdnussspieße für Basti. Also ein spannender Tag mit viel Entspannung.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}" />
+        </div>
+    </div>
+</div>
+<!--=== End Post ===-->
