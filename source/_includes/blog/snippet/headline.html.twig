@@ -15,9 +15,9 @@
         <li><i class="fa fa-globe"></i>
             {% for location in page.locations %}
                 {% if loop.last == false %}
-                    {{ location }},
+                    {{ location|raw }},
                 {% else %}
-                    {{ location }}
+                    {{ location|raw }}
                 {% endif %}
             {% endfor %}
         </li>
