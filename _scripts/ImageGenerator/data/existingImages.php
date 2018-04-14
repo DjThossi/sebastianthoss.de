@@ -190,4 +190,12 @@
   'IMG_5251.jpg' => 'IMG_5251.jpg',
   'IMG_5258.jpg' => 'IMG_5258.jpg',
   'IMG_5262.jpg' => 'IMG_5262.jpg',
+  'IMG_5278.jpg' => 'IMG_5278.jpg',
+  'IMG_5279.jpg' => 'IMG_5279.jpg',
+  'IMG_5283.jpg' => 'IMG_5283.jpg',
+  'IMG_5293.jpg' => 'IMG_5293.jpg',
+  'IMG_5297.jpg' => 'IMG_5297.jpg',
+  'IMG_5325.jpg' => 'IMG_5325.jpg',
+  'IMG_5326.jpg' => 'IMG_5326.jpg',
+  'IMG_5332.jpg' => 'IMG_5332.jpg',
 );
