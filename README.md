@@ -23,3 +23,4 @@ This is a description how to set up a development environment on a Linux/Mac. I'
 In most cases watch mode helps while working on pages or single blog posts. 
 It will not render blog overview page again if you just change a single blog entry. 
 In this case you need to restart the command.
+The result of these commands will be saved in 'output_dev' directory which is connected to the webserver.
