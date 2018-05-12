@@ -18,9 +18,14 @@ This is a description how to set up a development environment on a Linux/Mac. I'
 1. Go to correct directory `cd /vagrant`
 1. Install dependencies `composer install`
 1. Run markup generation `vendor/bin/sculpin generate` or `vendor/bin/sculpin generate --watch`
-1. You can see the result by opening [http://192.168.10.12/](http://192.168.10.12/)  
+1. You can see the result by opening [http://192.168.10.12/](http://192.168.10.12/)
+1. Code changes are done in 'source' directory. For example 'source/de/index.html.twig' if you want to change German homepage [http://192.168.10.12/de/](http://192.168.10.12/de/)
 
 In most cases watch mode helps while working on pages or single blog posts. 
 It will not render blog overview page again if you just change a single blog entry. 
 In this case you need to restart the command.
 The result of these commands will be saved in 'output_dev' directory which is connected to the webserver.
+
+## Run ImageGenerator
+With this script you can resize images, put them into the correct folders, add them to the files needed for generating fotos page and run production generation
+`php _scripts/ImageGenerator/run.php`
