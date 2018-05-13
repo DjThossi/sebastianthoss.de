@@ -10,8 +10,14 @@
             "homepage": "http://www.sebastianthoss.de"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Djthossi/sculpin"
+        }
+    ],
     "require": {
-        "sculpin/sculpin": "^2.1@stable",
+        "sculpin/sculpin": "2.1.2",
         "dflydev/embedded-composer": "^1.0@dev",
         "orbitale/imagemagick-php": "^1.6"
     }
