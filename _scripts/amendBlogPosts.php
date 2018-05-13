@@ -37,17 +37,24 @@ function replaceContent ($content, $searchString, $replaceString) {
     return str_replace($searchString, $replaceString, $content);
 }
 
-$blogPath = __DIR__ . "/../source/_reiseblog/";
+$blogPath = __DIR__ . "/../source/_familie/";
 
-$searchString = 'sitemap: false';
+$searchString = 'categories:
+  - de
+  - Reiseblog';
 
 $addContent = '
-headline_type: top
-pagination:
-  previous: true
-  next: true';
+  - 2018-philippines';
+
+$fromDate = strtotime('2017-01-01');
 
 foreach(readFiles($blogPath) as $fileName) {
+    $date = strtotime(substr($fileName, 0, 10));
+
+    if ($date < $fromDate) {
+        continue;
+    }
+
 	$content = file_get_contents($blogPath . $fileName);
 
 	$content = insertContent($content, $searchString, $addContent);
