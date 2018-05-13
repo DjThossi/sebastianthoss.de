@@ -20,12 +20,20 @@ permalink: sitemap.xml
     <url>
         <loc>{{ site.url }}/de/reiseblog/</loc>
     </url>
-    <url>
-        <loc>{{ site.url }}/de/reiseblog/2017-asia-oz/fotos/</loc>
-    </url>
     {% for page in 2..(data.reiseblog|length / 9)|round(0, 'ceil') %}
         <url>
             <loc>{{ site.url }}/de/reiseblog/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2017-asia-oz/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2017-asia-oz/</loc>
+    </url>
+    {% for page in 2..5 %}
+        <url>
+            <loc>{{ site.url }}/de/reiseblog/2017-asia-oz/page/{{ page }}/</loc>
         </url>
     {% endfor %}
 

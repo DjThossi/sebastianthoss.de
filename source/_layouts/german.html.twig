@@ -65,10 +65,18 @@
                             </li>
 
                             <!-- Reiseblog -->
-                            <li class="{% if page.active_nav == 'travel-blog' %}active{% endif %}">
-                                <a href="{{ site.url }}/de/reiseblog/">
-                                    Reiseblog
+                            <li class="dropdown{% if page.active_nav == 'travel-blog' %} active{% endif %}">
+                                <a href="{{ site.url }}/de/reiseblog/" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reiseblogs
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li class="{% if page.active_nav == 'blog-newest' %}active{% endif %}">
+                                        <a href="{{ site.url }}/de/reiseblog/"><i class="fa fa-angle-double-right"></i>Neuste Beitr&auml;ge</a>
+                                    </li>
+                                    <li class="{% if page.active_nav == 'blog-2017-asia-oz' %}active{% endif %}">
+                                        <a href="{{ site.url }}/de/reiseblog/2017-asia-oz/page/5/"><i class="fa fa-angle-double-right"></i>2017 Australien</a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <!-- More -->

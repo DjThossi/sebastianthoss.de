@@ -11,7 +11,7 @@ meta:
     - Auszeit
     - Welt
     - Weltreise
-active_nav: travel-blog
+active_nav: blog-newest
 
 add_css:
   - /assets/css/pages/blog_masonry_3col.css
@@ -24,7 +24,13 @@ generator: pagination
 pagination:
   max_per_page: 9
   provider: data.reiseblog
+<!--provider: filtered.reiseblog.categories.2017-asia-oz-->
 ---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Alle Blogartikel</h1>
+  <p>Hier findet Ihr alle Blogartikel meiner Reisen quer durch die Welt. Nicht jeder Artikel ist selbstgeschrieben. Oft hatte ich auch Hilfe von Familie und Freunden</p>
+</div>
 
 <!--=== Content Part ===-->
 {% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
