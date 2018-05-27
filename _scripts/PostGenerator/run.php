@@ -31,9 +31,8 @@ $fileName = $year . '-' . $month . '-' . $day . '-' . urlencode(strtolower(str_r
 
 $replace = [
     '{#title#}' => $title,
-    '{#imageUrl#}' => '/assets/img/blog/2018-philippines/small/cartoon-2898206.png',
-    '{#imageAlt#}' => 'Eine Zeichnung auf dem ein Mann auf einem Liegestuhl am Strand mit einem Laptop arbeitet.',
-
+    '{#imageUrl#}' => '/assets/img/blog/2018-philippines/small/IMG_5130.jpg',
+    '{#imageAlt#}' => 'BITTE FÜLLEN',
 ];
 
 do {
