@@ -1,6 +1,6 @@
 ---
 layout: blog/de/familie
-title: Template
+title: "{#title#}"
 active_nav: travel-blog
 sitemap: false
 pagination:
@@ -21,10 +21,10 @@ headline:
     alt: "ein Jeepney in Manila. Hier sind das die lokalen Busse"
 
 overview:
-  intro: "Heute ging es endlich los Richtung Philippinen."
+  intro: "{#intro#}"
   image:
-    url: "/assets/img/blog/2018-philippines/small/IMG_4172.jpg"
-    alt: "Basti am Hamburger Flughafen"
+    url: "{#imageUrl#}"
+    alt: "{#imageAlt#}"
 ---
 <!--=== Post ===-->
 <div class="row">
@@ -33,13 +33,15 @@ overview:
     </div>
     <div class="col-md-6">
         <p>
-            {{ page.overview.intro|raw }}
+            {{ page.overview.intro|raw }} {#afterIntro#}
         </p>
+{#additionalNextToImage#}
     </div>
     <div class="col-md-6 overflow-h">
         <div class="box-shadow shadow-effect-3">
             <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
         </div>
     </div>
+{#additionalContent#}
 </div>
 <!--=== End Post ===-->
