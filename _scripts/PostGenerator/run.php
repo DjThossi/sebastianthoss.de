@@ -26,8 +26,21 @@ if ($didMatch === 1) {
     throw new Exception('Date not found');
 }
 
-$fileName = $year . '-' . $month . '-' . $day . '-' . urlencode(strtolower(str_replace(['&', ' '], ['und', '-'], $titleForFile))) . '.html.twig';
+$nameReplace = [
+    '&' => 'und',
+    ' ' => '-',
+    'ä' => 'ae',
+    'ö' => 'oe',
+    'ü' => 'ue',
+    'ß' => 'ss',
+];
 
+$fileName = $year . '-' . $month . '-' . $day . '-' . urlencode(
+    str_replace(
+        array_keys($nameReplace),
+        array_values($nameReplace),
+        strtolower($titleForFile)
+    )) . '.html.twig';
 
 $replace = [
     '{#title#}' => $title,
