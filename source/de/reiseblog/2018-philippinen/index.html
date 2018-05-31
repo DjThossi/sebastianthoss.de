@@ -2,7 +2,7 @@
 layout: german
 title: Reiseblog
 meta:
-  description: "Hier findet meine Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge &uuml;ber unsere Australienreise 2017"
+  description: "Hier findet meine Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge &uuml;ber unsere Reise auf die Philippinen 2018"
   keywords:
     - Philippinen
     - Manila
@@ -21,10 +21,10 @@ js:
     - /assets/plugins/masonry/jquery.masonry.min.js
     - /assets/js/pages/blog-masonry.js
 
-#generator: pagination
-#pagination:
-#  max_per_page: 9
-#  provider: filtered.reiseblog.categories.2018-philippines
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: filtered.reiseblog.categories.2018-philippines
 ---
 
 <div class="heading margin-bottom-20 margin-top-20">
@@ -33,9 +33,9 @@ js:
 </div>
 
 <!--=== Content Part ===-->
-{#% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
-{% include 'pagination.html.twig' with {'pagination': page.pagination} %#}
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
 <!--End Pagination-->
