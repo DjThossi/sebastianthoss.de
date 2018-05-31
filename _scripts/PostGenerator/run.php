@@ -53,7 +53,7 @@ do {
 }
 while (strlen($line) === 0);
 
-$cutPosition = strrpos(substr($line, 0, 145), ' ');
+$cutPosition = strrpos(substr($line, 0, 150), ' ');
 $intro = trim(substr($line, 0, $cutPosition));
 $replace['{#intro#}'] = $intro;
 
@@ -62,7 +62,7 @@ $replace['{#afterIntro#}'] = $afterIntro;
 
 $additionalNextToImage = '';
 try {
-    while ($file->getCharCount() < 1000) {
+    while ($file->getCharCount() < 1300) {
         do {
             $line = $file->getNextLine();
         }
