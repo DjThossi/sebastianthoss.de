@@ -7,10 +7,16 @@ set -o nounset
 set -o errexit
 
 # generate prod
-vendor/bin/sculpin generate --env=prod --clean --no-interaction
+#vendor/bin/sculpin generate --env=prod --clean --no-interaction
+
+gitStatus=$(git status)
+echo "$gitStatus"
+
+if echo "$gitStatus" | grep -q "nothing to commit";then
+    exit 0;
+fi
 
 git add .
-git status
 
 # collect message
 echo -n "Commit message [ENTER]: "
