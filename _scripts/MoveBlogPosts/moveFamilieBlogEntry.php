@@ -37,27 +37,48 @@ function replaceContent ($content, $searchString, $replaceString) {
     return str_replace($searchString, $replaceString, $content);
 }
 
-$familiePath = __DIR__ . "/../source/_familie/";
-$travelBlogPath = __DIR__ . "/../source/_reiseblog/";
+$familiePath = __DIR__ . "/../../source/_familie/";
+$travelBlogPath = __DIR__ . "/../../source/_reiseblog/";
 
 echo "READE FILE\n";
 $files = readFiles($familiePath);
 sort($files);
 $fileName = array_shift($files);
 
-echo "MOVE FIRST FILE\n";
-rename($familiePath . $fileName, $travelBlogPath . $fileName);
-
 echo "READ FILE\n";
-$content = file_get_contents($travelBlogPath . $fileName);
+$content = file_get_contents($familiePath . $fileName);
 
 echo "AMEND FILE\n";
 $content = replaceContent($content, 'layout: blog/de/familie', 'layout: blog/de/travel-blog');
 $content = replaceContent($content, 'sitemap: false', 'sitemap: true
 headline_type: no');
 
+echo "COLLECT INFOS FOR SOCIAL\n";
+$hasFound = preg_match("/\ntitle:([A-z 0-9\., &;äöüÜÖÄß€\"]{1,})\n/", $content, $matches);
+if ($hasFound !== 1) {
+    echo "[ERROR] TITLE NOT FOUND";
+    exit(1);
+}
+$title = trim($matches[1], " \t\n\r\0\x0B\"");
+
+$hasFound = preg_match("/\n[ ]{1,}intro:([A-z 0-9\., &;äöüÜÖÄß€\"]{1,})\n/", $content, $matches);
+if ($hasFound !== 1) {
+    echo "[ERROR] INTRO NOT FOUND\n";
+    exit(1);
+}
+$intro = trim($matches[1], " \t\n\r\0\x0B\"");
+
 echo "SAVE FILE\n";
 file_put_contents($travelBlogPath . $fileName, $content);
+
+echo "REMOVE ORIGINAL FILE\n";
+unlink($familiePath . $fileName);
+
+echo "TITLE AND INTRO: \n";
+echo $title . "\n";
+echo $intro . "\n";
+
+exit(0);
 
 echo "GENERATE DEV\n";
 
