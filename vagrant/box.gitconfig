@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
         name = Sebastian Thoss
         email = thoss_sebastian@web.de
+[push]
+        default = simple
