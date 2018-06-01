@@ -7,7 +7,7 @@ set -o nounset
 set -o errexit
 
 # generate prod
-#vendor/bin/sculpin generate --env=prod --clean --no-interaction
+vendor/bin/sculpin generate --env=prod --clean --no-interaction
 
 gitStatus=$(git status)
 echo "$gitStatus"

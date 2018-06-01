@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "peterrehm/xenial-php71"
+  config.vm.provision "file", source: "~/.ssh", destination: "~/"
   config.vm.provision :shell, path: "vagrant/bootstrap.sh"
 
   # Disable automatic box update checking. If you disable this, then
