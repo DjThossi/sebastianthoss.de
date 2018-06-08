@@ -115,7 +115,7 @@ if ($stop === false) {
     $snippet = file_get_contents(__DIR__ . '/templates/md-6-left.html.twig');
     $snippetContent = '';
 
-    $maxCount = $file->getCharCount() + 1500;
+    $maxCount = $file->getCharCount() + 1400;
 
     try {
         while ($file->getCharCount() < $maxCount) {
