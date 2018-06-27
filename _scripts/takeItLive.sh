@@ -10,7 +10,7 @@ set -o errexit
 vendor/bin/sculpin generate --env=prod --clean --no-interaction
 
 gitStatus=$(git status)
-echo "$gitStatus"
+#echo "$gitStatus"
 
 if echo "$gitStatus" | grep -q "nothing to commit";then
     exit 0;
