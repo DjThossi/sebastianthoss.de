@@ -54,14 +54,14 @@ $content = replaceContent($content, 'sitemap: false', 'sitemap: true
 headline_type: no');
 
 echo "COLLECT INFOS FOR SOCIAL\n";
-$hasFound = preg_match("/\ntitle:([A-z 0-9\.\-, &;äöüÜÖÄß€\"]{1,})\n/", $content, $matches);
+$hasFound = preg_match("/\ntitle:([A-z 0-9\.\-,\(\) &;äöüÜÖÄß€\"\']{1,})\n/", $content, $matches);
 if ($hasFound !== 1) {
-    echo "[ERROR] TITLE NOT FOUND";
+    echo "[ERROR] TITLE NOT FOUND\n";
     exit(1);
 }
 $title = trim($matches[1], " \t\n\r\0\x0B\"");
 
-$hasFound = preg_match("/\n[ ]{1,}intro:([A-z 0-9\.\-, &;äöüÜÖÄß€\"\']{1,})\n/", $content, $matches);
+$hasFound = preg_match("/\n[ ]{1,}intro:([A-z 0-9\.\-,\(\) &;äöüÜÖÄß€\"\']{1,})\n/", $content, $matches);
 if ($hasFound !== 1) {
     echo "[ERROR] INTRO NOT FOUND\n";
     exit(1);

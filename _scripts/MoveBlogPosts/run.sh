@@ -8,4 +8,4 @@ set -o errexit
 
 php ./_scripts/MoveBlogPosts/moveFamilieBlogEntry.php
 
-bash -c "./_scripts/takeItLive.sh"
+bash -c "./_scripts/takeItLive.sh 'Move familie blog post'"
