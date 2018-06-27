@@ -18,9 +18,14 @@ fi
 
 git add .
 
-# collect message
-echo -n "Commit message [ENTER]: "
-read message
+if [ $# -eq 0 ]
+  then
+    # collect message
+    echo -n "Commit message [ENTER]: "
+    read message
+  else
+    message="$1"
+fi
 
 # git commit and push
 git commit -am "${message}"
