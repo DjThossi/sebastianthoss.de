@@ -3,6 +3,9 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             <url>
+            <loc>http://www.sebastianthoss.de/en/tech-blog/2018/08/23/smest.html</loc>
+        </url>
+            <url>
             <loc>http://www.sebastianthoss.de/en/tech-blog/2017/11/14/smoke-test-in-development.html</loc>
         </url>
             <url>
