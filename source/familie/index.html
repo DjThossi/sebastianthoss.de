@@ -33,9 +33,9 @@ pagination:
 </div>
 
 <!--=== Content Part ===-->
-{#% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
-{% include 'pagination.html.twig' with {'pagination': page.pagination} %#}
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
 <!--End Pagination-->
