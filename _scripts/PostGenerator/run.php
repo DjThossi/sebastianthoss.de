@@ -32,14 +32,19 @@ $nameReplace = [
     'ä' => 'ae',
     'ö' => 'oe',
     'ü' => 'ue',
+    'Ä' => 'ae',
+    'Ö' => 'oe',
+    'Ü' => 'ue',
     'ß' => 'ss',
 ];
 
 $fileName = $year . '-' . $month . '-' . $day . '-' . urlencode(
-    str_replace(
-        array_keys($nameReplace),
-        array_values($nameReplace),
-        strtolower($titleForFile)
+    strtolower(
+        str_replace(
+            array_keys($nameReplace),
+            array_values($nameReplace),
+            $titleForFile
+        )
     )) . '.html.twig';
 
 $replace = [
