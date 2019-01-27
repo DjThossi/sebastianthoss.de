@@ -10,6 +10,17 @@
 
 talks:
   de:
+    - id: 10
+      title: "PHPUnit"
+      subtitle: "In 4 parts"
+      link: /de/vortraege/phpunit-in-four-parts.html
+      active_nav: phpunit-in-four-parts
+      image:
+        url: /assets/img/under-construction-small.jpg
+        alt: This talk is currently under construction
+      tags:
+        - testing
+
     - id: 9
       title: "SmokeTests 2"
       subtitle: "The what, why and how"
@@ -89,6 +100,17 @@ talks:
         - architecture
 
   en:
+    - id: 10
+      title: "PHPUnit"
+      subtitle: "In 4 parts"
+      link: /en/talks/phpunit-in-four-parts.html
+      active_nav: phpunit-in-four-parts
+      image:
+        url: /assets/img/under-construction-small.jpg
+        alt: This talk is currently under construction
+      tags:
+        - testing
+
     - id: 9
       title: "SmokeTests 2"
       subtitle: "The what, why and how"

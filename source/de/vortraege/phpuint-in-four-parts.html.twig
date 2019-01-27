@@ -1,10 +1,10 @@
 ---
 layout: german
-permalink: de/vortraege/smoke-tests-the-what-why-and-how.html
+permalink: de/vortraege/phpunit-in-four-parts.html
 
-title: "SmokeTests - The what, why and how"
+title: "PHPUnit - In 4 parts"
 meta:
-  description: "Details &uuml;ber Sebastian Tho&szlig;'s Vortrag zum Thema Smoke Tests "
+  description: "Details &uuml;ber Sebastian Tho&szlig;'s Vortrag zum Thema PHPUnit in vier Teilen"
   keywords:
     - test
     - testen
@@ -13,13 +13,13 @@ meta:
     - Entwicklung
     - phpunit
 
-active_nav: talks-smoke-tests-what-why-how
+active_nav: phpunit-in-four-parts
 
 hreflang:
   en:
-    href: /en/talks/smoke-tests-the-what-why-and-how.html
+    href: /en/talks/phpunit-in-four-parts.html
   de:
-    href: /de/vortraege/smoke-tests-the-what-why-and-how.html
+    href: /de/vortraege/phpunit-in-four-parts.html
 
 add_css:
   - /assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css
@@ -32,8 +32,8 @@ js:
 <!--=== Breadcrumbs v3 ===-->
 <div class="breadcrumbs-v3 img-v3">
     <div class="container text-center">
-        <h1>SmokeTests</h1>
-        <p>The what, why and how</p>
+        <h1>PHPUnit</h1>
+        <p> In 4 parts</p>
     </div><!--/end container-->
 </div>
 <!--=== End Breadcrumbs v3 ===-->
@@ -90,23 +90,32 @@ js:
         </div>
         <!-- End Magazine Slider -->
 
-
         <div class="row margin-bottom-30">
             <div class="col-sm-8">
-                <div class="headline"><h2>Talk Abstract</h2></div>
+                <div class="headline"><h2>Kurzbeschreibung</h2></div>
                 <p>
-                    Today it's crystal clear why we need unit tests.
-                    Even integration and acceptance tests are quite common.
-                    However, none of these tests is generally run in a production environment.
-                    Well, are you sure that all your web pages are working in production after your newest feature was deployed?
-                    Discover SmokeTests (as well called sanity or availability tests) and why every web development team should have them set up.
+                    We’ll start with the basics and guide you through 4 parts of writing tests using PHPUnit.
+                </p>
+                <ul>
+                    <li>
+                        Part 1: Unit Testing
+                    </li>
+                    <li>
+                        Part 2: Integration Testing
+                    </li>
+                    <li>
+                        Part 3: Acceptance Testing
+                    </li>
+                    <li>
+                        Part 4: Smoke Testing
+                    </li>
+                </ul>
+                <p>
+                    After this session, you'll have a good understanding of all 4 types of tests, how they should be structured and in which cases they are used. On top, you'll get a lot of examples and exercises for each type.
                 </p>
                 <p>
-                    I want to show that smoke tests are a good way to approve that all your critical URLs are working.
-                    First part will be a general overview of testing website code.
-                    Then SmokeTesting explained in depths including code examples for easy reuse.
-                    Afterward, I will show how the workflow of deployments to production environments could look like.
-                    How the correct server setup will help to get smoke tests running and how we make sure that smoke tests are not affecting the users.
+                    Background for this talk is to provide an overview of how to structure and write these 4 kinds of tests and where and when to separate between them.
+                    The slides will show a lot of graphical and source code explanations for each of the part.
                 </p>
             </div>
             <div class="col-sm-4">
@@ -114,16 +123,15 @@ js:
                 <ul class="list-unstyled project-details">
                     <li><strong>Vortragender:</strong> Sebastian Thoss</li>
                     <li><strong>L&auml;nge:</strong> 35 to 45 minutes</li>
-                    <li><strong>Probedatum:</strong> 19. Februar 2019</li>
-                    <li><strong>Probe Event:</strong> <a href="https://www.meetup.com/de-DE/True-Tech-Talks/events/258355490/" target="_blank">True Tech Talks, Hamburg<i class="fa fa-external-link margin-left-5"></i></a></li>
-                    <li><strong>Vortrag am:</strong> 15. M&auml;rz 2019</li>
-                    <li><strong>Vorbereitet f&uuml;r</strong> <a href="https://confoo.ca/en/yul2019/session/smoketests-the-what-why-and-how" target="_blank">ConFoo 2019, Montreal<i class="fa fa-external-link margin-left-5"></i></a></li>
-                    <li><strong>Github:</strong> <a href="https://github.com/DjThossi/smoke-testing-php" target="_blank">Smoke-Testing-PHP<i class="fa fa-external-link margin-left-5"></i></a></li>
+                    <li><strong>Probedatum:</strong> noch nicht festgelegt</li>
+                    <li><strong>Probe Event:</strong> noch nicht festgelegt</li>
+                    <li><strong>Vortrag am:</strong> 14. M&auml;rz 2019</li>
+                    <li><strong>Vorbereitet f&uuml;r</strong> <a href="https://confoo.ca/en/yul2019/session/phpunit-in-4-parts" target="_blank">ConFoo 2019, Montreal<i class="fa fa-external-link margin-left-5"></i></a></li>
                 </ul>
             </div>
         </div>
 
-        {% include 'other-talks/de.html.twig' with {skipId: '9'} %}
+        {% include 'other-talks/de.html.twig' with {skipId: '10'} %}
 
     </div>
 </div>
