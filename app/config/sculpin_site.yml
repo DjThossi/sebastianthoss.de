@@ -10,6 +10,17 @@
 
 talks:
   de:
+    - id: 9
+      title: "SmokeTests 2"
+      subtitle: "The what, why and how"
+      link: /de/vortraege/smoke-tests-the-what-why-and-how.html
+      active_nav: talks-smoke-tests-what-why-how
+      image:
+        url: /assets/img/under-construction-small.jpg
+        alt: This talk is currently under construction
+      tags:
+        - testing
+
     - id: 7
       title: "Fun about recruiting"
       subtitle: "Let's turn the tables"
@@ -44,7 +55,7 @@ talks:
         - git
 
     - id: 3
-      title: "SmokeTests"
+      title: "SmokeTests 1"
       subtitle: "Let's try to burn down servers"
       link: /de/vortraege/smoke-tests.html
       active_nav: talks-smoke-tests
@@ -78,6 +89,17 @@ talks:
         - architecture
 
   en:
+    - id: 9
+      title: "SmokeTests 2"
+      subtitle: "The what, why and how"
+      link: /en/talks/smoke-tests-the-what-why-and-how.html
+      active_nav: talks-smoke-tests-what-why-how
+      image:
+        url: /assets/img/under-construction-small.jpg
+        alt: This talk is currently under construction
+      tags:
+        - testing
+
     - id: 8
       title: "How to build a startup"
       subtitle: "digital and alone"
@@ -124,13 +146,13 @@ talks:
         - git
 
     - id: 3
-      title: "SmokeTests"
+      title: "SmokeTests 1"
       subtitle: "Let's try to burn down servers"
       link: /en/talks/smoke-tests.html
       active_nav: talks-smoke-tests
       image:
         url: /assets/img/smoke-tests/kam-slides-001.jpg
-        alt: This talk is currently under construction
+        alt: This is the first talk about SmokeTesting and why you should try to burn down your server
       tags:
         - testing
 
