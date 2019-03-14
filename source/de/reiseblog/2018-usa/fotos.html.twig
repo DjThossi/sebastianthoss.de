@@ -1,0 +1,47 @@
+---
+layout: german
+title: Reisefotos
+sitemap: false
+meta:
+  description: "Fotos unserer Reise in die USA"
+  keywords:
+    - Fotos
+    - Reisen
+    - Urlaub
+active_nav: travel-blog
+
+add_css:
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - FancyBox.initFancybox();
+---
+<div class="heading heading-v1 margin-top-20">
+  <h1>Reisebilder USA 2018</h1>
+  <p>Hier findet Ihr alle Bilder unserer Reise nach New York und Washington D.C.</p>
+</div>
+
+<!-- Six Columns -->
+<div class="container content">
+
+    <div class="row margin-bottom-30">
+        {% set images =  source('imageData/2018-usa.csv')|split(", ")|reverse %}
+
+        {% for image in images %}
+            <div class="col-sm-2 sm-margin-bottom-30">
+                <a href="{{ site.url }}/assets/img/blog/2018-usa/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2018-usa/small/{{ image }}" alt="{{ image }}"></span>
+                </a>
+            </div>
+            {% if loop.index % 6 == 0 %}
+                </div>
+                <div class="row margin-bottom-30">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!-- End Six Columns -->
