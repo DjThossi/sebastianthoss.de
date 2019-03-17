@@ -49,8 +49,6 @@ $fileName = $year . '-' . $month . '-' . $day . '-' . urlencode(
 
 $replace = [
     '{#title#}' => $title,
-    '{#imageUrl#}' => '/assets/img/blog/2018-usa/small/IMG_6701.jpg',
-    '{#imageAlt#}' => 'BITTE FÜLLEN',
 ];
 
 do {
