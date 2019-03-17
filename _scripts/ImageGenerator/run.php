@@ -4,7 +4,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
-
+//TODO Amend here
+$folderFileName = '2019-canada';
 
 //LOAD LIST OF NEW IMAGES
 echo "LOAD LIST OF NEW IMAGES\n";
@@ -13,7 +14,7 @@ function readFiles($directory) {
     $excludedFiles = ['.', '..', '.gitkeep', '.DS_Store'];
 
     $files = [];
-    foreach ( scandir($directory) as $file) {
+    foreach ( scandir($directory, null) as $file) {
         if (in_array($file, $excludedFiles)) {
             continue;
         }
@@ -28,7 +29,7 @@ $inputPath = __DIR__ . '/input/';
 $inputImages = readFiles($inputPath);
 sort($inputImages);
 
-if (count($inputImages) == 0) {
+if (count($inputImages) === 0) {
 	echo("Nothing found");die;
 }
 
@@ -90,8 +91,19 @@ if (count($images) === 0 ) {
 //MOVE IMAGES
 echo "MOVE IMAGES\n";
 
-$largePath = __DIR__ . '/../../source/assets/img/blog/2018-usa/';
-$smallPath = __DIR__ . '/../../source/assets/img/blog/2018-usa/small/';
+$largePath = __DIR__ . '/../../source/assets/img/blog/' . $folderFileName . '/';
+if (!file_exists($largePath)) {
+    if (!mkdir($largePath) && !is_dir($largePath)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $largePath));
+    }
+}
+
+$smallPath = __DIR__ . '/../../source/assets/img/blog/' . $folderFileName . '/small/';
+if (!file_exists($smallPath)) {
+    if (!mkdir($smallPath) && !is_dir($smallPath)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $smallPath));
+    }
+}
 
 foreach ($images as $image) {
     unlink($inputPath . $image);
@@ -104,7 +116,7 @@ foreach ($images as $image) {
 //READ EXISTING IMAGES DATA
 echo "READ EXISTING IMAGES DATA\n";
 
-$existingImagesFile = __DIR__ . '/data/existingImages.php';
+$existingImagesFile = __DIR__ . '/data/existing-images-' . $folderFileName . '.php';
 @include $existingImagesFile;
 if (!isset($existingImages)) {
     $existingImages = [];
@@ -127,7 +139,7 @@ foreach (array_reverse($existingImages) as $image) {
     }
     $content .= $image;
 }
-file_put_contents(__DIR__ . '/../../source/_includes/imageData/2018-usa.csv', $content);
+file_put_contents(__DIR__ . '/../../source/_includes/imageData/' . $folderFileName . '.csv', $content);
 
 
 
