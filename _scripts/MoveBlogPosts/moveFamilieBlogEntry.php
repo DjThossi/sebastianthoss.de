@@ -54,19 +54,29 @@ $content = replaceContent($content, 'sitemap: false', 'sitemap: true
 headline_type: no');
 
 echo "COLLECT INFOS FOR SOCIAL\n";
-$hasFound = preg_match("/\ntitle:([A-z 0-9\.\-,\(\)\/\!: &;äöüÜÖÄß€é\"\']{1,})\n/", $content, $matches);
+$hasFound = preg_match("/\ntitle:([A-z 0-9\.\-,\(\)\/\!: ‘&;äöüÜÖÄß€é\"\']{1,})\n/", $content, $matches);
 if ($hasFound !== 1) {
     echo "[ERROR] TITLE NOT FOUND\n";
     exit(1);
 }
 $title = trim($matches[1], " \t\n\r\0\x0B\"");
 
-$hasFound = preg_match("/\n[ ]{1,}intro:([A-z 0-9\.\-,\(\)\/\!: &;äöüÜÖÄß€é\"\']{1,})\n/", $content, $matches);
+$hasFound = preg_match("/\n[ ]{1,}intro:([A-z 0-9\.\-,\(\)\/\!: ‘&;äöüÜÖÄß€é\"\']{1,})\n/", $content, $matches);
 if ($hasFound !== 1) {
     echo "[ERROR] INTRO NOT FOUND\n";
     exit(1);
 }
 $intro = trim($matches[1], " \t\n\r\0\x0B\"");
+
+$fileNameParts = explode('-', $fileName);
+$link = '/' . array_shift($fileNameParts) . '/' . array_shift($fileNameParts) . '/' . array_shift($fileNameParts) . '/' ;
+$link .= implode('-', $fileNameParts);
+$link = trim($link, '.twig');
+
+if (!file_exists(__DIR__ . '/../../docs/familie/' . $link)) {
+    echo "[ERROR] LINK VALIDATION FAILED. FILE $link NOT FOUND IN /docs/familie \n";
+    exit(1);
+}
 
 echo "SAVE FILE\n";
 file_put_contents($travelBlogPath . $fileName, $content);
@@ -77,38 +87,6 @@ unlink($familiePath . $fileName);
 echo "TITLE AND INTRO: \n";
 echo $title . "\n";
 echo $intro . "\n";
+echo 'https://www.sebastianthoss.de/de/reiseblog/' . $link . "\n";
 
 exit(0);
-
-echo "GENERATE DEV\n";
-
-$basePath = __DIR__ . '/../';
-
-$output = null;
-$returnValue = null;
-exec("cd $basePath && vendor/bin/sculpin generate --clean --no-interaction", $output, $returnValue);
-
-foreach($output as $line) {
-    echo $line . "\n";
-}
-
-if ($returnValue !== 0) {
-    echo "SOMETIHNG WENT WRONG!\n";
-    die ($returnValue);
-}
-
-
-echo "GENERATE PROD\n";
-
-$output = null;
-$returnValue = null;
-exec("cd $basePath && vendor/bin/sculpin generate --env=prod --clean --no-interaction && git add .", $output, $returnValue);
-
-foreach($output as $line) {
-    echo $line . "\n";
-}
-
-if ($returnValue !== 0) {
-    echo "SOMETIHNG WENT WRONG!\n";
-    die ($returnValue);
-}
