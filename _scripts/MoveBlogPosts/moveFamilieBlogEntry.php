@@ -87,6 +87,6 @@ unlink($familiePath . $fileName);
 echo "TITLE AND INTRO: \n";
 echo $title . "\n";
 echo $intro . "\n";
-echo 'https://www.sebastianthoss.de/de/reiseblog/' . $link . "\n";
+echo 'http://www.sebastianthoss.de/de/reiseblog' . $link . "\n";
 
 exit(0);
