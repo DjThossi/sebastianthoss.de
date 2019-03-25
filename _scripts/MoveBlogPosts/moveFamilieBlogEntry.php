@@ -90,3 +90,4 @@ echo $intro . "\n";
 echo 'http://www.sebastianthoss.de/de/reiseblog' . $link . "\n";
 
 exit(0);
+
