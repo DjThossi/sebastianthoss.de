@@ -16,19 +16,19 @@ talks:
       link: /de/vortraege/phpunit-in-four-parts.html
       active_nav: phpunit-in-four-parts
       image:
-        url: /assets/img/under-construction-small.jpg
-        alt: This talk is currently under construction
+        url: /assets/img/phpunit/phpunit-in-four-parts-001.jpg
+        alt: "Erste Folie aus Sebastian Thoss's Presentation zu PHPUnit in 4 teilen"
       tags:
         - testing
 
     - id: 9
-      title: "SmokeTests 2"
+      title: "SmokeTests - What Why How"
       subtitle: "The what, why and how"
       link: /de/vortraege/smoke-tests-the-what-why-and-how.html
       active_nav: talks-smoke-tests-what-why-how
       image:
-        url: /assets/img/under-construction-small.jpg
-        alt: This talk is currently under construction
+        url: /assets/img/smoke-tests/smoke-tests-what-why-how-confoo-001.jpg
+        alt: "Erste Folie aus Sebastian Thoss's Presentation zu SmokeTest"
       tags:
         - testing
 
@@ -39,7 +39,7 @@ talks:
       active_nav: fun-about-recruiting
       image:
         url: /assets/img/fun-about-recruiting/true-tech-talks-001.jpg
-        alt: "Erste Folie aus Sebastian Thoss'p Presentation zu fun about recruiting"
+        alt: "Erste Folie aus Sebastian Thoss's Presentation zu fun about recruiting"
       tags:
         - soft-skills
 
@@ -66,7 +66,7 @@ talks:
         - git
 
     - id: 3
-      title: "SmokeTests 1"
+      title: "SmokeTests - Let's burn ..."
       subtitle: "Let's try to burn down servers"
       link: /de/vortraege/smoke-tests.html
       active_nav: talks-smoke-tests
@@ -106,19 +106,19 @@ talks:
       link: /en/talks/phpunit-in-four-parts.html
       active_nav: phpunit-in-four-parts
       image:
-        url: /assets/img/under-construction-small.jpg
-        alt: This talk is currently under construction
+        url: /assets/img/phpunit/phpunit-in-four-parts-001.jpg
+        alt: First slide of Sebastian Thoss talk PHPUnit in 4 parts
       tags:
         - testing
 
     - id: 9
-      title: "SmokeTests 2"
+      title: "SmokeTests - What Why How"
       subtitle: "The what, why and how"
       link: /en/talks/smoke-tests-the-what-why-and-how.html
       active_nav: talks-smoke-tests-what-why-how
       image:
-        url: /assets/img/under-construction-small.jpg
-        alt: This talk is currently under construction
+        url: /assets/img/smoke-tests/smoke-tests-what-why-how-confoo-001.jpg
+        alt: First slide of Sebastian Thoss talk SmokeTest - The what, why and how
       tags:
         - testing
 
@@ -168,7 +168,7 @@ talks:
         - git
 
     - id: 3
-      title: "SmokeTests 1"
+      title: "SmokeTests - Let's burn ..."
       subtitle: "Let's try to burn down servers"
       link: /en/talks/smoke-tests.html
       active_nav: talks-smoke-tests
