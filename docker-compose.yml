@@ -7,3 +7,11 @@ services:
       - ./output_dev:/usr/share/nginx/html
     ports:
       - 8000:80
+
+  php:
+    build:
+      context: .
+      dockerfile: _docker/php/Dockerfile
+    volumes:
+      - ./:/var/www
+      - ~/.ssh:/root/.ssh
