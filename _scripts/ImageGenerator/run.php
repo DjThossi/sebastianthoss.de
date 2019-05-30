@@ -5,12 +5,14 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = '2019-canada';
+$folderFileName = '2019-belgrade';
+$generateLargeImage = true;
 
 //LOAD LIST OF NEW IMAGES
 echo "LOAD LIST OF NEW IMAGES\n";
 
-function readFiles($directory) {
+function readFiles($directory)
+{
     $excludedFiles = ['.', '..', '.gitkeep', '.DS_Store'];
 
     $files = [];
@@ -23,6 +25,21 @@ function readFiles($directory) {
     }
 
     return $files;
+}
+
+function generateImage(string $inputPath, $image, int $imageLongSidePixels, string $path): void
+{
+    $command = new Command();
+    $response = $command
+        ->convert($inputPath . $image)
+        ->resize(new Geometry($imageLongSidePixels))
+        ->file($path . $image, false)
+        ->run();
+
+    if ($response->hasFailed()) {
+        echo "SOMETIHNG WENT WRONG!\n";
+        die($response->getError());
+    }
 }
 
 $inputPath = __DIR__ . '/input/';
@@ -44,29 +61,11 @@ echo "CONVERT ALL IMAGES\n";
 
 foreach ($inputImages as $image) {
     //Large output image
-    $command = new Command();
-    $response = $command
-        ->convert($inputPath . $image)
-        ->resize(new Geometry(1024))
-        ->file($outputPath . $image, false)
-        ->run();
-
-    if ($response->hasFailed()) {
-        echo "SOMETIHNG WENT WRONG!\n";
-        die($response->getError());
-    }
-
-    //Small output image
-    $command = new Command();
-    $response = $command
-        ->convert($inputPath . $image)
-        ->resize(new Geometry(455))
-        ->file($outputSmallPath . $image, false)
-        ->run();
-
-    if ($response->hasFailed()) {
-        echo "SOMETIHNG WENT WRONG!\n";
-        die($response->getError());
+    if ($generateLargeImage) {
+        generateImage($inputPath, $image, 1024, $outputPath);
+        generateImage($inputPath, $image, 455, $outputSmallPath);
+    } else {
+        generateImage($inputPath, $image, 455, $outputPath);
     }
 }
 
@@ -83,7 +82,7 @@ $images = array_intersect($inputImages, $outputImages);
 
 if (count($images) === 0 ) {
     echo "NOTHING TO MOVE\n";
-    die ($returnValue);
+    die (1);
 }
 
 
@@ -108,7 +107,9 @@ if (!file_exists($smallPath)) {
 foreach ($images as $image) {
     unlink($inputPath . $image);
     rename($outputPath . $image, $largePath . $image);
-    rename($outputSmallPath . $image, $smallPath . $image);
+    if ($generateLargeImage) {
+        rename($outputSmallPath . $image, $smallPath . $image);
+    }
 }
 
 
