@@ -138,30 +138,19 @@ if ($stop === false) {
     }
 }
 
-//Add first col-12
+//Add another col-12
 if ($stop === false) {
     $snippet = file_get_contents(__DIR__ . '/templates/md-12.html.twig');
     $snippetContent = '';
 
     try {
-        for ($i = 1; $i <= 2; $i++) {
+        while (true) {
             do {
                 $line = $file->getNextLine();
             }
             while (strlen($line) === 0);
 
             $snippetContent .= prepareLine($line, $file);
-        }
-
-        if ($file->doesAnotherImageFit() === false) {
-            while (true) {
-                do {
-                    $line = $file->getNextLine();
-                }
-                while (strlen($line) === 0);
-
-                $snippetContent .= prepareLine($line, $file);
-            }
         }
     } catch (UnexpectedValueException $e) {
         $stop = true;
