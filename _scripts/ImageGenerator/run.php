@@ -6,7 +6,8 @@ use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
 $folderFileName = '2019-belgrade';
-$generateLargeImage = true;
+$generateBothImages = false;
+$imageGenerationOnly = true;
 
 //LOAD LIST OF NEW IMAGES
 echo "LOAD LIST OF NEW IMAGES\n";
@@ -61,7 +62,7 @@ echo "CONVERT ALL IMAGES\n";
 
 foreach ($inputImages as $image) {
     //Large output image
-    if ($generateLargeImage) {
+    if ($generateBothImages) {
         generateImage($inputPath, $image, 1024, $outputPath);
         generateImage($inputPath, $image, 455, $outputSmallPath);
     } else {
@@ -97,19 +98,27 @@ if (!file_exists($largePath)) {
     }
 }
 
-$smallPath = __DIR__ . '/../../source/assets/img/blog/' . $folderFileName . '/small/';
-if (!file_exists($smallPath)) {
-    if (!mkdir($smallPath) && !is_dir($smallPath)) {
-        throw new \RuntimeException(sprintf('Directory "%s" was not created', $smallPath));
+if ($generateBothImages) {
+    $smallPath = __DIR__ . '/../../source/assets/img/blog/' . $folderFileName . '/small/';
+    if (!file_exists($smallPath)) {
+        if (!mkdir($smallPath) && !is_dir($smallPath)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $smallPath));
+        }
     }
 }
 
 foreach ($images as $image) {
     unlink($inputPath . $image);
     rename($outputPath . $image, $largePath . $image);
-    if ($generateLargeImage) {
+    if ($generateBothImages) {
         rename($outputSmallPath . $image, $smallPath . $image);
     }
+}
+
+
+if ($imageGenerationOnly) {
+    echo "DONE\n";
+    exit(0);
 }
 
 
