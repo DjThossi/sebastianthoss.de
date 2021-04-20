@@ -21,6 +21,15 @@ It will not render blog overview page again if you just change a single blog ent
 In this case you need to restart the command.
 The result of these commands will be saved in 'output_dev' directory which is connected to the web server.
 
+## Deploy to live
+Simply run the following command inside the docker php container.
+`vendor/bin/sculpin generate --env=prod`
+This generate the markup new into the `docs` folder.
+
+Afterwards simply commit your changes. DONE!
+
+Now, have a look on [http://www.sebastianthoss.de](http://www.sebastianthoss.de)
+
 ## Run ImageGenerator
 With this script you can resize images, put them into the correct folders, add them to the files needed for generating fotos page and run production generation
 `php _scripts/ImageGenerator/run.php`
