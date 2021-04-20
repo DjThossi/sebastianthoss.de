@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:7.4
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     echo 'date.timezone = Europe/Berlin' >> "$PHP_INI_DIR/php.ini"

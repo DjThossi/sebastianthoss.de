@@ -1,5 +1,5 @@
 {
-    "name": "DjThossi/djthossi.github.io",
+    "name": "djthossi/djthossi.github.io",
     "description": "My Private Website",
     "type": "sculpin-project",
     "license": "Private Project. No copies allowed",
@@ -17,8 +17,10 @@
         }
     ],
     "require": {
+        "php": "^7.4 < 8.0",
         "sculpin/sculpin": "2.1.3",
         "dflydev/embedded-composer": "^1.0@dev",
-        "orbitale/imagemagick-php": "^1.6"
+        "orbitale/imagemagick-php": "^1.6",
+        "dflydev/dot-access-configuration": "v1.0.2"
     }
 }
