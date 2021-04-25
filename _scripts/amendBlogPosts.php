@@ -47,31 +47,38 @@ function replaceContent ($content, $searchString, $replaceString) {
     return str_replace($searchString, $replaceString, $content);
 }
 
+function replaceRegex($content, $regexString, $replaceString) {
+    return preg_replace($regexString, $replaceString, $content);
+}
+
 $blogPath = __DIR__ . "/../source/_reiseblog/";
 
-$searchString = 'overview:';
+$searchString = 'active_nav:';
 
-$addContent = 'headline:
-  image:
-    url: /assets/img/blog/2017-asia-oz/train-banner.jpg
-    alt: "Der Zug der Kuranda Scenic Railway"
+$addContent = '
+active_nav:';
 
-overview:';
-
-$fromDate = strtotime('2017-01-01');
+$fromDate = strtotime('2012-09-16');
+$toDate = strtotime('2013-06-09');
 
 foreach(readFiles($blogPath) as $fileName) {
     $date = strtotime(substr($fileName, 0, 10));
-    if ($date < $fromDate) {
+    if ($date < $fromDate || $date > $toDate) {
         continue;
     }
 
 	$content = file_get_contents($blogPath . $fileName);
-    if (hasContent($content, 'headline:')) {
+    if (hasContent($content, 'sitemap: false') === false) {
         continue;
     }
 
-	$content = replaceContent($content, $searchString, $addContent);
+    if (hasContent($content, '<img ')) {
+        continue;
+    }
+    var_dump($fileName);
+    continue;
 
-	file_put_contents($blogPath . $fileName, $content);
+    $content = replaceContent($content, "<p></p>\n", '');
+
+    file_put_contents($blogPath . $fileName, $content);
 }
