@@ -78,7 +78,7 @@ foreach(readFiles($blogPath) as $fileName) {
     var_dump($fileName);
     continue;
 
-    $content = replaceContent($content, "<p></p>\n", '');
+    $content = replaceContent($content, $searchString, $replaceString);
 
     file_put_contents($blogPath . $fileName, $content);
 }
