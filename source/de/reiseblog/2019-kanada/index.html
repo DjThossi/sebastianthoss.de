@@ -1,0 +1,38 @@
+---
+layout: german
+title: Reiseblog
+meta:
+  description: "Hier findet unsere Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge unserer Reise nach Kanada 2019"
+  keywords:
+    - Kanada
+    - Montreal
+    - Toronto
+    - Reisen
+
+active_nav: blog-2019-kanada
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 10
+  provider: filtered.reiseblog.categories.2019-kanada
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Matze und Basti in Kanada</h1>
+  <p>Hier findet Ihr alle Blogartikel und <a href="{{ site.url }}/de/reiseblog/2019-kanada/fotos/">Bilder</a> unserer Reise nach Kanda 2019.</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->
