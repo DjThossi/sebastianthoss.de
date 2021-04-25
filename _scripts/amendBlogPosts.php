@@ -72,9 +72,6 @@ foreach(readFiles($blogPath) as $fileName) {
         continue;
     }
 
-    if (hasContent($content, '<img ')) {
-        continue;
-    }
     var_dump($fileName);
     continue;
 
