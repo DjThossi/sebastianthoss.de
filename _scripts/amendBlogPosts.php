@@ -72,6 +72,11 @@ foreach(readFiles($blogPath) as $fileName) {
         continue;
     }
 
+    $imgCount = substr_count($content, '<img ');
+    if ($imgCount > 1) {
+        continue;
+    }
+
     var_dump($fileName);
     continue;
 
