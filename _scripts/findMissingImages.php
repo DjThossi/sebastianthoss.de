@@ -15,26 +15,10 @@ function readFiles($directory) {
     return $files;
 }
 
-function insertAfterContent ($content, $searchString, $addContent) {
-    $position = strpos($content, $searchString);
-
-    if ($position === false) {
-        return $content;
-    }
-
-    $position += strlen($searchString);
-
-    return substr($content, 0, $position) . $addContent . substr($content, $position);
-}
-
 function hasContent ($content, $searchString) {
     $position = strpos($content, $searchString);
 
-    if ($position === false) {
-        return false;
-    }
-
-    return true;
+    return !($position === false);
 }
 
 function replaceContent ($content, $searchString, $replaceString) {
