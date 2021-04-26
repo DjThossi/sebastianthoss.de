@@ -47,8 +47,8 @@ function replaceContent ($content, $searchString, $replaceString) {
     return str_replace($searchString, $replaceString, $content);
 }
 
-function replaceRegex($content, $regexString, $replaceString) {
-    return preg_replace($regexString, $replaceString, $content);
+function replaceRegex($content, $regexString, $replaceString, $limit = 1) {
+    return preg_replace($regexString, $replaceString, $content, $limit);
 }
 
 $blogPath = __DIR__ . "/../source/_reiseblog/";
@@ -77,10 +77,32 @@ foreach(readFiles($blogPath) as $fileName) {
         continue;
     }
 
-    var_dump($fileName);
-    continue;
+    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    preg_match('/src=".*" alt="[A-z0-9.&; \-]{0,}"/', $matches[0], $matches);
+    $imgData = $matches[0];
 
-    $content = replaceContent($content, $searchString, $replaceString);
+    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+
+    $contentStart = strpos($content, '---', 5) + 4;
+
+    $markup = '<div class="row margin-bottom-10">
+  <div class="col-md-5 margin-bottom-10">
+    <img class="img-bordered img-responsive img-center" %s
+    />
+  </div>
+  <div class="col-md-7">
+    %s
+  </div>
+</div>';
+
+    $markup = sprintf(
+        $markup,
+        $imgData,
+        substr($content, $contentStart)
+    );
+
+    $content = substr($content, 0, $contentStart) . $markup;
 
     file_put_contents($blogPath . $fileName, $content);
 }
