@@ -105,8 +105,8 @@ function checkImage($imgName, $fileName) {
 
     } else {
 
-        for($i = 3; $i < 10; $i++) {
-            $imgUrl = "https://sebastian301082.files.wordpress.com/" . substr($fileName, 0,4) . '/0' . $i . '/' . $imgName;
+        for($i = 0; $i < 10; $i++) {
+            $imgUrl = "https://sebastian301082.files.wordpress.com/2016/0" . $i . '/' . $imgName;
             $fileGetContents = @file_get_contents($imgUrl);
             if ($fileGetContents === false) {
                 if ($i < 9) {
