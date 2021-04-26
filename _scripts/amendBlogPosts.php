@@ -72,10 +72,13 @@ foreach(readFiles($blogPath) as $fileName) {
         continue;
     }
 
-    $imgCount = substr_count($content, '<img ');
-    if ($imgCount > 1) {
+    $imgCount = substr_count($content, '[caption ');
+    if ($imgCount < 1) {
         continue;
     }
+
+    var_dump($fileName);
+    continue;
 
     preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
     preg_match('/src=".*" alt="[A-z0-9.&; \-]{0,}"/', $matches[0], $matches);
