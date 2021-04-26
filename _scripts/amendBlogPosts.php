@@ -77,6 +77,9 @@ foreach(readFiles($blogPath) as $fileName) {
         continue;
     }
 
+    $content = replaceContent($content, 'sitemap: false', 'sitemap: true');
+    $content = replaceRegex($content, '/  external_link: .*\n/', '');
+
     preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
     preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $matches[0], $matchesSrc);
     if(empty($matchesSrc)) {
@@ -86,7 +89,7 @@ foreach(readFiles($blogPath) as $fileName) {
     }
 
     $imgSrcData = $matchesSrc[0];
-    preg_match('/alt="[A-z0-9.&; \-]{0,}"/', $matches[0], $matchesAlt);
+    preg_match('/alt="[A-z0-9.,&; \-]{0,}"/', $matches[0], $matchesAlt);
     if(empty($matchesSrc)) {
         echo "ERROR2 in ";
         echo $fileName;
@@ -109,7 +112,24 @@ foreach(readFiles($blogPath) as $fileName) {
   <div class="col-md-7">
     %s
   </div>
-</div>';
+</div>
+
+<div class="row margin-bottom-10">
+  <div class="col-md-5 visible-sm visible-xs margin-bottom-10">
+    <img class="img-bordered img-responsive img-center"
+         
+    />
+  </div>
+  <div class="col-md-7">
+    
+  </div>
+  <div class="col-md-5 hidden-sm hidden-xs">
+    <img class="img-bordered img-responsive img-center"
+         
+    />
+  </div>
+</div>
+';
 
     $markup = sprintf(
         $markupTemplate,
