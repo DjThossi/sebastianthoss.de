@@ -73,23 +73,35 @@ foreach(readFiles($blogPath) as $fileName) {
     }
 
     $imgCount = substr_count($content, '[caption ');
-    if ($imgCount < 1) {
+    if ($imgCount < 1 || $imgCount > 2) {
         continue;
     }
 
-    var_dump($fileName);
-    continue;
-
     preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
-    preg_match('/src=".*" alt="[A-z0-9.&; \-]{0,}"/', $matches[0], $matches);
-    $imgData = $matches[0];
+    preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $matches[0], $matchesSrc);
+    if(empty($matchesSrc)) {
+        echo "ERROR in ";
+        echo $fileName;
+        die();
+    }
+
+    $imgSrcData = $matchesSrc[0];
+    preg_match('/alt="[A-z0-9.&; \-]{0,}"/', $matches[0], $matchesAlt);
+    if(empty($matchesSrc)) {
+        echo "ERROR2 in ";
+        echo $fileName;
+        die();
+    }
+
+    $imgAltData = $matchesAlt[0];
+    $imgData = $imgSrcData . ' ' . $imgAltData;
 
     $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
     $contentStart = strpos($content, '---', 5) + 4;
 
-    $markup = '<div class="row margin-bottom-10">
+    $markupTemplate = '<div class="row margin-bottom-10">
   <div class="col-md-5 margin-bottom-10">
     <img class="img-bordered img-responsive img-center" %s
     />
@@ -100,12 +112,16 @@ foreach(readFiles($blogPath) as $fileName) {
 </div>';
 
     $markup = sprintf(
-        $markup,
+        $markupTemplate,
         $imgData,
         substr($content, $contentStart)
     );
 
     $content = substr($content, 0, $contentStart) . $markup;
 
+//    var_dump($content);
+//    die();
+
     file_put_contents($blogPath . $fileName, $content);
+    break;
 }

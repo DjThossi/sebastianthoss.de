@@ -5,8 +5,8 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = '2019-belgrade';
-$generateBothImages = false;
+$folderFileName = 'auszeit';
+$generateBothImages = true;
 $imageGenerationOnly = true;
 
 //LOAD LIST OF NEW IMAGES
