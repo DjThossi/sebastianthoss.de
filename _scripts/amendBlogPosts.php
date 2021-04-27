@@ -109,25 +109,25 @@ foreach(readFiles($blogPath) as $fileName) {
     $contentStart = strpos($content, '---', 5) + 4;
 
     $markupTemplate = '<div class="row margin-bottom-10">
-  <div class="col-md-4 margin-bottom-10">
+  <div class="col-md-5 margin-bottom-10">
     <img class="img-bordered img-responsive img-center" %s
     />
   </div>
-  <div class="col-md-8">
+  <div class="col-md-7">
     %s
   </div>
 </div>
 
 <div class="row margin-bottom-10">
-  <div class="col-md-4 visible-sm visible-xs margin-bottom-10">
+  <div class="col-md-5 visible-sm visible-xs margin-bottom-10">
     <img class="img-bordered img-responsive img-center"
          
     />
   </div>
-  <div class="col-md-8">
+  <div class="col-md-7">
     
   </div>
-  <div class="col-md-4 hidden-sm hidden-xs">
+  <div class="col-md-5 hidden-sm hidden-xs">
     <img class="img-bordered img-responsive img-center"
          
     />
@@ -135,12 +135,12 @@ foreach(readFiles($blogPath) as $fileName) {
 </div>
 
 <div class="row margin-bottom-10">
-  <div class="col-md-4 margin-bottom-10">
+  <div class="col-md-5 margin-bottom-10">
     <img class="img-bordered img-responsive img-center"
     
     />
   </div>
-  <div class="col-md-8">
+  <div class="col-md-7">
     
   </div>
 </div>
