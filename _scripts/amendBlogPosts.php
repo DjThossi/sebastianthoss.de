@@ -61,6 +61,7 @@ active_nav:';
 $fromDate = strtotime('2012-09-16');
 $toDate = strtotime('2013-06-09');
 
+$count = 0;
 foreach(readFiles($blogPath) as $fileName) {
     $date = strtotime(substr($fileName, 0, 10));
     if ($date < $fromDate || $date > $toDate) {
@@ -71,6 +72,9 @@ foreach(readFiles($blogPath) as $fileName) {
     if (hasContent($content, 'sitemap: false') === false) {
         continue;
     }
+
+    $count++;
+//    continue;
 
     $imgCount = substr_count($content, '[caption ');
     if ($imgCount < 2 || $imgCount > 3) {
@@ -157,3 +161,6 @@ foreach(readFiles($blogPath) as $fileName) {
     file_put_contents($blogPath . $fileName, $content);
     break;
 }
+
+var_dump($count);
+die();
