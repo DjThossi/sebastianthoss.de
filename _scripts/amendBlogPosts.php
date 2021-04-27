@@ -93,7 +93,7 @@ foreach(readFiles($blogPath) as $fileName) {
     }
 
     $imgSrcData = $matchesSrc[0];
-    preg_match('/alt="[A-z!0-9.,&; \-]{0,}"/', $matches[0], $matchesAlt);
+    preg_match('/alt="[A-z!?0-9.,&; \-]{0,}"/', $matches[0], $matchesAlt);
     if(empty($matchesAlt)) {
         echo "ERROR2 in ";
         echo $fileName;
