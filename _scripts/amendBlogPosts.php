@@ -62,6 +62,36 @@ $fromDate = strtotime('2012-09-16');
 $toDate = strtotime('2013-06-09');
 
 $count = 0;
+/**
+ * @param $captionImg
+ * @param $matchesSrc
+ * @param $fileName
+ * @param $matchesAlt
+ *
+ * @return string
+ */
+function getImgSrcAndAlt($captionImg, $fileName): string
+{
+    preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $captionImg, $matchesSrc);
+    if (empty($matchesSrc)) {
+        echo "ERROR in ";
+        echo $fileName;
+        die();
+    }
+
+    $imgSrcData = $matchesSrc[0];
+    preg_match('/alt="[A-z!?0-9.,&; \-]{0,}"/', $captionImg, $matchesAlt);
+    if (empty($matchesAlt)) {
+        echo "ERROR2 in ";
+        echo $fileName;
+        die();
+    }
+
+    $imgAltData = $matchesAlt[0];
+
+    return $imgSrcData . ' ' . $imgAltData;
+}
+
 foreach(readFiles($blogPath) as $fileName) {
     $date = strtotime(substr($fileName, 0, 10));
     if ($date < $fromDate || $date > $toDate) {
@@ -85,59 +115,62 @@ foreach(readFiles($blogPath) as $fileName) {
     $content = replaceRegex($content, '/  external_link: .*\n/', '');
 
     preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
-    preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $matches[0], $matchesSrc);
-    if(empty($matchesSrc)) {
-        echo "ERROR in ";
-        echo $fileName;
-        die();
-    }
-
-    $imgSrcData = $matchesSrc[0];
-    preg_match('/alt="[A-z!?0-9.,&; \-]{0,}"/', $matches[0], $matchesAlt);
-    if(empty($matchesAlt)) {
-        echo "ERROR2 in ";
-        echo $fileName;
-        die();
-    }
-
-    $imgAltData = $matchesAlt[0];
-    $imgData = $imgSrcData . ' ' . $imgAltData;
+    $imgDataFirst = getImgSrcAndAlt($matches[0], $fileName);
 
     $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+
+    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    $imgDataSecond = getImgSrcAndAlt($matches[0], $fileName);
+
+    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+
+    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    $imgDataThird = getImgSrcAndAlt($matches[0], $fileName);
+
+    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+
+    preg_match_all('/\[caption .*\[\/caption\]/', $content, $matches);
+
+    $imgDataOthers = '';
+    foreach($matches[0] as $imgCaption) {
+        $imgDataOthers .= $imgCaption . "\n";
+
+        $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+        $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+    }
 
     $contentStart = strpos($content, '---', 5) + 4;
 
     $markupTemplate = '<div class="row margin-bottom-10">
   <div class="col-md-5 margin-bottom-10">
-    <img class="img-bordered img-responsive img-center" %s
+    <img class="img-bordered img-responsive img-center" %1$s
     />
   </div>
   <div class="col-md-7">
-    %s
+    %2$s
   </div>
 </div>
 
 <div class="row margin-bottom-10">
   <div class="col-md-5 visible-sm visible-xs margin-bottom-10">
-    <img class="img-bordered img-responsive img-center"
-         
-    />
+    <img class="img-bordered img-responsive img-center" %3$s
+     />
   </div>
   <div class="col-md-7">
     
   </div>
   <div class="col-md-5 hidden-sm hidden-xs">
-    <img class="img-bordered img-responsive img-center"
-         
+    <img class="img-bordered img-responsive img-center" %3$s
     />
   </div>
 </div>
 
 <div class="row margin-bottom-10">
   <div class="col-md-5 margin-bottom-10">
-    <img class="img-bordered img-responsive img-center"
-    
+    <img class="img-bordered img-responsive img-center" %4$s
     />
   </div>
   <div class="col-md-7">
@@ -145,12 +178,16 @@ foreach(readFiles($blogPath) as $fileName) {
   </div>
 </div>
 
+%5$s
 ';
 
     $markup = sprintf(
         $markupTemplate,
-        $imgData,
-        substr($content, $contentStart)
+        $imgDataFirst,
+        substr($content, $contentStart),
+        $imgDataSecond,
+        $imgDataThird,
+        $imgDataOthers
     );
 
     $content = substr($content, 0, $contentStart) . $markup;
