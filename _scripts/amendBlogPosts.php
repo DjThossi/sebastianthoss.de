@@ -61,15 +61,6 @@ active_nav:';
 $fromDate = strtotime('2012-09-16');
 $toDate = strtotime('2013-06-09');
 
-$count = 0;
-/**
- * @param $captionImg
- * @param $matchesSrc
- * @param $fileName
- * @param $matchesAlt
- *
- * @return string
- */
 function getImgSrcAndAlt($captionImg, $fileName): string
 {
     preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $captionImg, $matchesSrc);
@@ -84,6 +75,7 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     if (empty($matchesAlt)) {
         echo "ERROR2 in ";
         echo $fileName;
+//        var_dump($captionImg);
         die();
     }
 
@@ -92,6 +84,7 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     return $imgSrcData . ' ' . $imgAltData;
 }
 
+$count = 0;
 foreach(readFiles($blogPath) as $fileName) {
     $date = strtotime(substr($fileName, 0, 10));
     if ($date < $fromDate || $date > $toDate) {
