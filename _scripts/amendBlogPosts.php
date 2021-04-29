@@ -71,7 +71,7 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     }
 
     $imgSrcData = $matchesSrc[0];
-    preg_match('/alt="[A-z!?0-9.,&; \-]{0,}"/', $captionImg, $matchesAlt);
+    preg_match('/alt="[A-z!?0-9#.,&; \-]{0,}"/', $captionImg, $matchesAlt);
     if (empty($matchesAlt)) {
         echo "ERROR2 in ";
         echo $fileName;
