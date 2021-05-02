@@ -75,7 +75,7 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     if (empty($matchesAlt)) {
         echo "ERROR2 in ";
         echo $fileName;
-//        var_dump($captionImg);
+        var_dump($captionImg);
         die();
     }
 
