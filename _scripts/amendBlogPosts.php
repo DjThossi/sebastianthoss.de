@@ -97,7 +97,7 @@ foreach(readFiles($blogPath) as $fileName) {
     }
 
     $count++;
-//    continue;
+    continue;
 
     $imgCount = substr_count($content, '[caption ');
     if ($imgCount < 1) {
