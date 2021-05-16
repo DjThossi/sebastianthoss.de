@@ -99,7 +99,7 @@ foreach(readFiles($blogPath) as $fileName) {
     $count++;
 //    continue;
 
-    $imgCount = substr_count($content, '[caption ');
+    $imgCount = substr_count($content, '<img ');
     if ($imgCount < 1) {
         continue;
     }
@@ -107,66 +107,66 @@ foreach(readFiles($blogPath) as $fileName) {
     $content = replaceContent($content, 'sitemap: false', 'sitemap: true');
     $content = replaceRegex($content, '/  external_link: .*\n/', '');
 
-    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    preg_match('/<img .*\/>/', $content, $matches);
     $imgDataFirst = getImgSrcAndAlt($matches[0], $fileName);
 
-    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/\<img .*\/>/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
-    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    preg_match('/\<img .*\/>/', $content, $matches);
     $imgDataSecond = getImgSrcAndAlt($matches[0], $fileName);
 
-    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/\<img .*\/>/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
-    preg_match('/\[caption .*\[\/caption\]/', $content, $matches);
+    preg_match('/\<img .*\/>/', $content, $matches);
     $imgDataThird = getImgSrcAndAlt($matches[0], $fileName);
 
-    $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+    $content = replaceRegex($content, '/\<img .*\/>/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
-    preg_match_all('/\[caption .*\[\/caption\]/', $content, $matches);
+    preg_match_all('/\<img .*\/>/', $content, $matches);
 
     $imgDataOthers = '';
     foreach($matches[0] as $imgCaption) {
         $imgDataOthers .= $imgCaption . "\n";
 
-        $content = replaceRegex($content, '/\[caption .*\[\/caption\]/', '');
+        $content = replaceRegex($content, '/\<img .*\/>/', '');
         $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
     }
 
     $contentStart = strpos($content, '---', 5) + 4;
 
     $markupTemplate = '<div class="row margin-bottom-10">
-  <div class="col-md-5 margin-bottom-10">
+  <div class="col-md-4 margin-bottom-10">
     <img class="img-bordered img-responsive img-center" %1$s
     />
   </div>
-  <div class="col-md-7">
+  <div class="col-md-8">
     %2$s
   </div>
 </div>
 
 <div class="row margin-bottom-10">
-  <div class="col-md-5 visible-sm visible-xs margin-bottom-10">
+  <div class="col-md-4 visible-sm visible-xs margin-bottom-10">
     <img class="img-bordered img-responsive img-center" %3$s
      />
   </div>
-  <div class="col-md-7">
+  <div class="col-md-8">
     
   </div>
-  <div class="col-md-5 hidden-sm hidden-xs">
+  <div class="col-md-4 hidden-sm hidden-xs">
     <img class="img-bordered img-responsive img-center" %3$s
     />
   </div>
 </div>
 
 <div class="row margin-bottom-10">
-  <div class="col-md-5 margin-bottom-10">
+  <div class="col-md-4 margin-bottom-10">
     <img class="img-bordered img-responsive img-center" %4$s
     />
   </div>
-  <div class="col-md-7">
+  <div class="col-md-8">
     
   </div>
 </div>
