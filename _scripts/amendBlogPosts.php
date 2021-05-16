@@ -66,7 +66,6 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     preg_match('/src="[\/{}A-z0-9.&; \-]{0,}"/', $captionImg, $matchesSrc);
     if (empty($matchesSrc)) {
         echo "ERROR in ";
-        echo $fileName;
         die();
     }
 
@@ -119,11 +118,12 @@ foreach(readFiles($blogPath) as $fileName) {
     $content = replaceRegex($content, '/\<img .*\/>/', '');
     $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
-    preg_match('/\<img .*\/>/', $content, $matches);
-    $imgDataThird = getImgSrcAndAlt($matches[0], $fileName);
-
-    $content = replaceRegex($content, '/\<img .*\/>/', '');
-    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
+    $imgDataThird = '';
+//    preg_match('/\<img .*\/>/', $content, $matches);
+//    $imgDataThird = getImgSrcAndAlt($matches[0], $fileName);
+//
+//    $content = replaceRegex($content, '/\<img .*\/>/', '');
+//    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
 
     preg_match_all('/\<img .*\/>/', $content, $matches);
 
