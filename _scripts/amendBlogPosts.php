@@ -73,124 +73,29 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     return $imgSrcData . ' ' . $imgAltData;
 }
 
-$blogPath = __DIR__ . "/../source/_reiseblog/";
+function fixSpecialChars($content)
+{
+    $content = replaceContent($content, 'ä', '&auml;');
+    $content = replaceContent($content, 'Ä', '&Auml;');
+    $content = replaceContent($content, 'ö', '&ouml;');
+    $content = replaceContent($content, 'Ö', '&Ouml;');
+    $content = replaceContent($content, 'ü', '&uuml;');
+    $content = replaceContent($content, 'Ü', '&Uuml;');
+    $content = replaceContent($content, 'ß', '&szlig;');
+    $content = replaceContent($content, '€', '&euro;');
 
-$searchString = 'active_nav:';
-
-$addContent = '
-active_nav:';
-
-$fromDate = strtotime('2012-09-16');
-$toDate = strtotime('2013-06-09');
-
-$count = 0;
-foreach(readFiles($blogPath) as $fileName) {
-    $date = strtotime(substr($fileName, 0, 10));
-    if ($date < $fromDate || $date > $toDate) {
-        continue;
-    }
-
-	$content = file_get_contents($blogPath . $fileName);
-    if (hasContent($content, 'sitemap: false') === false) {
-        continue;
-    }
-
-    $count++;
-//    continue;
-
-    $imgCount = substr_count($content, '<img ');
-    if ($imgCount < 1) {
-        continue;
-    }
-
-    $content = replaceContent($content, 'sitemap: false', 'sitemap: true');
-    $content = replaceRegex($content, '/  external_link: .*\n/', '');
-
-    preg_match('/<img .*\/>/', $content, $matches);
-    $imgDataFirst = getImgSrcAndAlt($matches[0], $fileName);
-
-    $content = replaceRegex($content, '/\<img .*\/>/', '');
-    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
-
-    preg_match('/\<img .*\/>/', $content, $matches);
-    $imgDataSecond = getImgSrcAndAlt($matches[0], $fileName);
-
-    $content = replaceRegex($content, '/\<img .*\/>/', '');
-    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
-
-    $imgDataThird = '';
-    preg_match('/\<img .*\/>/', $content, $matches);
-    $imgDataThird = getImgSrcAndAlt($matches[0], $fileName);
-
-    $content = replaceRegex($content, '/\<img .*\/>/', '');
-    $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
-
-    preg_match_all('/\<img .*\/>/', $content, $matches);
-
-    $imgDataOthers = '';
-    foreach($matches[0] as $imgCaption) {
-        $imgDataOthers .= $imgCaption . "\n";
-
-        $content = replaceRegex($content, '/\<img .*\/>/', '');
-        $content = replaceRegex($content, '/<p>[ \t\n]{0,}<\/p>\n/', '');
-    }
-
-    $contentStart = strpos($content, '---', 5) + 4;
-
-    $markupTemplate = '<div class="row margin-bottom-10">
-  <div class="col-md-4 margin-bottom-10">
-    <img class="img-bordered img-responsive img-center" %1$s
-    />
-  </div>
-  <div class="col-md-8">
-    %2$s
-  </div>
-</div>
-
-<div class="row margin-bottom-10">
-  <div class="col-md-4 visible-sm visible-xs margin-bottom-10">
-    <img class="img-bordered img-responsive img-center" %3$s
-     />
-  </div>
-  <div class="col-md-8">
-    
-  </div>
-  <div class="col-md-4 hidden-sm hidden-xs">
-    <img class="img-bordered img-responsive img-center" %3$s
-    />
-  </div>
-</div>
-
-<div class="row margin-bottom-10">
-  <div class="col-md-4 margin-bottom-10">
-    <img class="img-bordered img-responsive img-center" %4$s
-    />
-  </div>
-  <div class="col-md-8">
-    
-  </div>
-</div>
-
-%5$s
-';
-
-    $markup = sprintf(
-        $markupTemplate,
-        $imgDataFirst,
-        substr($content, $contentStart),
-        $imgDataSecond,
-        $imgDataThird,
-        $imgDataOthers
-    );
-
-    $content = substr($content, 0, $contentStart) . $markup;
-
-//    var_dump($content);
-//    die();
-
-    file_put_contents($blogPath . $fileName, $content);
-    break;
+    return $content;
 }
 
-var_dump($count);
-die();
+
+$blogPath = __DIR__ . "/../source/_reiseblog/";
+
+foreach(readFiles($blogPath) as $fileName) {
+	$content = file_get_contents($blogPath . $fileName);
+    $content = fixSpecialChars($content);
+
+    file_put_contents($blogPath . $fileName, $content);
+}
+
+//var_dump($count);
+//die();
