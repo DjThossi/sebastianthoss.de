@@ -60,7 +60,7 @@ function getImgSrcAndAlt($captionImg, $fileName): string
     }
 
     $imgSrcData = $matchesSrc[0];
-    preg_match('/alt="[A-z!?0-9#.,&; \-]{0,}"/', $captionImg, $matchesAlt);
+    preg_match('/alt="[{}|A-z!?0-9#.,&; \-:%*]*"/', $captionImg, $matchesAlt);
     if (empty($matchesAlt)) {
         echo "ERROR2 in ";
         echo $fileName;
@@ -91,11 +91,8 @@ function fixSpecialChars($content)
 $blogPath = __DIR__ . "/../source/_reiseblog/";
 
 foreach(readFiles($blogPath) as $fileName) {
-	$content = file_get_contents($blogPath . $fileName);
+    $content = file_get_contents($blogPath . $fileName);
     $content = fixSpecialChars($content);
 
     file_put_contents($blogPath . $fileName, $content);
 }
-
-//var_dump($count);
-//die();
