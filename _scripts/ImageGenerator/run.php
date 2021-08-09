@@ -7,7 +7,7 @@ use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 //TODO Amend here
 $folderFileName = '2021-alps';
 $generateBothImages = true;
-$imageGenerationOnly = true;
+$imageGenerationOnly = false;
 
 //LOAD LIST OF NEW IMAGES
 echo "LOAD LIST OF NEW IMAGES\n";
