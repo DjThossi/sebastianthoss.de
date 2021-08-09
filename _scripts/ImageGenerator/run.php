@@ -5,7 +5,7 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = 'auszeit';
+$folderFileName = '2021-alps';
 $generateBothImages = true;
 $imageGenerationOnly = true;
 
