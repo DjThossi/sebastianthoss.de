@@ -8,6 +8,7 @@ use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 $folderFileName = '2021-alps';
 $generateBothImages = true;
 $imageGenerationOnly = false;
+$generateProd = false;
 
 //LOAD LIST OF NEW IMAGES
 echo "LOAD LIST OF NEW IMAGES\n";
@@ -160,7 +161,10 @@ echo "WRITE EXISTING IMAGES DATA\n";
 $content = '<?php $existingImages = ' . var_export($existingImages, true) . ';';
 file_put_contents($existingImagesFile, $content);
 
-
+if ($generateProd === false) {
+    echo "DONE\n";
+    exit(0);
+}
 
 //GENERATE PROD
 echo "GENERATE PROD\n";
