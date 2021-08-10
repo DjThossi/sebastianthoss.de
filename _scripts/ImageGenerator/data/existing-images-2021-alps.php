@@ -6,4 +6,7 @@
   'IMG_0550.jpg' => 'IMG_0550.jpg',
   'IMG_0551.jpg' => 'IMG_0551.jpg',
   'IMG_0553.jpg' => 'IMG_0553.jpg',
+  'IMG_0467.jpg' => 'IMG_0467.jpg',
+  'IMG_0476.jpg' => 'IMG_0476.jpg',
+  'IMG_0571.jpg' => 'IMG_0571.jpg',
 );
