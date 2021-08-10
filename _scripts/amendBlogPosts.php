@@ -88,7 +88,7 @@ function fixSpecialChars($content)
 }
 
 
-$blogPath = __DIR__ . "/../source/_reiseblog/";
+$blogPath = __DIR__ . "/../source/_familie/";
 
 foreach(readFiles($blogPath) as $fileName) {
     $content = file_get_contents($blogPath . $fileName);
