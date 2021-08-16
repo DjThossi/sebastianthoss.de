@@ -12,4 +12,5 @@
   'IMG_0519.jpg' => 'IMG_0519.jpg',
   'IMG_0520.jpg' => 'IMG_0520.jpg',
   'IMG_0611.jpg' => 'IMG_0611.jpg',
+  'seilbahn-im-nebel.jpg' => 'seilbahn-im-nebel.jpg',
 );
