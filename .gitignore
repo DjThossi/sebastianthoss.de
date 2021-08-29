@@ -3,6 +3,11 @@ _unify-layout
 /vendor/
 /output_dev/
 
+/_scripts/CsvConverter/input/*
+!/_scripts/CsvConverter/input/.gitkeep
+/_scripts/CsvConverter/output/*
+!/_scripts/CsvConverter/output/.gitkeep
+
 /_scripts/ImageGenerator/input/*
 !/_scripts/ImageGenerator/input/.gitkeep
 
