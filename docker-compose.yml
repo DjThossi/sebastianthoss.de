@@ -1,3 +1,5 @@
+name: sebastianthoss_de
+
 services:
   nginx:
     image: nginx
