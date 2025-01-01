@@ -20,9 +20,20 @@ composer-update: ## Composer update
 	docker compose run --rm php bash -c "composer update"
 
 .PHONY: generate-dev
-generate-dev: ## Composer update
+generate-dev: ## Generates html files for local env
 	docker compose run --rm php bash -c "vendor/bin/sculpin generate"
 
 .PHONY: generate-prod
-generate-prod: ## Composer update
-	docker compose run --rm php bash -c "vendor/bin/sculpin generate --env=prod"
+generate-prod: ## Generates html files for production env
+	docker compose run --rm php bash -c "vendor/bin/sculpin generate --env=prod --clean --no-interaction"
+
+.PHONY: scripts-image-generator
+scripts-image-generator: ## Generates browser optimized images
+	docker compose run --rm php bash -c "php _scripts/ImageGenerator/run.php"
+
+.PHONY: scripts-post-generator
+scripts-post-generator: ## Generates blog post files based on a single text file.
+	docker compose run --rm php bash -c "php _scripts/PostGenerator/run.php"
+
+takeItLive: ## Generates Prod files and commits them
+	_scripts/takeItLive.sh
