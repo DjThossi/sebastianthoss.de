@@ -11,6 +11,10 @@ setup: docker-up composer-install ## Setup project and dependencies
 docker-up: ## Booting docker env
 	docker compose up -d
 
+.PHONY: docker-stop
+docker-stop: ## stops docker env
+	docker compose stop
+
 .PHONY: composer-install
 composer-install: ## Composer install
 	docker compose run --rm php bash -c "composer install"
