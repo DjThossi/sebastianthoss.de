@@ -64,6 +64,8 @@ echo "CONVERT ALL IMAGES\n";
 foreach ($inputImages as $image) {
     //Large output image
     if ($generateBothImages) {
+//        generateImage($inputPath, $image, 1140, $outputPath);
+//        exit;
         generateImage($inputPath, $image, 1024, $outputPath);
         generateImage($inputPath, $image, 455, $outputSmallPath);
     } else {
