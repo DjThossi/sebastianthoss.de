@@ -31,6 +31,10 @@ generate-dev: ## Generates html files for local env
 generate-prod: ## Generates html files for production env
 	docker compose run --rm php bash -c "vendor/bin/sculpin generate --env=prod --clean --no-interaction"
 
+#.PHONY: generate-watch
+#generate-watch: ## Generates html files for local env
+#	docker compose run --rm php bash -c "vendor/bin/sculpin generate --watch"
+
 .PHONY: scripts-image-generator
 scripts-image-generator: ## Generates browser optimized images
 	docker compose run --rm php bash -c "php _scripts/ImageGenerator/run.php"
