@@ -19,4 +19,6 @@
   'IMG_0600.jpeg' => 'IMG_0600.jpeg',
   'IMG_0673.jpeg' => 'IMG_0673.jpeg',
   'walmendinger-im-nebel.jpg' => 'walmendinger-im-nebel.jpg',
+  'IMG_0636.jpeg' => 'IMG_0636.jpeg',
+  'IMG_0648.jpeg' => 'IMG_0648.jpeg',
 );
