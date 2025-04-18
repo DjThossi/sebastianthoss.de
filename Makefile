@@ -37,15 +37,15 @@ generate-prod: ## Generates html files for production env
 
 .PHONY: scripts-image-generator
 scripts-image-generator: ## Generates browser optimized images
-	docker compose run --rm php bash -c "php _scripts/ImageGenerator/run.php"
+	docker compose run --rm php -f _scripts/ImageGenerator/run.php
 
 .PHONY: scripts-move-blog-posts
 scripts-move-blog-posts: ## Generates blog post files based on a single text file.
-	docker compose run --rm php _scripts/MoveBlogPosts/moveFamilieBlogEntry.php
+	docker compose run --rm php -f _scripts/MoveBlogPosts/moveFamilieBlogEntry.php
 
 .PHONY: scripts-post-generator
 scripts-post-generator: ## Generates blog post files based on a single text file.
-	docker compose run --rm php bash -c "php _scripts/PostGenerator/run.php"
+	docker compose run --rm php -f _scripts/PostGenerator/run.php
 
 takeItLive: ## Generates Prod files and commits them
 	_scripts/takeItLive.sh
