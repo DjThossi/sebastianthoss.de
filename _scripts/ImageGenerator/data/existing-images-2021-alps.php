@@ -23,4 +23,5 @@
   'IMG_0648.jpeg' => 'IMG_0648.jpeg',
   'IMG_0655.jpeg' => 'IMG_0655.jpeg',
   'IMG_0668.jpeg' => 'IMG_0668.jpeg',
+  'IMG_0677.jpeg' => 'IMG_0677.jpeg',
 );
