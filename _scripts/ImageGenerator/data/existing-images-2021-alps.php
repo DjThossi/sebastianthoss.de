@@ -25,4 +25,5 @@
   'IMG_0668.jpeg' => 'IMG_0668.jpeg',
   'IMG_0677.jpeg' => 'IMG_0677.jpeg',
   'schafe-am-wegesrand.jpeg' => 'schafe-am-wegesrand.jpeg',
+  'IMG_0711.jpeg' => 'IMG_0711.jpeg',
 );
