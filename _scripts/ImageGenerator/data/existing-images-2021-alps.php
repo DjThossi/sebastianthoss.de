@@ -28,6 +28,5 @@
   'IMG_0711.jpeg' => 'IMG_0711.jpeg',
   'IMG_0744.jpeg' => 'IMG_0744.jpeg',
   'IMG_0789.jpeg' => 'IMG_0789.jpeg',
-  'IMG_0792.jpeg' => 'IMG_0792.jpeg',
   'IMG_0801.jpeg' => 'IMG_0801.jpeg',
 );
