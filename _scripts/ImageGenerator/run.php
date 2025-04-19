@@ -5,7 +5,8 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = '2021-alps';
+$folderFileName = '2021-tenerife';
+$generatePanoramaOnly = false;
 $generateBothImages = true;
 $imageGenerationOnly = false;
 $generateProd = false;
@@ -63,9 +64,10 @@ echo "CONVERT ALL IMAGES\n";
 
 foreach ($inputImages as $image) {
     //Large output image
-    if ($generateBothImages) {
-//        generateImage($inputPath, $image, 1140, $outputPath);
-//        exit;
+    if ($generatePanoramaOnly) {
+        generateImage($inputPath, $image, 1140, $outputPath);
+    }
+    elseif ($generateBothImages) {
         generateImage($inputPath, $image, 1024, $outputPath);
         generateImage($inputPath, $image, 455, $outputSmallPath);
     } else {
@@ -101,7 +103,7 @@ if (!file_exists($largePath)) {
     }
 }
 
-if ($generateBothImages) {
+if ($generatePanoramaOnly === false && $generateBothImages) {
     $smallPath = __DIR__ . '/../../source/assets/img/blog/' . $folderFileName . '/small/';
     if (!file_exists($smallPath)) {
         if (!mkdir($smallPath) && !is_dir($smallPath)) {
@@ -113,7 +115,7 @@ if ($generateBothImages) {
 foreach ($images as $image) {
     unlink($inputPath . $image);
     rename($outputPath . $image, $largePath . $image);
-    if ($generateBothImages) {
+    if ($generatePanoramaOnly === false && $generateBothImages) {
         rename($outputSmallPath . $image, $smallPath . $image);
     }
 }
