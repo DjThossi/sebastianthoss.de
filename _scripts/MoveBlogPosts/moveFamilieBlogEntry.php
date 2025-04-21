@@ -58,7 +58,7 @@ $content = replaceContent($content, '  - Reiseblog', '  - Reiseblog
   - 2021-alpen');
 
 echo "COLLECT INFOS FOR SOCIAL\n";
-$hasFound = preg_match("/\ntitle:([A-z 0-9\.\-,\(\)\/\!: ‘&;äöüÜÖÄß€é\"\']{1,})\n/", $content, $matches);
+$hasFound = preg_match("/\ntitle:(.*)\n/", $content, $matches);
 if ($hasFound !== 1) {
     echo "[ERROR] TITLE NOT FOUND\n";
     exit(1);

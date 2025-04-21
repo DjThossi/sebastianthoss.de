@@ -6,6 +6,6 @@ set -o nounset
 # Exit if a command exits with a non-zero status
 set -o errexit
 
-php ./_scripts/MoveBlogPosts/moveFamilieBlogEntry.php
+docker compose run --rm php -f _scripts/MoveBlogPosts/moveFamilieBlogEntry.php
 
-#bash -c "./_scripts/takeItLive.sh 'Move familie blog post'"
+./_scripts/takeItLive.sh 'Move familie blog post'

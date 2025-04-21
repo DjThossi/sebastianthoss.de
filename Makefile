@@ -41,7 +41,7 @@ scripts-image-generator: ## Generates browser optimized images
 
 .PHONY: scripts-move-blog-posts
 scripts-move-blog-posts: ## Generates blog post files based on a single text file.
-	docker compose run --rm php -f _scripts/MoveBlogPosts/moveFamilieBlogEntry.php
+	_scripts/MoveBlogPosts/run.sh
 
 .PHONY: scripts-post-generator
 scripts-post-generator: ## Generates blog post files based on a single text file.
