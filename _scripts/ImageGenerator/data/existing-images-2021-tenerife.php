@@ -5,4 +5,5 @@
   'IMG_1640.jpeg' => 'IMG_1640.jpeg',
   'IMG_1710.jpeg' => 'IMG_1710.jpeg',
   'IMG_1409.jpeg' => 'IMG_1409.jpeg',
+  'IMG_1548.jpeg' => 'IMG_1548.jpeg',
 );
