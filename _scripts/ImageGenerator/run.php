@@ -5,7 +5,7 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = '2021-tenerife';
+$folderFileName = '2024-ist-dxb';
 $generatePanoramaOnly = false;
 $generateBothImages = true;
 $imageGenerationOnly = false;
