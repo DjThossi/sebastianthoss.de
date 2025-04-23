@@ -20,7 +20,7 @@ if ($didMatch === 1) {
 } elseif (preg_match('/^([0-9]{1,2})\.([0-9]{1,2})\. (.*)/', $title, $dateParts) === 1) {
     $day = strlen($dateParts[1]) === 1 ? '0' . $dateParts[1] : $dateParts[1];
     $month = strlen($dateParts[2]) === 1 ? '0' . $dateParts[2] : $dateParts[2];
-    $year = '2021';
+    $year = '2024';
     $titleForFile = $dateParts[3];
 } else {
     throw new Exception('Date not found');
