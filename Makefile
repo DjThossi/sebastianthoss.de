@@ -15,6 +15,9 @@ docker-up: ## Booting docker env
 docker-stop: ## stops docker env
 	docker compose stop
 
+.PHONY: docker-restart
+docker-restart: docker-stop docker-up ## Restart docker env
+
 .PHONY: composer-install
 composer-install: ## Composer install
 	docker compose run --rm php bash -c "composer install"
