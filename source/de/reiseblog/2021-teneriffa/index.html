@@ -1,0 +1,40 @@
+---
+layout: german
+title: Reiseblog
+meta:
+  description: "Hier findet unsere Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge Steffi's und meiner Reise nach Teneriffa 2021"
+  keywords:
+    - Deutschland
+    - Österriech
+    - Kleinwalsertaal
+    - Poppengrün
+    - Pirna
+    - Tropical Island
+
+active_nav: blog-2021-teneriffa
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 10
+  provider: filtered.reiseblog.categories.2021-teneriffa
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Steffi und Basti auf Teneriffa</h1>
+  <p>Hier findet Ihr alle Blogartikel und <a href="{{ site.url }}/de/reiseblog/2021-teneriffa/fotos/">Bilder</a> unserer Reise nach Teneriffa auf den Kanaren.</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->

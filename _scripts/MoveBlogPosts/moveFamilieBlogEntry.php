@@ -53,9 +53,9 @@ $content = replaceContent($content, 'layout: blog/de/familie', 'layout: blog/de/
 $content = replaceContent($content, 'sitemap: false', 'sitemap: true
 headline_type: no');
 
-echo "ADD POST TO 2021 Alpen VACATION\n";
+echo "ADD POST TO 2021 Teneriffa VACATION\n";
 $content = replaceContent($content, '  - Reiseblog', '  - Reiseblog
-  - 2021-alpen');
+  - 2021-teneriffa');
 
 echo "COLLECT INFOS FOR SOCIAL\n";
 $hasFound = preg_match("/\ntitle:(.*)\n/", $content, $matches);

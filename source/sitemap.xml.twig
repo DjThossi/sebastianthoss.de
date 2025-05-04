@@ -38,14 +38,49 @@ permalink: sitemap.xml
     {% endfor %}
 
     <url>
-        <loc>{{ site.url }}/de/reiseblog/2018-usa/fotos/</loc>
-    </url>
-
-    <url>
         <loc>{{ site.url }}/de/reiseblog/2018-philippinen/fotos/</loc>
     </url>
     <url>
         <loc>{{ site.url }}/de/reiseblog/2018-philippinen/</loc>
+    </url>
+    {% for page in 2..5 %}
+        <url>
+            <loc>{{ site.url }}/de/reiseblog/2018-philippinen/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2018-usa/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2018-usa/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2018-usa/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2019-kanada/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2019-kanada/</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2021-alpen/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2021-alpen/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2021-alpen/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2021-teneriffa/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2021-teneriffa/</loc>
     </url>
 
     <url>

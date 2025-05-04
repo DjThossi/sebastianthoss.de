@@ -21,6 +21,9 @@
             <loc>https://www.sebastianthoss.de/en/tech-blog/2016/10/24/don-t-fear-the-walking-dead.html</loc>
         </url>
                 <url>
+            <loc>https://www.sebastianthoss.de/de/reiseblog/2021/09/26/auf-nach-teneriffa.html</loc>
+        </url>
+            <url>
             <loc>https://www.sebastianthoss.de/de/reiseblog/2021/07/11/lecker-und-wellness.html</loc>
         </url>
             <url>
@@ -752,14 +755,56 @@
         </url>
     
     <url>
-        <loc>https://www.sebastianthoss.de/de/reiseblog/2018-usa/fotos/</loc>
-    </url>
-
-    <url>
         <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/fotos/</loc>
     </url>
     <url>
         <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/</loc>
+    </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/page/2/</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/page/3/</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/page/4/</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/de/reiseblog/2018-philippinen/page/5/</loc>
+        </url>
+    
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2018-usa/fotos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2018-usa/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2018-usa/page/2</loc>
+    </url>
+
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2019-kanada/fotos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2019-kanada/</loc>
+    </url>
+
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2021-alpen/fotos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2021-alpen/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2021-alpen/page/2</loc>
+    </url>
+
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2021-teneriffa/fotos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2021-teneriffa/</loc>
     </url>
 
     <url>
