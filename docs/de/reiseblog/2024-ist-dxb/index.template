@@ -2,16 +2,14 @@
 layout: german
 title: Reiseblog
 meta:
-  description: "Hier findet unsere Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge Steffi's und meiner Reise in die Alpen 2021"
+  description: "Hier findet unsere Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge meiner Reise nach Istanbul und Dubai in 2024"
   keywords:
-    - Deutschland
-    - Österriech
-    - Kleinwalsertaal
-    - Poppengrün
-    - Pirna
-    - Tropical Island
+    - Türkei
+    - Istanbul
+    - Vereinigte Arabische Emirate
+    - Dubai
 
-active_nav: blog-2021-alpen
+active_nav: blog-2024-ist-dxb
 
 add_css:
   - /assets/css/pages/blog_masonry_3col.css
@@ -23,12 +21,12 @@ js:
 generator: pagination
 pagination:
   max_per_page: 9
-  provider: filtered.reiseblog.categories.2021-alpen
+  provider: filtered.reiseblog.categories.2024-ist-dxb
 ---
 
 <div class="heading margin-bottom-20 margin-top-20">
-  <h1>Steffi und Basti auf Alpentour</h1>
-  <p>Hier findet Ihr alle Blogartikel und <a href="{{ site.url }}/de/reiseblog/2021-alpen/fotos/">Bilder</a> unserer Reise ins Kleinwalsertaal und nach Ostdeutschland.</p>
+  <h1>Istanbul und Dubai zum Entspannen 2024</h1>
+  <p>Hier findet Ihr alle Blogartikel und <a href="{{ site.url }}/de/reiseblog/2024-ist-dxb/fotos/">Bilder</a> meiner Reise nach Istanbul und den Dubai.</p>
 </div>
 
 <!--=== Content Part ===-->
