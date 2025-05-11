@@ -8,3 +8,5 @@ sculpin_content_types:
     permalink: familie/:year/:month/:day/:filename.html
   reiseblog:
     permalink: de/reiseblog/:year/:month/:day/:filename.html
+  travelblog:
+    permalink: en/travelblog/:year/:month/:day/:filename.html

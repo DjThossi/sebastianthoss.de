@@ -18,10 +18,14 @@
     ],
     "require": {
         "php": "^7.4 < 8.0",
+        "ext-dom": "*",
+        "ext-iconv": "*",
+        "ext-libxml": "*",
         "sculpin/sculpin": "2.1.3",
         "dflydev/embedded-composer": "^1.0@dev",
         "orbitale/imagemagick-php": "^1.6",
-        "dflydev/dot-access-configuration": "v1.0.2"
+        "dflydev/dot-access-configuration": "v1.0.2",
+        "stichoza/google-translate-php": "^4.1"
     },
     "config": {
         "allow-plugins": {

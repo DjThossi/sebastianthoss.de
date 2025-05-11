@@ -52,6 +52,13 @@
                             </a>
                         </li>
 
+                        <!-- Travel blog -->
+                        <li class="{% if page.active_nav == 'travel-blog' %}active{% endif %}">
+                            <a href="{{ site.url }}/en/travel-blog/">
+                                Travel Blog
+                            </a>
+                        </li>
+
                         <!-- Talks -->
                         <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
                             <a href="{{ site.url }}/en/talks/" class="dropdown-toggle" data-toggle="dropdown">

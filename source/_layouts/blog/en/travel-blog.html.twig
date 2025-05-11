@@ -1,0 +1,42 @@
+{% extends "english.html.twig" %}
+
+{% set layoutAddCss = ['/assets/css/pages/blog.css'] %}
+{% set defaultImageSrc = '/assets/img/blog/travel-blog-headline.jpg' %}
+{% set defaultImageAlt = 'Standardbanner f&uuml;r die Headline des Reiseblogs.' %}
+
+{% block contentWrapper %}
+<div class="container content blog-page blog-item">
+
+    <!--=== Content Part ===-->
+    {% if page.headline_type == 'top' %}
+        {% include 'blog/post/top_headline.html.twig'
+            with {
+                'defaultImageSrc': defaultImageSrc,
+                'defaultImageAlt': defaultImageAlt
+            }
+        %}
+    {% else %}
+        {% include 'blog/post/no_headline.html.twig'
+            with {
+                'defaultImageSrc': defaultImageSrc,
+                'defaultImageAlt': defaultImageAlt
+            }
+        %}
+    {% endif %}
+    <!--=== End Content Part ===-->
+
+    {% if page.pagination %}
+        {% include 'blog/snippet/post_pagination.html.twig'
+            with {
+                'next': page.next_reiseblog,
+                'previous': page.previous_reiseblog,
+                'showNext': page.pagination.next,
+                'showPrevious': page.pagination.previous,
+                'nextPostLinkText': 'Next<span class="hidden-xs"> post</span>',
+                'previousPostLinkText': 'Previous <span class="hidden-xs"> post</span>'
+            }
+        %}
+    {% endif %}
+
+</div><!--/container-->
+{% endblock %}
