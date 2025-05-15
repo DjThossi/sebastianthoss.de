@@ -76,11 +76,12 @@ function translateHtml(string $html, GoogleTranslate $tr): string
     $xpath = new \DOMXPath($doc);
     foreach ($xpath->query('//text()') as $textNode) {
         $orig = $textNode->nodeValue;
-        $trim = trim($orig);
-        if ($trim === '') {
+        if (trim($orig) === '') {
             continue;
         }
-        $textNode->nodeValue = $tr->translate($orig);
+        $translated = $tr->translate($orig);
+        // sicherstellen, dass vor und nach dem Text ein Leerzeichen steht
+        $textNode->nodeValue = ' ' . trim($translated) . ' ';
     }
 
     // 4) raus mit XML‐Prolog
