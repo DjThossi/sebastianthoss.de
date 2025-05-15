@@ -2,7 +2,7 @@
 
 {% set layoutAddCss = ['/assets/css/pages/blog.css'] %}
 {% set defaultImageSrc = '/assets/img/blog/travel-blog-headline.jpg' %}
-{% set defaultImageAlt = 'Standardbanner f&uuml;r die Headline des Reiseblogs.' %}
+{% set defaultImageAlt = 'Defaultbanner for Headline' %}
 
 {% block contentWrapper %}
 <div class="container content blog-page blog-item">
@@ -28,8 +28,8 @@
     {% if page.pagination %}
         {% include 'blog/snippet/post_pagination.html.twig'
             with {
-                'next': page.next_reiseblog,
-                'previous': page.previous_reiseblog,
+                'next': page.next_travelblog,
+                'previous': page.previous_travelblog,
                 'showNext': page.pagination.next,
                 'showPrevious': page.pagination.previous,
                 'nextPostLinkText': 'Next<span class="hidden-xs"> post</span>',
