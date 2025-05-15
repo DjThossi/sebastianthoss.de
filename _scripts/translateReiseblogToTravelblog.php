@@ -46,7 +46,7 @@ function buildFrontmatter(array $lines): string
     return "---\n" . implode("\n", $lines) . "\n---\n\n";
 }
 
-if (!mkdir($concurrentDirectory = DST_DIR, 0755, true) && !is_dir($concurrentDirectory)) {
+if (!@mkdir($concurrentDirectory = DST_DIR, 0755, true) && !is_dir($concurrentDirectory)) {
     throw new RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
 }
 $tr = new GoogleTranslate('en', 'de'); // von Deutsch nach Englisch
@@ -100,13 +100,20 @@ foreach (readFiles(SRC_DIR) as $file) {
     $translatedTitle = '';
 
     foreach ($lines as $i => $ln) {
-        // 1) Kategorien
-        if (preg_match('/^\s*-\s*de\s*$/', $ln)) {
-            $lines[$i] = str_replace("de", 'en', $ln);
+        // 1) Kategorien: "- Reiseblog" → "- travel-blog"
+        if (preg_match('/^\s*-\s*Reiseblog\s*$/', $ln)) {
+            // exakt gleiche Einrückung beibehalten, nur Text ersetzen
+            $lines[$i] = preg_replace('/- Reiseblog/', '- travel-blog', $ln);
             continue;
         }
 
-        // 2) Titel übersetzen
+        // 2) Kategorien: "de" → "en"
+        if (preg_match('/^\s*-\s*de\s*$/', $ln)) {
+            $lines[$i] = str_replace('de', 'en', $ln);
+            continue;
+        }
+
+        // 3) Titel übersetzen
         if (preg_match('/^title:\s*["\']?(.*?)["\']?$/', $ln, $m)) {
             $translatedTitle = $tr->translate($m[1]);
             $lines[$i] = 'title: "' . addslashes($translatedTitle) . '"';
