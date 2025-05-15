@@ -100,20 +100,20 @@ foreach (readFiles(SRC_DIR) as $file) {
     $translatedTitle = '';
 
     foreach ($lines as $i => $ln) {
-        // 0) Layout-Pfad anpassen: "blog/de/travel-blog" → "blog/en/travel-blog"
+        // 0) Layout-Pfad anpassen: "blog/de/travel-blog" → "blog/en/travelblog"
         if (preg_match('/^layout:\s*blog\/de\/travel-blog\b/', $ln)) {
             $lines[$i] = preg_replace(
                 '/blog\/de\/travel-blog\b/',
-                'blog/en/travel-blog',
+                'blog/en/travelblog',
                 $ln
             );
             continue;
         }
 
-        // 1) Kategorien: "- Reiseblog" → "- travel-blog"
+        // 1) Kategorien: "- Reiseblog" → "- travelblog"
         if (preg_match('/^\s*-\s*Reiseblog\s*$/', $ln)) {
             // exakt gleiche Einrückung beibehalten, nur Text ersetzen
-            $lines[$i] = preg_replace('/- Reiseblog/', '- travel-blog', $ln);
+            $lines[$i] = preg_replace('/- Reiseblog/', '- travelblog', $ln);
             continue;
         }
 
