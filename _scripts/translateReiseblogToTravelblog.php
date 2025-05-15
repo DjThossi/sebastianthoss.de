@@ -100,6 +100,16 @@ foreach (readFiles(SRC_DIR) as $file) {
     $translatedTitle = '';
 
     foreach ($lines as $i => $ln) {
+        // 0) Layout-Pfad anpassen: "blog/de/travel-blog" → "blog/en/travel-blog"
+        if (preg_match('/^layout:\s*blog\/de\/travel-blog\b/', $ln)) {
+            $lines[$i] = preg_replace(
+                '/blog\/de\/travel-blog\b/',
+                'blog/en/travel-blog',
+                $ln
+            );
+            continue;
+        }
+
         // 1) Kategorien: "- Reiseblog" → "- travel-blog"
         if (preg_match('/^\s*-\s*Reiseblog\s*$/', $ln)) {
             // exakt gleiche Einrückung beibehalten, nur Text ersetzen
