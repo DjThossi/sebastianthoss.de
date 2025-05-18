@@ -1,0 +1,37 @@
+---
+layout: english
+title: Travelblog
+meta:
+  description: "My friends can see here list of all my travel blog posts, translated from german"
+  keywords:
+    - blog
+    - travelblog
+
+active_nav: travelblog
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: data.travelblog
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>All travel blog posts</h1>
+  <p>Here you'll find the newest blog posts about my journeys around the world. I wrote not every post myself. Often I had help frm family and friends</p>
+  <p>More Important: All English travel blog posts are translated by an AI model from German. The english won't be perfect</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->
