@@ -18,4 +18,10 @@
   'IMG_2257.jpg' => 'IMG_2257.jpg',
   'IMG_2260.jpg' => 'IMG_2260.jpg',
   'IMG_2270.jpg' => 'IMG_2270.jpg',
+  'IMG_2284.jpg' => 'IMG_2284.jpg',
+  'IMG_2295.jpg' => 'IMG_2295.jpg',
+  'IMG_2304.jpg' => 'IMG_2304.jpg',
+  'IMG_2309.jpg' => 'IMG_2309.jpg',
+  'IMG_2313.jpg' => 'IMG_2313.jpg',
+  'IMG_2316.jpg' => 'IMG_2316.jpg',
 );
