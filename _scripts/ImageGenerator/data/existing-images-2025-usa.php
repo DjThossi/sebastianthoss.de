@@ -36,4 +36,11 @@
   'IMG_2348.jpg' => 'IMG_2348.jpg',
   'IMG_2350.jpg' => 'IMG_2350.jpg',
   'IMG_2354.jpg' => 'IMG_2354.jpg',
+  'DSC08013.jpg' => 'DSC08013.jpg',
+  'DSC08018.jpg' => 'DSC08018.jpg',
+  'DSC08027.jpg' => 'DSC08027.jpg',
+  'DSC08052.jpg' => 'DSC08052.jpg',
+  'IMG_2367.jpg' => 'IMG_2367.jpg',
+  'IMG_2371.jpg' => 'IMG_2371.jpg',
+  'IMG_2373.jpg' => 'IMG_2373.jpg',
 );
