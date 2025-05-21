@@ -19,32 +19,32 @@ locations:
 headline:
   image:
     url: /assets/img/blog/2017-asia-oz/train-banner.jpg
-    alt: "The train of the Kuranda Scenic Railway"
+    alt: "The Kuranda Scenic Railway train"
 
 overview:
-  intro: "Today our plan was actually to drive up the Victoria Peak with a tram."
+  intro: "Today we planned to take the tram up to Victoria Peak."
   image:
     url: /assets/img/blog/2017-asia-oz/small/20170501-14.jpg
-    alt: "The luxury soft ice cream in Hong Kong"
+    alt: "The luxury soft serve ice cream in Hong Kong"
 ---
 
 <!--=== Post ===--><div class="row">
     <div class="col-md-12"> {% include 'blog/snippet/headline.html.twig' %} </div>
     <div class="col-md-6">
         <p> {{ page.overview.intro|raw }} </p>
-		<p> We wanted to look at Hong Kong from above.
-			But when we saw the humanities in front of the ticket office, we preferred to go to Hong Kong Park and just walk a little between the high -rise buildings.
-			What was surprising to us was that between the skyscrapers on the ground.
-			It looked like they were all waiting for something.
-			But after we had walked a few blocks and still rums everywhere, we wanted to know it more precisely. </p>
-		<p> We asked a security guard, two police officers and a lady in a tourist information before we really understood and believed what was told us.
-			In Hong Kong, May 1st is also a holiday. Since the offices are all closed, people simply sit down with cardboard and co. Armed in front of the offices on the street and meet with friends there for a chat.
-			Other cultures, different customs. </p>
-		<p> The rest of the day we dawned through the city and ended up in an ice cream parlor, where we got a completely overpriced soft ice cream. </p>
+        <p> We wanted to see Hong Kong from above.
+            But when we saw the crowds in front of the ticket office, we decided to go to Hong Kong Park instead and just walk around between the skyscrapers.
+            What surprised us was that people were sitting on the ground between the buildings everywhere.
+            It looked like they were all waiting for something.
+            After walking several blocks and still seeing people sitting around everywhere, we wanted to know what was going on. </p>
+        <p> We asked a security guard, two police officers, and a lady at the tourist information before we really understood and believed what we were told.
+            In Hong Kong, May 1st is also a holiday. Since all the offices are closed, people simply sit on the street in front of the offices with cardboard and other materials, meeting friends there for a chat.
+            Different cultures, different customs. </p>
+        <p> For the rest of the day, we wandered through the city and ended up at an ice cream parlor, where we treated ourselves to an overpriced soft serve ice cream. </p>
     </div>
     <div class="col-md-6 overflow-h">
         <div class="box-shadow shadow-effect-3">
-            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{Page.overview.image.alt | raw}}">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
         </div>
     </div>
 </div><!--=== End Post ===-->
