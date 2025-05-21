@@ -1,0 +1,43 @@
+---
+layout: blog/en/travelblog
+title: "03/22/2018 rest in the resort"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2018-philippines
+
+locations:
+  - Philippines
+  - Zamboanguita
+
+headline:
+  image:
+    url: "/assets/img/blog/2018-philippines/headline-jeepney.jpg"
+    alt: "A jeepney in Manila. Here are the local buses"
+
+author: "Steffi"
+
+overview:
+  intro: "There is not much to say today, because we put you on the lazy and occupied the sun loungers, the pool and in the meantime filled our stomachs."
+  image:
+    url: "/assets/img/blog/2018-philippines/small/IMG_4759.jpg"
+    alt: "Steffi and Sebastian on the beach of Zamboanguita"
+---
+
+<!--=== Post ===--><div class="row">
+    <div class="col-md-6"> {% include 'blog/snippet/headline.html.twig' %} <p> {{ page.overview.intro|raw }} </p>
+        <p> Well and Basti worked, of course. As a break there was a short walk on the beach and a supposed cooling in the sea. As far as you can call it cooling, because the sea clearly has a bathroom temperature of around 29 degrees. </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{Page.overview.image.alt | raw}}">
+        </div>
+    </div>
+</div><!--=== End Post ===-->

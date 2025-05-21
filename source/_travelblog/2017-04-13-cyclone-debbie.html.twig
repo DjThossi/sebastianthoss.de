@@ -1,0 +1,49 @@
+---
+layout: blog/en/travelblog
+title: "Cyclone Debbie"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2017-asia-oz
+
+locations:
+  - Australia
+  - Queensland
+  - Great Barrier Reef
+
+headline:
+  image:
+    url: /assets/img/blog/2017-asia-oz/train-banner.jpg
+    alt: "The train of the Kuranda Scenic Railway"
+
+overview:
+  intro: "Unfortunately, our holiday area was hit by a cyclone at the end of March."
+  image:
+    url: /assets/img/blog/2017-asia-oz/small/tropical-cyclone-catarina-1167137.jpg
+    alt: "Recording of a cyclone from space"
+---
+
+<!--=== Post ===--><div class="row">
+    <div class="col-md-6"> {% include 'blog/snippet/headline.html.twig' %} <p> {{ page.overview.intro|raw }} </p>
+        <p> Zyklone Debbie hit the coast of Queensland at up to 270 km/h.
+            Debbie destroyed a lot of land, nature and also large parts of the Great Barrier Reef.
+            Some towns are still flooded.
+            Debbie has a good thing.
+            The cyclone has reduced the water temperature, which is dangerously high for the reef. </p>
+        <p> We just hope that Debbie will not affect our vacation too much. </p>
+        <p>
+            <a target="_blank" href="https://goo.gl/GlqBuw"> Here </a> Another report about the reef. </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{Page.overview.image.alt | raw}}">
+        </div>
+    </div>
+</div><!--=== End Post ===-->

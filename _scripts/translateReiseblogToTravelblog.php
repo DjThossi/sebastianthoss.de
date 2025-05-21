@@ -89,10 +89,18 @@ function translateHtml(string $html, GoogleTranslate $tr): string
     $out = preg_replace('/^<\?xml.*?\?>\s*/', '', $out);
 
     // 5) Twig‐Tokens zurücktauschen
+    $out = str_replace(['Twig_token', 'twig_token' ], 'TWIG_TOKEN', $out);
     return strtr($out, $replacements);
 }
 
+$notBefore = new DateTime('2018-04-04');
+
 foreach (readFiles(SRC_DIR) as $file) {
+    $postDate = new DateTime(substr($file, 0, 10));
+    if ($postDate < $notBefore) {
+        continue;
+    }
+
     $raw = file_get_contents(SRC_DIR . $file);
     [$yamlBlock, $body] = splitFrontmatter($raw);
     $lines = parseYamlLines($yamlBlock);
@@ -157,7 +165,7 @@ foreach (readFiles(SRC_DIR) as $file) {
         // 5) Front-Matter: alt-Attribute übersetzen
         if (preg_match('/^\s*(\S*?\s*)alt:\s*["\']?(.*?)["\']?$/', $ln, $m)) {
             $altTrans       = $tr->translate($m[2]);
-            $lines[$i]      = $m[1] . 'alt: "' . addslashes($altTrans) . '"';
+            $lines[$i]      = $m[1] . '    alt: "' . addslashes($altTrans) . '"';
             continue;
         }
     }
@@ -179,9 +187,7 @@ foreach (readFiles(SRC_DIR) as $file) {
     if (!preg_match('/^(\d{4}-\d{2}-\d{2})-/', $file, $m)) {
         throw new RuntimeException("Dateiname-Pattern passt nicht: $file");
     }
-    $date = $m[1];
-    $slug = slugify($translatedTitle);
-    $newFile = $date . '-' . $slug . '.html.twig';
+    $newFile = slugify($tr->translate(str_replace('-', ' ', substr($file, 0, -10)))) . '.html.twig';
 
     // Schreiben
     // … restliches Script bleibt unverändert …
