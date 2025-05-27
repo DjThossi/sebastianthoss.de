@@ -43,4 +43,7 @@
   'IMG_2367.jpg' => 'IMG_2367.jpg',
   'IMG_2371.jpg' => 'IMG_2371.jpg',
   'IMG_2373.jpg' => 'IMG_2373.jpg',
+  'IMG_2385.jpg' => 'IMG_2385.jpg',
+  'IMG_2395.jpg' => 'IMG_2395.jpg',
+  'IMG_2397.jpg' => 'IMG_2397.jpg',
 );
