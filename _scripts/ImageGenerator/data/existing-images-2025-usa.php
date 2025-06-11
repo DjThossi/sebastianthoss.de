@@ -71,4 +71,6 @@
   'IMG_8483.jpg' => 'IMG_8483.jpg',
   'IMG_8504.jpg' => 'IMG_8504.jpg',
   'IMG_8511.jpg' => 'IMG_8511.jpg',
+  'DSC08003.jpg' => 'DSC08003.jpg',
+  'IMG_2658.jpg' => 'IMG_2658.jpg',
 );
