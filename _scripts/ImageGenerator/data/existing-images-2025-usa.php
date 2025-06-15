@@ -79,4 +79,11 @@
   'IMG_2690.jpg' => 'IMG_2690.jpg',
   'IMG_8676.jpg' => 'IMG_8676.jpg',
   'IMG_8692.jpg' => 'IMG_8692.jpg',
+  'IMG_8695.jpg' => 'IMG_8695.jpg',
+  'IMG_8701.jpg' => 'IMG_8701.jpg',
+  'DSC09160.jpg' => 'DSC09160.jpg',
+  'IMG_8730.jpg' => 'IMG_8730.jpg',
+  'DSC09251.jpg' => 'DSC09251.jpg',
+  'DSC09256.jpg' => 'DSC09256.jpg',
+  'IMG_8764.jpg' => 'IMG_8764.jpg',
 );
