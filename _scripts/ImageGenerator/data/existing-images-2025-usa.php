@@ -99,4 +99,6 @@
   'IMG_9041.jpg' => 'IMG_9041.jpg',
   'IMG_9082.jpg' => 'IMG_9082.jpg',
   'IMG_9119.jpg' => 'IMG_9119.jpg',
+  'IMG_9136.jpg' => 'IMG_9136.jpg',
+  'IMG_9183.jpg' => 'IMG_9183.jpg',
 );
