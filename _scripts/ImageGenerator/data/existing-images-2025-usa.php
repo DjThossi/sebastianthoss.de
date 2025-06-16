@@ -94,4 +94,9 @@
   'DSC09297.jpg' => 'DSC09297.jpg',
   'DSC09320.jpg' => 'DSC09320.jpg',
   'IMG_8923.jpg' => 'IMG_8923.jpg',
+  'IMG_2852.jpg' => 'IMG_2852.jpg',
+  'IMG_2864.jpg' => 'IMG_2864.jpg',
+  'IMG_9041.jpg' => 'IMG_9041.jpg',
+  'IMG_9082.jpg' => 'IMG_9082.jpg',
+  'IMG_9119.jpg' => 'IMG_9119.jpg',
 );
