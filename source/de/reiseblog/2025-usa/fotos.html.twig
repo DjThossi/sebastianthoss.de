@@ -1,0 +1,55 @@
+---
+layout: german
+title: Reisefotos
+meta:
+  description: "Hier findet Ihr ein paar schöne Bilder unserer Reise in die USA in 2025"
+  keywords:
+    - Fotos
+    - Reisen
+    - Urlaub
+    - USA
+    - New York
+    - Washington D.C.
+    - Miami
+    - Cape Coral
+    - Tampa
+    - Cape Canaveral
+    - Orlando
+active_nav: blog-2025-usa
+
+add_css:
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - FancyBox.initFancybox();
+---
+<div class="heading heading-v1 margin-top-20">
+  <h1>Reisebilder aus den USA 2025</h1>
+  <p>Hier findet Ihr ein paar schöne Bilder und die <a href="{{ site.url }}/de/reiseblog/2025-usa/">Blogposts</a> unserer Reise in diue USA 2025</p>
+</div>
+
+<!-- Six Columns -->
+<div class="container content">
+
+    <div class="row margin-bottom-30">
+        {% set images =  source('imageData/2025-usa.csv')|split(", ")|reverse %}
+
+        {% for image in images %}
+            <div class="col-sm-2 sm-margin-bottom-30">
+                <a href="{{ site.url }}/assets/img/blog/2025-usa/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2025-usa/small/{{ image }}" alt="{{ image }}"></span>
+                </a>
+            </div>
+            {% if loop.index % 6 == 0 %}
+                </div>
+                <div class="row margin-bottom-30">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!-- End Six Columns -->
