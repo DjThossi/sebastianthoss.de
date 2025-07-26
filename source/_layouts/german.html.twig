@@ -41,13 +41,13 @@
                             </li>
                             <!-- End Homepage -->
 
-                            <!-- Homepage -->
-                            <li class="{% if page.active_nav == 'big-5' %}active{% endif %}">
-                                <a href="{{ site.url }}/de/big-five-for-life/">
-                                    Big 5 For life
+                            <!-- News -->
+                            <li class="{% if page.active_nav == 'news' %}active{% endif %}">
+                                <a href="{{ site.url }}/de/news/">
+                                    News
                                 </a>
                             </li>
-                            <!-- End Homepage -->
+                            <!-- End News -->
 
                             <!-- Talks -->
                             <li class="dropdown{% if page.active_nav starts with 'talks-' %} active{% endif %}">
@@ -73,9 +73,9 @@
                                     <li class="{% if page.active_nav == 'blog-newest' %}active{% endif %}">
                                         <a href="{{ site.url }}/de/reiseblog/"><i class="fa fa-angle-double-right"></i>Neuste Beitr&auml;ge</a>
                                     </li>
-                                    {#<li class="{% if page.active_nav == 'blog-2025-usa' %}active{% endif %}">
+                                    <li class="{% if page.active_nav == 'blog-2025-usa' %}active{% endif %}">
                                         <a href="{{ site.url }}/de/reiseblog/2025-usa/"><i class="fa fa-angle-double-right"></i>2025 New York & Florida</a>
-                                    </li>#}
+                                    </li>
                                     <li class="{% if page.active_nav == 'blog-2024-ist-dxb' %}active{% endif %}">
                                         <a href="{{ site.url }}/de/reiseblog/2024-ist-dxb/"><i class="fa fa-angle-double-right"></i>2024 Istanbul & Dubai</a>
                                     </li>
@@ -95,13 +95,21 @@
                                         <a href="{{ site.url }}/de/reiseblog/2018-philippinen/"><i class="fa fa-angle-double-right"></i>2018 Philippinen</a>
                                     </li>
                                     <li class="{% if page.active_nav == 'blog-2017-asia-oz' %}active{% endif %}">
-                                        <a href="{{ site.url }}/de/reiseblog/2017-asia-oz/page/5/"><i class="fa fa-angle-double-right"></i>2017 Australien</a>
+                                        <a href="{{ site.url }}/de/reiseblog/2017-asia-oz/"><i class="fa fa-angle-double-right"></i>2017 Australien</a>
                                     </li>
                                 </ul>
                             </li>
 
+                            <!-- Contact -->
+                            <li class="{% if page.active_nav == 'kontakt' %}active{% endif %}">
+                                <a href="{{ site.url }}/de/kontakt/">
+                                    Kontakt
+                                </a>
+                            </li>
+                            <!-- End News -->
+
                             <!-- More -->
-                            <li class="dropdown{% if page.active_nav starts with 'more-' %} active{% endif %}">
+                            {#<li class="dropdown{% if page.active_nav starts with 'more-' %} active{% endif %}">
                                 <a href="{{ site.url }}/de/vortraege/" class="dropdown-toggle" data-toggle="dropdown">
                                     Mehr
                                 </a>
@@ -121,6 +129,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            #}
 
                             <!-- English Version -->
                             <li>

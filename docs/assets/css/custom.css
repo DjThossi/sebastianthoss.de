@@ -23,6 +23,12 @@
     background-position: center center;
 }
 
+.breadcrumbs-v3.contact-image {
+    background: url("../img/bg/contact.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 @media (max-width: 450px) {
     .interactive-slider-v2 {
         padding: 100px 0;
