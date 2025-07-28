@@ -8,4 +8,4 @@ set -o errexit
 
 docker compose run --rm php -f _scripts/MoveBlogPosts/moveFamilieBlogEntry.php
 
-#./_scripts/takeItLive.sh 'Move familie blog post'
+./_scripts/takeItLive.sh 'Move familie blog post'
