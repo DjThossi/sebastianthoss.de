@@ -5,7 +5,7 @@ use Orbitale\Component\ImageMagick\Command;
 use Orbitale\Component\ImageMagick\ReferenceClasses\Geometry;
 
 //TODO Amend here
-$folderFileName = '2025-usa';
+$folderFileName = '2025-vietnam-bali';
 $generatePanoramaOnly = false;
 $generateBothImages = true;
 $imageGenerationOnly = false;
