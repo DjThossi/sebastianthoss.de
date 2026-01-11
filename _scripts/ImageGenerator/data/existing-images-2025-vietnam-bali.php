@@ -1,4 +1,4 @@
 <?php $existingImages = array (
-  'IMG_7189.jpg' => 'IMG_7189.jpg',
-  'IMG_E0121.jpg' => 'IMG_E0121.jpg',
+  'IMG_1283.jpg' => 'IMG_1283.jpg',
+  'IMG_5393.jpg' => 'IMG_5393.jpg',
 );
