@@ -9,4 +9,7 @@
   'DSC01439.jpg' => 'DSC01439.jpg',
   'DSC01500.jpg' => 'DSC01500.jpg',
   'IMG_1480.jpg' => 'IMG_1480.jpg',
+  'IMG_5619.jpg' => 'IMG_5619.jpg',
+  'IMG_1495.jpg' => 'IMG_1495.jpg',
+  'IMG_1510.jpg' => 'IMG_1510.jpg',
 );
