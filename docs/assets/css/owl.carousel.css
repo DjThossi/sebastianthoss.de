@@ -1,0 +1,33 @@
+/* Owl Carousel Buttons links und rechts positionieren */
+.owl-slider-v4 {
+    position: relative;
+}
+
+
+.owl-carousel-v4 .owl-theme .owl-controls .owl-buttons div
+{
+    background: #000000;
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+/* Hover-Effekt für die Buttons */
+.owl-carousel-v4 .owl-theme .owl-controls .owl-buttons div:hover {
+    background: #337ab7; /* Deine Primärfarbe bei Hover */
+    opacity: 1;
+}
+
+.owl-slider-v4 .owl-buttons div
+{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.owl-slider-v4 .owl-prev {
+    left: 10px; /* Abstand vom linken Rand */
+}
+
+.owl-slider-v4 .owl-next {
+    right: 10px; /* Abstand vom rechten Rand */
+}

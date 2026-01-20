@@ -20,4 +20,11 @@
   'IMG_1786.jpg' => 'IMG_1786.jpg',
   'IMG_5805.jpg' => 'IMG_5805.jpg',
   'IMG_1791.jpg' => 'IMG_1791.jpg',
+  'IMG_1796.jpg' => 'IMG_1796.jpg',
+  'IMG_1805.jpg' => 'IMG_1805.jpg',
+  'IMG_1815.jpg' => 'IMG_1815.jpg',
+  'IMG_1835.jpg' => 'IMG_1835.jpg',
+  'IMG_1839.jpg' => 'IMG_1839.jpg',
+  'IMG_1846.jpg' => 'IMG_1846.jpg',
+  'IMG_1847.jpg' => 'IMG_1847.jpg',
 );

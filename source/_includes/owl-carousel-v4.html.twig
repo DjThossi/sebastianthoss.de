@@ -1,0 +1,32 @@
+{#
+Damit das richtig funktioniert musst Du noch im Head Block
+zwischen --- und --- den folgenden Extra Block einfügen:
+
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+#}
+<div class="owl-carousel-v4 {{ additionalContainerCss }}">
+    <div class="owl-slider-v4 owl-theme">
+        {% for image, imageAlt in images %}
+            <div class="item">
+                <a href="{{ site.url }}{{ imageBasePath }}{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ imageAlt }}">
+                    <img src="{{ site.url }}{{ imageBasePath }}small/{{ image }}" alt="{{ imageAlt }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
