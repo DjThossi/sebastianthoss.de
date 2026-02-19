@@ -1,0 +1,126 @@
+---
+layout: blog/de/familie
+title: "07.01.2026 Tauchen & Packen"
+active_nav: travel-blog
+sitemap: false
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - de
+  - Reiseblog
+
+locations:
+  - Indonesien
+  - Bali
+  - Kubu
+
+author: Steffi & Basti
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/bali-fische.jpg"
+    alt: "Fischschwarm vor der Küste von Bali"
+
+overview:
+  intro: "Heute fassen wir mal zwei Tage zusammen, da sie sich inhaltlich sehr ähnelten. Gestern früh ging ich ein drittes und letztes Mal in diesem"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/P1060115.jpg"
+    alt: "Eine wirklich winzige Neonsternschnecke"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} Urlaub tauchen. Heute habe ich bewusst pausiert, denn morgen steht ein Tempelbesuch auf dem Programm – und der liegt auf etwa 1.000 Metern über dem Meeresspiegel. Nach dem Tauchen soll man ja 24 Stunden lang keine größeren Höhenunterschiede machen, also lieber auf Nummer sicher gehen.
+        </p>
+        <p>
+            Der letzte Tauchgang war noch einmal richtig schön. Wieder ging es am Hausriff ins Wasser – und natürlich wieder mit Kamera. Zuerst besuchte ich die Clownfisch-Familie in ihrer Anemone. Inmitten der Tentakel entdeckte ich sogar einen kleinen Krebs – ein wirklich tolles Motiv. Leider hatte ich diesmal nicht so viel Glück mit der Kamera, irgendwie wollten die Fotos nicht so richtig scharf werden. Der Wellengang bewegte die Anemone und auch mich heute etwas mehr hin und her.
+        </p>
+        <p>
+            Danach trafen wir wieder „unsere“ echte Karettschildkröte, die uns die letzten Tage immer wieder begleitet hatte. Auch der blaue Bandaal vom Vortag ließ sich erneut blicken. Neu waren diesmal vor allem die winzigen Motive: Komang fand zuerst eine Neonsternschnecke, kurz darauf mehrere Warzen-Sternschnecken in unterschiedlichsten Farben. Einige waren nur wenige Millimeter groß, andere immerhin bis zu vier Zentimeter. Diese kleinen Details machen das Tauchen hier einfach unglaublich faszinierend.
+        </p>
+        <p>
+            Mittags lagen wir faul am Pool, bevor wir später noch schnorcheln gingen. Wir ließen uns gemütlich bis zum nächsten Einstieg treiben. Auch dort gab es wieder viel zu sehen, allerdings eher größere Fische. Schildkröten wollten sich diesmal leider nicht blicken lassen.
+        </p>
+        <p>
+            Den Abend verbrachten wir wieder im und vor unserem Bungalow. Die Fertignudeln aus dem Supermarkt kamen auch erneut zum Einsatz. Nudeln, Film schauen, Meeresrauschen und der Blick aufs Wasser – genau die Art von Urlaubsmoment, die man am liebsten einfriert.
+        </p>
+        <hr />
+        <p>
+            Heute verlief der Tag ähnlich entspannt. Nur wurde das Tauchen am Vormittag durch Kofferpacken am Abend ersetzt. Langsam wurde uns klar: Der ruhige Teil der Reise neigt sich dem Ende zu.
+        </p>
+
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}/assets/img/blog/2025-vietnam-bali/small/IMG_1906.jpg" alt="Der Blick über den Pool Richtung Meer">
+{#            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">#}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            Zum Abendessen gab es heute Live-Cooking im Restaurant. Statt aus der Karte zu wählen, konnten wir uns die Zutaten an einem Buffet selbst zusammenstellen und zuschauen, wie alles im Wok zubereitet wurde. Die Auswahl war allerdings etwas kleiner als erhofft – Möhren und Kohl waren da, aber Paprika und andere Gemüsesorten fehlten leider. Grundsätzlich war es lecker, aber irgendetwas im Geschmack war… seltsam.
+        </p>
+        <p>
+            Bis wir sahen, was alles noch in den Wok wanderte: vor allem Unmengen an Knoblauch und Ingwer. In der letzten Runde haben wir den Ingwer dann abbestellt – und das schmeckte uns deutlich besser.
+        </p>
+    </div>
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'P1060007.jpg': 'Ein Blaustreifen-Doktorfisch',
+                'P1060037.jpg': 'Familie Clownfisch',
+                'P1060115.jpg': page.overview.image.alt|raw,
+                'P1060061.jpg': 'Die echte Karettschildkröte',
+                'P1060079.jpg': 'Der blaue Bandaal',
+                'P1060120.jpg': 'Eine Warzensternschnecke',
+                'P1060130.jpg': 'Ein riesiger Zackenbarsch',
+                'P1060132.jpg': 'Adrige-Warzenschnecke',
+                'P1060135.jpg': 'Ein mehrere Meter hocher Berg Korallen, Anemonen und Schwämme',
+                'P1060141.jpg': 'Gelbgestreifte Süßlippe',
+                'P1070194.jpg': 'Schachbrett-Lippfisch',
+                'P1070195.jpg': 'Noch ein Blaustreifen-Doktorfisch',
+            }
+        } %}
+    </div>
+
+    <div class="col-md-12">
+        <p>
+            Morgen ist es vorbei mit der völligen Ruhe. Erst geht es mit unserem Lieblingsguide Yuda quer über die Insel, dann wartet am Abend unser zweites großes Highlight auf uns: die Villa in Ubud mit privatem Pool, Jacuzzi und einem traumhaften Blick über die Reisterrassen. Wir sind schon jetzt total gespannt.
+        </p>
+        <p>
+            Auch wenn es hier im Siddhartha Oceanfront Resort wirklich wunderschön ist, die Unterwasserwelt einfach der Wahnsinn ist und ich gerne noch ein paar Mal mehr tauchen gegangen wäre – ab morgen beginnt der Adventure-Teil der Reise.
+        </p>
+        <p>
+            Dann wollen wir Bali noch intensiver erleben, Kultur entdecken, Tempel besuchen und tiefer in das Leben hier eintauchen.
+        </p>
+        <p>
+            Und genau darauf freuen wir uns gerade unglaublich.
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->
