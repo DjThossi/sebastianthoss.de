@@ -60,4 +60,9 @@
   'P1060141.jpg' => 'P1060141.jpg',
   'P1070194.jpg' => 'P1070194.jpg',
   'P1070195.jpg' => 'P1070195.jpg',
+  'IMG_2018.jpg' => 'IMG_2018.jpg',
+  'IMG_2058.jpg' => 'IMG_2058.jpg',
+  'IMG_2067.jpg' => 'IMG_2067.jpg',
+  'IMG_2096.jpg' => 'IMG_2096.jpg',
+  'IMG_2100.jpg' => 'IMG_2100.jpg',
 );
