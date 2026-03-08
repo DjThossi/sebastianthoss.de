@@ -1,0 +1,149 @@
+---
+layout: blog/de/familie
+title: "11.01.2026 Dummheit für Bilder"
+active_nav: travel-blog
+sitemap: false
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - de
+  - Reiseblog
+
+locations:
+  - Indonesien
+  - Bali
+  - Kubu
+
+author: Steffi & Basti
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/bali-fische.jpg"
+    alt: "Fischschwarm vor der Küste von Bali"
+
+overview:
+  intro: "Heute starte ich (Basti) mal den Blogpost, denn auch dieser Tag begann wieder mit einem Tauchgang. Dieses Mal ging ich mit Komang tauchen. Er war zum"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/P1110003.jpg"
+    alt: "Die Fadenschnecke mit der Photovoltaikanlage auf dem Rücken"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} Glück wieder richtig fit. Es ging erneut ins Hausriff. Heute wollte ich mich noch einmal intensiver mit der kleinen Tierwelt beschäftigen und versuchen, einige davon gut auf Fotos zu bekommen.
+        </p>
+        <p>
+            Es ging auch gleich spannend los mit einer Fadenschnecke. Die grünen Puschel auf ihrem Rücken sind voller Algenzellen. Durch deren Photosynthese erhält die Schnecke zusätzliche Energie – sie hat quasi ihre eigene kleine Photovoltaikanlage immer dabei. Während sie sich also langsam über den Untergrund bewegt, produziert sie mithilfe des Sonnenlichts zusätzlich Energie.
+        </p>
+        <p>
+            Im Laufe des Tauchgangs kamen wir an vielen weiteren winzigen Tieren vorbei. Da waren zum Beispiel Fische, die nur etwa acht Millimeter lang und fast durchsichtig sind und auf blau, grün und orange schimmernden Korallen leben. Oder auch schwarze Schnecken mit grauen und gelben Punkten.
+        </p>
+        <p>
+            Leider wurde der Wellengang immer stärker, sodass es zunehmend schwieriger wurde, wirklich scharfe Fotos zu machen. Komang und ich wechselten uns daher beim Fotografieren ab – immer derjenige, der gerade stabiler im Wasser lag und somit die ruhigere Hand hatte.
+        </p>
+
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            Am schönsten fand ich zwei Kunies Prachtsternschnecken. Helle Nacktschnecken mit einer getigerten Oberfläche, umrandet in Lila und mit kleinen lila Punkten. Die wollte ich unbedingt in Ruhe fotografieren. Also ließ ich etwas Luft aus meiner Taucherweste, um tief genug zu bleiben, damit der Wellengang mich nicht ständig hin und her schubst. Das Foto saß – und darauf bin ich wirklich stolz.
+        </p>
+        <p>
+            Worauf ich allerdings nicht stolz bin, ist das, was danach passierte. Als ich weiterschwimmen wollte, hatte ich bereits vergessen, dass ich kaum noch Luft im Jacket hatte. Die nächste Welle drückte mich deshalb direkt auf einen kleinen Felsen, der mit nicht gerade freundlichen Pflanzen bewachsen war.
+        </p>
+        <p>
+            Da ich nur einen Shorty anhatte – also Arme und Beine frei – erwischten mich die Pflanzen am linken Unterarm und am rechten Oberschenkel. Super. Es brannte ein wenig wie Brennnesseln, ließ aber nach ein paar Minuten wieder nach und ich dachte zunächst gar nicht weiter darüber nach.
+        </p>
+    </div>
+
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'P1110047.jpg': 'Ein Neon-Dreiflosser (oben) und eine durchsichtige Zwerggrundel',
+                'P1110049.jpg': 'Eine Blaue Pralinenschnecke die Ihren Kopf versteckt',
+                'P1110075.jpg': 'Die zwei Kunies Prachtsternschnecken. Für dieses Bild hat sich der Brennesselarm gelohnt',
+                'P1110016.jpg': 'Eine wirklich hübsche Rüschen-Prachtsternschnecke. Als ob sie auf mich und meine Kamera gewartet hat',
+                'P1110007.jpg': 'Noch eine sehr kleine (nur ca 1cm) lange Prachtsternschnecke',
+                'P1110065.jpg': 'Noch eine Warzenschnecke. Wo ist da eigentlich vorne?',
+                'P1110091.jpg': 'Die zwei Thorunna-Zwerg-Prachtsternschnecken sind richtig klein. Die kleinere hat bestimmt nur 3 o. 4 mm länge',
+                'P1110098.jpg': 'Auch diese Berts Prachtsternschnecke ist nur ca 10 mm lang. Die Körper sehen fast immer Unscharf aus. ',
+                'P1110003.jpg': page.overview.image.alt|raw,
+            }
+        } %}
+    </div>
+    <div class="col-md-12">
+        <p>
+            Zurück an Land sprachen wir noch kurz über den kleinen Unfall, und Komang kippte vorsichtshalber etwas Essig über meinen Arm. Das soll wohl verhindern, dass sich etwas verschlimmert. Hoffen wir mal das Beste, denn meine Haut ist bei solchen Sachen leider recht empfindlich.
+            Komang und ich saßen anschließend noch bis zum Mittag zusammen, sichteten Fotos und suchten die einzelnen Tiere in Bestimmungsbüchern heraus, damit ich sie in meinem Tauchlog eintragen kann.
+        </p>
+        <h3>
+            In der Zwischenzeit bei Steffi
+        </h3>
+        <p>
+            Das Meer und auch der Wind spielten leider immer verrückter. Am Nachmittag wurde schließlich sogar die rote Flagge gehisst. Schwimmen im Meer war also erst einmal gestrichen. Am Pool liegen ging allerdings noch ganz gut, auch wenn der Wind zwischendurch immer wieder stärker wurde und sich öfter Wolken vor die Sonne schoben.
+        </p>
+    </div>
+
+    <div class="col-md-6 overflow-h margin-top-15">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}/assets/img/blog/2025-vietnam-bali/small/IMG_2196.jpg" alt="Der Kleine Krebs der bei uns in der Dusche saß" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <p>
+            So langsam änderte sich auch die Stimmung des Wetters. Die Luft wurde schwerer, dunklere Wolken zogen auf und irgendwann begann es immer kräftiger zu regnen. Ich hatte es mir gerade noch mit meinem Buch am Pool gemütlich gemacht, als klar wurde, dass der Tag wohl eher ein ruhiger auf der Veranda unseres Bungalows wird.
+        </p>
+        <p>
+            Am späten Nachmittag ging ich duschen. Dabei bekam ich allerdings ziemlich unerwarteten Besuch. Zur Erinnerung: Unser Badezimmer ist nicht komplett geschlossen. Ein Teil der Dusche ist nach oben hin offen, sodass man quasi halb draußen unter freiem Himmel duschen kann.
+        </p>
+        <p>
+            In der letzten Nacht hatte ich beim Gang zur Toilette schon einmal an der Wand am anderen Ende etwas gesehen, das ich spontan für eine Spinne hielt. Also schnell wegschauen und bloß nicht weiter darüber nachdenken.
+        </p>
+        <p>
+            Beim Duschen stellte sich dann allerdings heraus, was dort wirklich unterwegs war. Ich hatte Besuch von einem kleinen Krebs. Der krabbelte gemütlich durch das Steinbeet, das die Dusche einrahmt, und hielt offenbar direkt unter dem Wasserstrahl an, als würde er sich selbst eine kleine Dusche gönnen. Frisches Wasser scheint also auch für Krebse ganz angenehm zu sein.
+        </p>
+        <p>
+            Ich stand also unter der Dusche, schaute diesem kleinen Kerl zu und dachte mir nur: Willkommen auf Bali. Hier teilt man sich eben alles mit der Natur – sogar das Badezimmer.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <p>
+            Am Abend beschlossen wir schließlich, wieder einmal Fertignudeln zu essen und es uns mit einem Film im Bungalow gemütlich zu machen. Draußen regnete es inzwischen so stark, dass wir keine große Lust mehr hatten, noch einmal zum Restaurant zu laufen.
+        </p>
+        <p>
+            Also blieb es bei Nudeln, Film und dem beruhigenden Geräusch von Regen.
+            <br />
+            Bis morgen.
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->
