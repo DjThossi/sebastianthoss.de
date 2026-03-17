@@ -1,0 +1,179 @@
+---
+layout: blog/en/travelblog
+title: "01/05/26 Buddha and the Fish"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2025-vietnam-bali
+
+locations:
+  - Indonesia
+  - Bali
+  - Kubu
+
+author: Steffi & Seb
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/bali-fische.jpg"
+    alt: "School of fish off the coast of Bali"
+
+overview:
+  intro: "We were awake surprisingly early today – even before the alarm. Instead of turning over once more, I spontaneously decided: out of bed,"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/P1050051.jpg"
+    alt: "Clownfish family looks curiously out of their anemone"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} into the sea. In the morning, the water up here is significantly calmer than later in the day, and since I get seasick faster than you can say "boo", it was the perfect time.
+        </p>
+        <p>
+            While I grabbed my mask and fins, Seb already went to have a small breakfast. For him, a dive was on the agenda again at 10 AM.
+            And before anyone thinks: "Alone into the sea – you don't do that!" – don't worry. There is always someone from the resort or the dive center sitting at the entry keeping an eye on everything. I even had my phone with me in the waterproof case today.
+        </p>
+        <p>
+            After only a few minutes, it was clear: it had been worth it. The amount of fish was impressive again, movement everywhere, colors, life. In between, I lifted my head out of the water and discovered Seb sitting on the shore. Brief eye contact, a grin – and spontaneously we swapped equipment. I grabbed his camera with lighting and dived down again. Even if there were still many fish: before the swap, it seemed somehow to have been even more.
+        </p>
+        <p>
+            At some point my neck unfortunately spoke up. So I handed Seb my snorkeling things, wished him much fun for his dive with Komang, and slowly made my way back to the bungalow.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h margin-top-20">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}/assets/img/blog/2025-vietnam-bali/small/IMG_1858.jpg" alt="The morning view of the sea. Directly from bed">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            It was meanwhile 9:40 AM. Shower off the salt, breathe briefly – and then at top speed to breakfast, because here 10 AM is the end of ordering. Just made it.
+        </p>
+        <h3>
+            Seb's Dive Report
+        </h3>
+        <p>
+            Today was a very special dive. Komang and I went into the water as a pair. My big goal: the Buddha statues from the day before – this time to take photos – and hopefully find the black-blue variable headshield slug again.
+        </p>
+        <p>
+            Komang also told me about a second spot with smaller Buddha statues that is shallow enough so that my camera doesn't get a heart attack. Because from about 12 meters it starts to beep and below 15 meters it's finally over.
+        </p>
+        <p>
+            Hardly in the water, we were again welcomed by a true sea of fish. It didn't take a minute until a huge school of mackerel also joined us. We continued to the Nemos in their large anemone. They played hide and seek with the camera – curious but cautious. Nevertheless, some really strong pictures were already created here.
+        </p>
+        <p>
+            When we reached the sandy area with the large Buddha statues, it initially seemed almost empty. The reason was quickly apparent: a small group of barracudas was leisurely circling between the figures. Not necessarily my favorite fish – but they moved on calmly when they noticed us. After that, we had the place almost to ourselves.
+        </p>
+        <p>
+            We used the peace for photos – of the statues themselves and of me between the figures. Shortly after, we found it again: the black-blue variable headshield slug, actually almost in the same spot as yesterday. And only a few meters further even a second one. Unfortunately, my hands were not quite as steady today – the pictures are a bit blurry. Maybe again tomorrow?
+        </p>
+    </div>
+
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'P1050040.jpg': 'Clownfish family still a bit shy',
+                'P1050051.jpg': page.overview.image.alt|raw,
+                'P1050061.jpg': 'A goatfish looking for a new feeding spot',
+                'P1050071.jpg': 'A barracuda on the retreat',
+                'P1050084.jpg': 'The about 3 cm long variable headshield slug',
+                'P1050092.jpg': 'Seb between the large Buddha statues',
+                'P1050107.jpg': 'The small male blue ribbon eel',
+                'P1050142.jpg': 'The blue-spotted ray looking for a hiding place',
+                'P1050151.jpg': 'The upper end of a giant sponge with many smaller reef dwellers',
+                'P1050158.jpg': 'The hawksbill turtle',
+                'P1050165.jpg': 'The small Buddhas in front of the large rock',
+                'P1050171.jpg': 'Up close you can see how well overgrown they already are',
+                'P1050195.jpg': 'The green sea turtle',
+                'P1050210.jpg': 'A small school of orange-spotted rabbitfish',
+                'P1050229.jpg': 'A striped hawkfish while keeping watch. ;)',
+                'P1050243.jpg': 'A few king mackerels swimming after their school',
+            }
+        } %}
+    </div>
+    <div class="col-md-12">
+        <p>
+            At about 10 meters depth, we headed back towards the corals. Huge schools of small fish surrounded us. Then we discovered a tiny male blue ribbon eel – only a few millimeters thick. For those who only see a black eel with a yellow stripe on the photos: that's exactly it. Only later does it turn blue, then changes sex to female and finally even changes color once more to yellow. No wonder it's called the "Marine Drag Queen". Underwater, one always realizes how crazy and fascinating this world is.
+        </p>
+        <p>
+            We passed large rocks overgrown with corals, discovered a massive grouper, surely over 40 kilos heavy, and an almost full-grown blue-spotted ray. Shortly after, a hawksbill turtle appeared again – this time with a significantly darker shell than the one from yesterday.
+        </p>
+        <p>
+            Then finally the second Buddha spot: smaller statues, at the foot of a huge rock, partly already completely overgrown with shells and corals. A magical place. We stayed long, took photos, just hovered.
+        </p>
+        <p>
+            On the way back, we encountered a green sea turtle. It looked very similar to the hawksbill turtle but had this less parrot-like beak. Unfortunately, it didn't want to pose and preferred to disappear between seagrass and corals.
+        </p>
+        <p>
+            Back on land, I helped clean the equipment and then sat down with Komang to my logbook. While the rain started outside, we quietly gathered all seen species in the fish books. There were also two special stamps: one for the turtles and one for a well-hidden lionfish.
+        </p>
+        <p>
+            When the rain subsided around noon, I went back to the bungalow – to Steffi.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h margin-top-20">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}/assets/img/blog/2025-vietnam-bali/small/IMG_1878.jpg" alt="Smoke clouds against mosquitoes" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h3>Meanwhile at Steffi's</h3>
+        <p>
+            The terrace of our bungalow was exactly the right place for me today. Around 11:35 AM it started to rain and I just sat there, listened, watched the warm rain fall on plants and roofs. Apart from the arrival day, this was only the second rain here – and after not even 20 minutes, everything was over again. Rainy season, sure.
+        </p>
+        <p>
+            At some point Seb was standing in front of me again. After a short break, we went together to the pool. Shade, shirts, little movement – the sunburn had us both firmly in its grip.
+        </p>
+        <p>
+            At noon, there was a small snack at the pool bar. Briefly we toyed with the idea of going into the sea once more, but the waves became stronger and stronger. Instead, we experienced a very Balinese measure against insects: the hotel crew moved through the complex with motorized fogging devices and laid everything in a fragrant cloud.
+        </p>
+        <p>
+            After Seb had signed up for the next diving day, further doing nothing was on the agenda. Terrace. Peace. Just being.
+        </p>
+        <p>
+            In between, we wrote with Yuda, our guide from two years ago. On 01/08, he will pick us up here and take us to Ubud – into our next highlight: a large villa with a private pool, outdoor jacuzzi, and a view over rice terraces. We want to use the drive there directly for a small island tour. We have already collected initial ideas.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <p>
+            If you ever come to Bali: get in touch. Yuda is worth his weight in gold – speaks German, drives relaxed, and brings a peace that just does good.
+        </p>
+        <p>
+            In the evening, a strong wind picked up that pushed the rain directly onto our terrace. No desire for blinds. So off to the inside. Instant noodles, viewing photos, coming down.
+        </p>
+        <p>
+            Let's see what tomorrow holds for us.
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->

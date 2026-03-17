@@ -1,0 +1,106 @@
+---
+layout: blog/en/travelblog
+title: "01/03/26 Arrival in Paradise"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2025-vietnam-bali
+
+locations:
+  - Indonesia
+  - Bali
+  - Kubu
+
+author: Steffi & Seb
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/bali-fische.jpg"
+    alt: "School of fish off the coast of Bali"
+
+overview:
+  intro: "Awake much too early… because there is no real room darkening here, only blinds – and the upper windows have no"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/IMG_1791.jpg"
+    alt: "Our bungalow no. 27"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-12">
+        <p>
+            {{ page.overview.intro|raw }} blinds at all. The night was already restless enough: headaches and an annoying mosquito should have let us sleep longer.
+        </p>
+        <p>
+            After a relaxed breakfast, where you choose a main component from the menu and take the rest at the buffet, we went to the pool. For more we were simply not usable today. Well… and what does the stupid German do? Of course, immediately catch a sunburn, severely. We will definitely have something of that for longer.
+        </p>
+        <h3>More details about our paradise</h3>
+        <p>
+            Our resort, the Siddhartha Oceanfront Resort & Spa, has inspired us from the first moment. This beautiful boutique resort is located on the quiet northeast coast of Bali in the village of Kubu – far away from the hectic tourist miles, surrounded by a peaceful, almost village-natural atmosphere and impressive natural backdrop. The complex extends over several hectares directly by the sea, with lushly maintained tropical gardens, a large garden infinity pool with direct sea view, and a relaxed, open restaurant area with a view of the ocean. Small and large Buddha statues stand everywhere, giving the whole a wonderfully quiet, almost meditative mood. In between, countless palm trees tower into the sky – many of them heavily hung with fresh coconuts.
+        </p>
+    </div>
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'IMG_1835.jpg': 'The entrance to the resort',
+                'IMG_1791.jpg': page.overview.image.alt|raw,
+                'IMG_1805.jpg': 'Seb testing the underwater camera',
+                'IMG_1796.jpg': 'An area for resting and for yoga classes',
+                'IMG_1815.jpg': 'More loungers stand between the pool and the sea',
+                'IMG_1839.jpg': 'The winding paths from the reception to the sea',
+                'IMG_1846.jpg': 'Past bungalows and the spa',
+                'IMG_1847.jpg': 'Towards the restaurant and the pool',
+            }
+        } %}
+    </div>
+    <div class="col-md-12">
+        <p>
+            Our Bungalow 27 is located directly by the water. Already in the morning, we hear the sea even before we have really opened our eyes. From our terrace, we look directly out onto the ocean, while a light breeze moves through the palms. Our bungalow is bright, lovingly designed, and is exactly what we were looking for here: peace, vastness, and the feeling of having really arrived on vacation.
+        </p>
+        <p>
+            The resort also includes a small, very stylish spa as well as its own dive center directly on the grounds. Both fit perfectly into the complex and underline this special mix of relaxation and adventure that this place offers.
+        </p>
+        <p>
+            For lunch, we had sandwiches or wraps at the pool bar before we then set off for the dive center. There, Seb's diver's heart immediately spoke up: for the next day, he booked a refresher at the house reef. After all, he hadn't been diving in the open sea for a long time, and even the pool training at home was rather rare.
+        </p>
+        <p>
+            The rest of the afternoon consisted of lying around lazily – exactly how a vacation should be – until hunger called us to the resort's restaurant. Here Seb had Nasi Goreng with chicken, while I enjoyed the same dish as a vegetarian variant with noodles instead of rice. Both were delicious and comfortably served, with a view of the pool and the sea.
+        </p>
+        <p>
+            We let the evening end comfortably on our veranda. Until tomorrow.
+        </p>
+        <h3>Disclamer</h3>
+        <p>
+            Even if this blog post may sound like paid advertising, we have not received any benefits from this content. We just want to show our friends and family where we are on our beautiful journey.
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->

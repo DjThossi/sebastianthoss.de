@@ -1,0 +1,126 @@
+---
+layout: blog/en/travelblog
+title: "01/07/26 Diving & Packing"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2025-vietnam-bali
+
+locations:
+  - Indonesia
+  - Bali
+  - Kubu
+
+author: Steffi & Seb
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/bali-fische.jpg"
+    alt: "School of fish off the coast of Bali"
+
+overview:
+  intro: "Today we summarize two days, as they were very similar in terms of content. Yesterday morning I went diving for a third and last time in this"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/P1060115.jpg"
+    alt: "A truly tiny neon slug"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} vacation. Today I deliberately paused because tomorrow a temple visit is on the program – and that lies at about 1,000 meters above sea level. After diving, you shouldn't make any major altitude differences for 24 hours, so better to be safe.
+        </p>
+        <p>
+            The last dive was really nice once again. Back into the water at the house reef – and of course with a camera again. First I visited the clownfish family in their anemone. In the midst of the tentacles, I even discovered a small crab – a truly great subject. Unfortunately, I didn't have so much luck with the camera this time; somehow the photos didn't want to get really sharp. The swell moved the anemone and also me a bit more back and forth today.
+        </p>
+        <p>
+            Afterwards we met "our" hawksbill turtle again, which had accompanied us repeatedly over the last few days. The blue ribbon eel from the day before also showed itself again. New this time were mainly the tiny subjects: Komang first found a neon sea slug, shortly after several wart slugs in various colors. Some were only a few millimeters large, others at least up to four centimeters. These small details simply make diving here incredibly fascinating.
+        </p>
+        <p>
+            At noon we lay lazily at the pool before we went snorkeling later. We let ourselves drift comfortably to the next entry. There too was a lot to see again, though rather larger fish. Turtles unfortunately didn't want to show themselves this time.
+        </p>
+        <p>
+            We spent the evening again in and in front of our bungalow. The instant noodles from the supermarket were also used again. Noodles, watching a movie, the sound of the sea, and the view of the water – exactly the kind of vacation moment you'd like to freeze.
+        </p>
+        <hr />
+        <p>
+            Today the day went similarly relaxed. Only diving in the morning was replaced by packing suitcases in the evening. It slowly became clear to us: the quiet part of the trip is drawing to a close.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}/assets/img/blog/2025-vietnam-bali/small/IMG_1906.jpg" alt="The view over the pool towards the sea">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            For dinner today there was live cooking in the restaurant. Instead of choosing from the menu, we could assemble the ingredients ourselves at a buffet and watch as everything was prepared in a wok. However, the selection was a bit smaller than hoped – carrots and cabbage were there, but peppers and other types of vegetables were unfortunately missing. Basically it was tasty, but something in the taste was… strange.
+        </p>
+        <p>
+            Until we saw what else went into the wok: above all, tons of garlic and ginger. In the last round, we then cancelled the ginger – and that tasted much better to us.
+        </p>
+    </div>
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'P1060007.jpg': 'A blue-lined surgeonfish',
+                'P1060037.jpg': 'Clownfish family',
+                'P1060115.jpg': page.overview.image.alt|raw,
+                'P1060061.jpg': 'The hawksbill turtle',
+                'P1060079.jpg': 'The blue ribbon eel',
+                'P1060120.jpg': 'A wart sea slug',
+                'P1060130.jpg': 'A huge grouper',
+                'P1060132.jpg': 'Veined wart slug',
+                'P1060135.jpg': 'A mountain of corals, anemones and sponges several meters high',
+                'P1060141.jpg': 'Yellow-striped sweetlips',
+                'P1070194.jpg': 'Checkerboard wrasse',
+                'P1070195.jpg': 'Another blue-lined surgeonfish',
+            }
+        } %}
+    </div>
+
+    <div class="col-md-12">
+        <p>
+            Tomorrow the complete peace is over. First we head across the island with our favorite guide Yuda, then in the evening our second big highlight awaits us: the villa in Ubud with a private pool, jacuzzi, and a fantastic view over the rice terraces. We are already totally excited.
+        </p>
+        <p>
+            Even though it is really beautiful here at the Siddhartha Oceanfront Resort, the underwater world is simply amazing and I would have loved to go diving a few more times – from tomorrow the adventure part of the trip begins.
+        </p>
+        <p>
+            Then we want to experience Bali even more intensively, discover culture, visit temples, and dive deeper into life here.
+        </p>
+        <p>
+            And that's exactly what we're incredibly looking forward to right now.
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->

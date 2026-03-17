@@ -1,0 +1,132 @@
+---
+layout: blog/en/travelblog
+title: "01/19/26 Epilogue: Southeast Asia"
+active_nav: travel-blog
+sitemap: true
+headline_type: no
+pagination:
+  previous: true
+  next: true
+
+categories:
+  - en
+  - travelblog
+  - 2025-vietnam-bali
+
+locations:
+  - Singapore
+  - Vietnam
+  - Ho Chi Minh
+  - Indonesia
+  - Bali
+
+author: Seb
+
+headline:
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/besakih.jpg"
+    alt: "The Besakih Temples on Bali"
+
+overview:
+  intro: "So now we are sitting back at home. The suitcases are unpacked, the jet lag is keeping within surprising limits and slowly everyday life"
+  image:
+    url: "/assets/img/blog/2025-vietnam-bali/small/IMG_1993.jpg"
+    alt: "Steffi and Seb on a staircase in Besakih Temple"
+
+add_css:
+  - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.css
+  - /assets/plugins/owl-carousel/owl-carousel/owl.theme.css
+  - /assets/css/owl.carousel.css
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/owl-carousel/owl-carousel/owl.carousel.js
+    - /assets/js/plugins/owl-carousel.js
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - OwlCarousel.initOwlCarousel();
+    - FancyBox.initFancybox();
+---
+<!--=== Post ===-->
+<div class="row">
+    <div class="col-md-12">
+        {% include 'blog/snippet/headline.html.twig' %}
+    </div>
+    <div class="col-md-6">
+        <p>
+            {{ page.overview.intro|raw }} is returning. Time then to look back once more on this journey. Three weeks of Southeast Asia lie behind us – with many beautiful moments, a few small mishaps, and plenty of memories.
+        </p>
+        <p>
+            If we had to give the vacation a rating, we would probably land at an 8 out of 10. It was a really great trip, but just also not quite perfect. A few things went differently than planned, and especially at the beginning in Vietnam we did less than we had originally intended. Sometimes we simply lacked the energy, sometimes the weather didn't quite cooperate, and sometimes it was also simply nicer to shift down a gear instead of checking off another program item.
+        </p>
+        <p>
+            For that there were also some real highlights, though. Right at the front were definitely the dives and snorkeling trips to the house reef of the Siddhartha Oceanfront Resort. The underwater world there was really impressive. From tiny sea slugs and shrimps to turtles, everything was there, and every dive had something new to offer again. That I once landed somewhat clumsily with the arm in the corals during it probably belongs to the stories of this trip too. The blood-red arm still itches like hell, by the way, and will probably accompany me for a few more days.
+        </p>
+    </div>
+    <div class="col-md-6 overflow-h">
+        <div class="box-shadow shadow-effect-3">
+            <img class="img-responsive img-center img-bordered" src="{{ site.url }}{{ page.overview.image.url }}" alt="{{ page.overview.image.alt|raw }}">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            Also our short detour to Ubud remains in our memory – though rather for mixed reasons. The accommodation sounded really spectacular on paper: villa, private pool, jacuzzi, and view over rice fields. In reality not much of that was noticeable then. Much seemed completely worn out, moldy, or was simply defective. In the end it remained therefore with exactly one night before we preferred to flee back to the Siddhartha the next day after all. Sometimes one only notices on site what really suits one.
+        </p>
+        <p>
+            Unforgotten remains on the other hand the excursion across the island with our guide Yuda. Such days are often those that one likes to remember most later. One gets a completely different impression of the country, sees places off the typical tourist paths, and learns incidentally plenty of stories from the everyday life on site.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <p>
+            And then there was of course still a quite different luxury factor of this trip: flying in Business Class. The lounges, the comfortable seats, the relaxed boarding, and the possibility to actually get a few hours of sleep on a long-haul flight – one could thoroughly get used to that. Even if it probably won't be like that on every trip.
+        </p>
+        <p>
+            Not everything went perfectly. The weather showed us very clearly on Bali in between why this season is called rainy season. Some days were significantly quieter than planned because storm, wind, and high waves simply slowed us down. And somehow there also seemed to be a small law of nature: whenever we sat in the car with Made, it reliably started to pour in buckets.
+        </p>
+        <p>
+            What remains are above all many small memories: walks through tropical parks, fresh juices from machines at the roadside, encounters with foreign people, unusual hotel architecture, improvised evenings with instant noodles on the terrace, and of course the many hours under water. Exactly these small moments are it in the end that make a journey special.
+        </p>
+        <p>
+            To finish off we want to show here once more a few of our favorite pictures of this journey. Pictures that capture for us the many small moments that made this vacation.
+        </p>
+    </div>
+
+    <div class="col-md-12">
+        {% include 'owl-carousel-v4.html.twig' with {
+            'additionalContainerCss': 'margin-bottom-10 margin-top-10',
+            'imageBasePath': '/assets/img/blog/2025-vietnam-bali/',
+            'images': {
+                'IMG_5393.jpg': 'Lufthansa Business Class from Munich to Singapore',
+                'IMG_1310.jpg': 'Singapore from the Buddha Tooth Relic Temple & Museum',
+                'IMG_5582.jpg': 'A fruit vendor on the streets of Ho Chi Minh City',
+                'DSC01569.jpg': 'The Black Virgin Mountain Buddha outside the gates of Ho Chi Minh City',
+                'IMG_5779.jpg': 'New Year\'s Eve in Vietnam',
+                'IMG_1791.jpg': 'Bungalow No. 27 at the Siddhartha Oceanfront Resort and Spa',
+                'P1041630.jpg': 'A turtle that we could comfortably observe while snorkeling.',
+                'P1050092.jpg': 'Seb while diving',
+                'IMG_2018.jpg': 'One of the oldest temples in the Besakih Temple complex on Bali',
+                'IMG_2067.jpg': 'An old traditional village which is open to the public',
+                'IMG_2172.jpg': 'Back in Kubu by the sea',
+                'P1100013.jpg': 'Nemos that Seb met again and again while diving.',
+                'P1110075.jpg': 'The pretty underwater sea slugs off Bali',
+                'IMG_2313.jpg': 'Clarke Quay, Singapore. Quiet and colorful by day. Loud and full by night.',
+                'IMG_6106.jpg': 'The luxury minivan that brought us to Singapore Airport',
+            }
+        } %}
+    </div>
+
+    <div class="col-md-12">
+        <p>
+            And while we are writing these lines, the gaze already wanders again a little piece into the future. The next trip is namely already fixed. In April or May it's off together with friends to Sicily. We are already looking forward to that very much now.
+        </p>
+        <p>
+            But first we still enjoy a bit the feeling of being back home – with many beautiful memories of Southeast Asia in the luggage.
+            <br />
+            Best regards and see you soon!
+        </p>
+    </div>
+
+</div>
+<!--=== End Post ===-->
