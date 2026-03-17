@@ -41,5 +41,9 @@ pagination:
 <!--=== End Content Part ===-->
 
 <!--Pagination-->
-{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+{% include 'pagination.html.twig' with {
+    'pagination': page.pagination,
+    'pagination_newer': 'Ältere',
+    'pagination_older': 'Neuere',
+} %}
 <!--End Pagination-->
