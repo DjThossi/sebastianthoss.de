@@ -1,0 +1,38 @@
+---
+layout: english
+title: Travelblog
+meta:
+  description: "Here our family and friends can find an overview of all blog posts of Steffi's and my trip to Tenerife in 2021"
+  keywords:
+    - Spain
+    - Canary Islands
+    - Tenerife
+
+active_nav: blog-2021-tenerife
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: filtered.travelblog.categories.2021-tenerife
+  reverse: true
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Steffi and Basti in Tenerife</h1>
+  <p>Here you can find all blog articles and <a href="{{ site.url }}/en/travelblog/2021-tenerife/photos/">photos</a> of our trip to Tenerife on the Canary Islands.</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->

@@ -53,10 +53,42 @@
                         </li>
 
                         <!-- Travel blog -->
-                        <li class="{% if page.active_nav == 'travelblog' %}active{% endif %}">
-                            <a href="{{ site.url }}/en/travelblog/">
-                                Travel Blog
+                        <li class="dropdown{% if page.active_nav == 'travel-blog' or page.active_nav starts with 'blog-' %} active{% endif %}">
+                            <a href="{{ site.url }}/en/travelblog/" class="dropdown-toggle" data-toggle="dropdown">
+                                Travel Blogs
                             </a>
+                            <ul class="dropdown-menu">
+                                <li class="{% if page.active_nav == 'blog-newest' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/"><i class="fa fa-angle-double-right"></i>Newest posts</a>
+                                </li>
+{#                                <li class="{% if page.active_nav == 'blog-2025-vietnam-bali' %}active{% endif %}">#}
+{#                                    <a href="{{ site.url }}/en/travelblog/2025-vietnam-bali/"><i class="fa fa-angle-double-right"></i>2025/26 Southeast Asia</a>#}
+{#                                </li>#}
+                                <li class="{% if page.active_nav == 'blog-2025-usa' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2025-usa/"><i class="fa fa-angle-double-right"></i>2025 New York & Florida</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2024-ist-dxb' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2024-ist-dxb/"><i class="fa fa-angle-double-right"></i>2024 Istanbul & Dubai</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2021-tenerife' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2021-tenerife/"><i class="fa fa-angle-double-right"></i>2021 Tenerife</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2021-alps' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2021-alps/"><i class="fa fa-angle-double-right"></i>2021 Alps</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2019-canada' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2019-canada/"><i class="fa fa-angle-double-right"></i>2019 Canada</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2018-usa' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2018-usa/"><i class="fa fa-angle-double-right"></i>2018 USA</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2018-philippines' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2018-philippines/"><i class="fa fa-angle-double-right"></i>2018 Philippines</a>
+                                </li>
+                                <li class="{% if page.active_nav == 'blog-2017-asia-oz' %}active{% endif %}">
+                                    <a href="{{ site.url }}/en/travelblog/2017-asia-oz/"><i class="fa fa-angle-double-right"></i>2017 Australia</a>
+                                </li>
+                            </ul>
                         </li>
 
                         <!-- Talks -->

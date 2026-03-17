@@ -1,0 +1,50 @@
+---
+layout: english
+title: Travel Photos 2017 Asia Oz
+meta:
+  description: "Photos from our trip to Hong Kong, Australia and Singapore"
+  keywords:
+    - Photos
+    - Australia
+    - Vacation
+    - Hong Kong
+    - Singapore
+
+active_nav: blog-2017-asia-oz
+
+add_css:
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - FancyBox.initFancybox();
+---
+<div class="heading heading-v1 margin-top-20">
+  <h1>Travel Pictures Asia / Australia 2017</h1>
+  <p>Here you can find all pictures of our trip to Hong Kong, Australia and Singapore 2017</p>
+</div>
+
+<!-- Six Columns -->
+<div class="container content">
+
+    <div class="row margin-bottom-30">
+        {% set images = source('imageData/2017-asia-oz.csv')|split(", ")|reverse %}
+
+        {% for image in images %}
+            <div class="col-sm-2 sm-margin-bottom-30">
+                <a href="{{ site.url }}/assets/img/blog/2017-asia-oz/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2017-asia-oz/small/{{ image }}" alt="{{ image }}"></span>
+                </a>
+            </div>
+            {% if loop.index % 6 == 0 %}
+                </div>
+                <div class="row margin-bottom-30">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!-- End Six Columns -->

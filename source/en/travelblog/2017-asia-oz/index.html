@@ -1,0 +1,40 @@
+---
+layout: english
+title: Travelblog
+meta:
+  description: "Here my family and friends can find an overview of all blog posts about our Australia trip in 2017"
+  keywords:
+    - Australia
+    - Singapore
+    - Hong Kong
+    - Blog
+    - Travel
+    - Vacation
+active_nav: blog-2017-asia-oz
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: filtered.travelblog.categories.2017-asia-oz
+  reverse: true
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Australia Trip 2017</h1>
+  <p>Here you can find all blog articles and <a href="{{ site.url }}/en/travelblog/2017-asia-oz/photos/">photos</a> of our trip to Hong Kong, Australia and Singapore.</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {'pagination': page.pagination} %}
+<!--End Pagination-->

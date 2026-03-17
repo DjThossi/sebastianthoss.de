@@ -1,0 +1,51 @@
+---
+layout: english
+title: Travel Photos
+meta:
+  description: "Here you can find some beautiful pictures of my trip to Istanbul and Dubai 2024"
+  keywords:
+    - Photos
+    - Travel
+    - Vacation
+    - Turkey
+    - Istanbul
+    - United Arab Emirates
+    - Dubai
+active_nav: blog-2024-ist-dxb
+
+add_css:
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - FancyBox.initFancybox();
+---
+<div class="heading heading-v1 margin-top-20">
+  <h1>Travel Pictures from Istanbul and Dubai 2024</h1>
+  <p>Here you can find some beautiful pictures and the <a href="{{ site.url }}/en/travelblog/2024-ist-dxb/">blog posts</a> of my trip to Istanbul and Dubai 2024</p>
+</div>
+
+<!-- Six Columns -->
+<div class="container content">
+
+    <div class="row margin-bottom-30">
+        {% set images =  source('imageData/2024-ist-dxb.csv')|split(", ")|reverse %}
+
+        {% for image in images %}
+            <div class="col-sm-2 sm-margin-bottom-30">
+                <a href="{{ site.url }}/assets/img/blog/2024-ist-dxb/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2024-ist-dxb/small/{{ image }}" alt="{{ image }}"></span>
+                </a>
+            </div>
+            {% if loop.index % 6 == 0 %}
+                </div>
+                <div class="row margin-bottom-30">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!-- End Six Columns -->

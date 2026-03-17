@@ -1,0 +1,51 @@
+---
+layout: english
+title: Travel Photos
+meta:
+  description: "Photos for the family"
+  keywords:
+    - Germany
+    - Austria
+    - Kleinwalsertal
+    - Poppengrün
+    - Pirna
+    - Tropical Island
+
+active_nav: blog-2021-alps
+
+add_css:
+  - /assets/plugins/fancybox/source/jquery.fancybox.css
+
+js:
+  scripts:
+    - /assets/plugins/fancybox/source/jquery.fancybox.pack.js
+    - /assets/js/plugins/fancy-box.js
+  run_code:
+    - FancyBox.initFancybox();
+---
+<div class="heading heading-v1 margin-top-20">
+  <h1>Travel Pictures for our Summer Vacation 2021</h1>
+  <p>Here you can find all pictures related to the <a href="{{ site.url }}/en/travelblog/2021-alps/">posts</a> of our summer trip 2021</p>
+</div>
+
+<!-- Six Columns -->
+<div class="container content">
+
+    <div class="row margin-bottom-30">
+        {% set images =  source('imageData/2021-alps.csv')|split(", ")|reverse %}
+
+        {% for image in images %}
+            <div class="col-sm-2 sm-margin-bottom-30">
+                <a href="{{ site.url }}/assets/img/blog/2021-alps/{{ image }}" rel="gallery3" class="fancybox img-hover-v1" title="{{ image }}">
+                    <span><img class="img-responsive" src="{{ site.url }}/assets/img/blog/2021-alps/small/{{ image }}" alt="{{ image }}"></span>
+                </a>
+            </div>
+            {% if loop.index % 6 == 0 %}
+                </div>
+                <div class="row margin-bottom-30">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!-- End Six Columns -->
