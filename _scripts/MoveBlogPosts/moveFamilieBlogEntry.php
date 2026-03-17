@@ -1,5 +1,7 @@
 <?php
 
+$targetCategory = '2025-vietnam-bali';
+
 function readFiles($directory) {
     $excludedFiles = ['.', '..', '.gitkeep'];
 
@@ -53,9 +55,9 @@ $content = replaceContent($content, 'layout: blog/de/familie', 'layout: blog/de/
 $content = replaceContent($content, 'sitemap: false', 'sitemap: true
 headline_type: no');
 
-echo "ADD POST TO 2025 USA VACATION\n";
+echo "ADD POST TO $targetCategory VACATION\n";
 $content = replaceContent($content, '  - Reiseblog', '  - Reiseblog
-  - 2025-usa');
+  - ' . trim($targetCategory));
 
 echo "COLLECT INFOS FOR SOCIAL\n";
 $hasFound = preg_match("/\ntitle:(.*)\n/", $content, $matches);
@@ -83,7 +85,7 @@ unlink($familiePath . $fileName);
 
 echo "TITLE AND INTRO: \n";
 echo $title . "\n";
-echo 'http://www.sebastianthoss.de/de/reiseblog' . $link . "\n";
+echo 'https://www.sebastianthoss.de/de/reiseblog' . $link . "\n";
 
 exit(0);
 
