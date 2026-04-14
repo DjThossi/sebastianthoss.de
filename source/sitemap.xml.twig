@@ -1,5 +1,5 @@
 ---
-use: ["posts", "reiseblog"]
+use: ["posts", "reiseblog", "travelblog"]
 permalink: sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,6 +84,40 @@ permalink: sitemap.xml
     </url>
 
     <url>
+        <loc>{{ site.url }}/de/reiseblog/2024-ist-dxb/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2024-ist-dxb/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2024-ist-dxb/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2025-usa/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2025-usa/</loc>
+    </url>
+    {% for page in 2..4 %}
+        <url>
+            <loc>{{ site.url }}/de/reiseblog/2025-usa/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2025-vietnam-bali/fotos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/de/reiseblog/2025-vietnam-bali/</loc>
+    </url>
+    {% for page in 2..3 %}
+        <url>
+            <loc>{{ site.url }}/de/reiseblog/2025-vietnam-bali/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
         <loc>{{ site.url }}/de/vortraege/99-percent-is-not-enough.html</loc>
     </url>
     <url>
@@ -153,6 +187,113 @@ permalink: sitemap.xml
         <loc>{{ site.url }}/de/gruender-hands-on/</loc>
     </url>
     <url>
-        <loc>https://www.sebastianthoss.de/en/talks/how-to-build-a-startup-digital-and-alone.html</loc>
+        <loc>{{ site.url }}/en/talks/how-to-build-a-startup-digital-and-alone.html</loc>
     </url>
+
+    {% for post in data.travelblog if post.sitemap == true %}
+        <url>
+            <loc>{{ site.url }}{{ post.url }}</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/</loc>
+    </url>
+
+    {% for page in 2..(data.travelblog|length / 9)|round(0, 'ceil') %}
+        <url>
+            <loc>{{ site.url }}/en/travelblog/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2017-asia-oz/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2017-asia-oz/</loc>
+    </url>
+    {% for page in 2..5 %}
+        <url>
+            <loc>{{ site.url }}/en/travelblog/2017-asia-oz/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2018-philippinen/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2018-philippinen/</loc>
+    </url>
+    {% for page in 2..5 %}
+        <url>
+            <loc>{{ site.url }}/en/travelblog/2018-philippinen/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2018-usa/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2018-usa/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2018-usa/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2019-kanada/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2019-kanada/</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2021-alpen/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2021-alpen/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2021-alpen/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2021-teneriffa/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2021-teneriffa/</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2024-ist-dxb/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2024-ist-dxb/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2024-ist-dxb/page/2</loc>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2025-usa/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2025-usa/</loc>
+    </url>
+    {% for page in 2..4 %}
+        <url>
+            <loc>{{ site.url }}/en/travelblog/2025-usa/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2025-vietnam-bali/photos/</loc>
+    </url>
+    <url>
+        <loc>{{ site.url }}/en/travelblog/2025-vietnam-bali/</loc>
+    </url>
+    {% for page in 2..3 %}
+        <url>
+            <loc>{{ site.url }}/en/travelblog/2025-vietnam-bali/page/{{ page }}/</loc>
+        </url>
+    {% endfor %}
 </urlset>
