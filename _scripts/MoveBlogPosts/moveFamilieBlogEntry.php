@@ -1,6 +1,6 @@
 <?php
 
-$targetCategory = '2025-vietnam-bali';
+$targetCategory = '2026-sizilien';
 
 function readFiles($directory) {
     $excludedFiles = ['.', '..', '.gitkeep'];

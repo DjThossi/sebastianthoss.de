@@ -1,0 +1,43 @@
+---
+layout: german
+title: Reiseblog
+meta:
+  description: "Hier findet unsere Familie und Freunde eine &Uuml;bersicht aller Blogeintr&auml;ge unserer Reise nach Sizilien in 2026"
+  keywords:
+    - Reisen
+    - Urlaub
+    - Italien
+    - Sizilien
+
+active_nav: blog-2026-sizilien
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: filtered.reiseblog.categories.2026-sizilien
+  reverse: true
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Abenteuer auf Sizilien</h1>
+  <p>Hier findet Ihr alle Blogartikel und <a href="{{ site.url }}/de/reiseblog/2026-sizilien/fotos/">Bilder</a> unserer Reise nach Sizilien 2026</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Weiterlesen'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {
+    'pagination': page.pagination,
+    'pagination_newer': 'Ältere',
+    'pagination_older': 'Neuere',
+} %}
+<!--End Pagination-->
