@@ -1,0 +1,44 @@
+---
+layout: english
+title: Travelblog
+meta:
+  description: "Here our family and friends can find an overview of all blog posts of our trip to Sicily in 2026"
+  keywords:
+    - Travel
+    - Vacation
+    - Italy
+    - Sicily
+
+active_nav: blog-2026-sizilien
+
+add_css:
+  - /assets/css/pages/blog_masonry_3col.css
+js:
+  scripts:
+    - /assets/plugins/masonry/jquery.masonry.min.js
+    - /assets/js/pages/blog-masonry.js
+
+generator: pagination
+pagination:
+  max_per_page: 9
+  provider: filtered.travelblog.categories.2026-sicily
+  reverse: true
+---
+
+<div class="heading margin-bottom-20 margin-top-20">
+  <h1>Adventures in Sicily</h1>
+  <p>Here you can find all blog articles and <a href="{{ site.url }}/en/travelblog/2026-sicily/photos/">photos</a> of our trip to Sicily 2026</p>
+</div>
+
+<!--=== Content Part ===-->
+{% include 'blog/overview/masonry_3col.html.twig' with {'posts': page.pagination.items, 'readMore': 'Read more'} %}
+<!--=== End Content Part ===-->
+
+<!--Pagination-->
+{% include 'pagination.html.twig' with {
+    'pagination': page.pagination,
+    'pagination_newer': 'Older',
+    'pagination_older': 'Newer',
+    'pagination_posts': 'posts'
+} %}
+<!--End Pagination-->
