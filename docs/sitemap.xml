@@ -1103,7 +1103,16 @@
             <url>
             <loc>https://www.sebastianthoss.de/de/reiseblog/2025-vietnam-bali/page/3/</loc>
         </url>
-    
+        <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2026-sizilien/fotos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2026-sizilien/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/de/reiseblog/2026-sizilien/page/2</loc>
+    </url>
+
     <url>
         <loc>https://www.sebastianthoss.de/de/vortraege/99-percent-is-not-enough.html</loc>
     </url>
@@ -1177,6 +1186,36 @@
         <loc>https://www.sebastianthoss.de/en/talks/how-to-build-a-startup-digital-and-alone.html</loc>
     </url>
 
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/10/the-early-bird.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/09/flowers-and-cannolo.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/08/castle-and-beach.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/07/caves-island-and-temples.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/05/where-is-the-beach.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/03/new-dream-destinations.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/02/dream-scenery-and-influencer-poses.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/05/01/arriving-in-catania.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/04/29/flight-to-italy.html</loc>
+        </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/2026/04/28/4-crazy-ones-for-12-days-in-sicily.html</loc>
+        </url>
             <url>
             <loc>https://www.sebastianthoss.de/en/travelblog/2026/01/19/epilogue-southeast-asia.html</loc>
         </url>
@@ -2151,6 +2190,9 @@
             <url>
             <loc>https://www.sebastianthoss.de/en/travelblog/page/33/</loc>
         </url>
+            <url>
+            <loc>https://www.sebastianthoss.de/en/travelblog/page/34/</loc>
+        </url>
         <url>
         <loc>https://www.sebastianthoss.de/en/travelblog/2017-asia-oz/photos/</loc>
     </url>
@@ -2261,4 +2303,14 @@
             <url>
             <loc>https://www.sebastianthoss.de/en/travelblog/2025-vietnam-bali/page/3/</loc>
         </url>
-    </urlset>
+    
+    <url>
+        <loc>https://www.sebastianthoss.de/en/travelblog/2026-sicily/photos/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/en/travelblog/2026-sicily/</loc>
+    </url>
+    <url>
+        <loc>https://www.sebastianthoss.de/en/travelblog/2026-sicily/page/2/</loc>
+    </url>
+</urlset>
